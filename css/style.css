@@ -1,0 +1,36 @@
+/* navigation  Mateusz */
+
+/* hero Bartek */
+/* test na branch feature-28-premiera */
+
+/* opis aplikacji skrót Dominik */
+
+/* opis aplikacji długi Dominik */
+
+/* Premier Borys */
+.premiere {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form label,
+form input {
+  margin: 10px;
+}
+
+form .submit {
+  width: 10vw;
+  border: none;
+  border-radius: 5px;
+  background-color: aquamarine;
+}
+
+.premiere p::before {
+  content: "\002A";
+  color: red;
+}
+/* Team information  */
+
+/*footer */
