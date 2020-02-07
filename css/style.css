@@ -47,7 +47,12 @@ form .submit {
 img{
   width: 100%;
 }
-
+.team h3{
+  text-align: center;
+}
+.members{
+  display: flex;
+}
 @media (min-width:720px) {
     body {
       font-size: 1.5rem;
@@ -60,8 +65,11 @@ img{
     img{
       width: 50%;
     }
-    
+
 }
 /* Team information  */
+
+
+
 
 /*footer */
