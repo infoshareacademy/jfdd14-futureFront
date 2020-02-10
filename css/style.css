@@ -5,13 +5,19 @@
     font-family: 'Lato', sans-serif;
     font-weight: 300;
 }
+
 body {
     background-image: url(/img/tlo.jpg)
 }
 
 .header {
-    margin-top: 10vw;
+    position: relative;
+    top: 80px;
+    /* margin-top: 80px; */
+    text-align: center;
     justify-content: center;
+    text-decoration: none;
+    font-weight: 200;
 }
 
 
@@ -24,7 +30,7 @@ body {
 
 img {
     display: block;
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
     /* border: 1px solid; */
     /* object-fit: cover; */
@@ -44,7 +50,7 @@ i.fab {
     transform: scale(1.5);
     margin: 10px;
     opacity: 0.4;
-    color:teal;
+    color: teal;
     background-color: transparent;
     text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: all 1.5s ease;
@@ -121,7 +127,7 @@ footer {
 @media (orientation: portrait) {
 
     header {
-        margin-top: 10vw;
+        margin-bottom: 5vw;
     }
 
     .mainContainer {
@@ -131,6 +137,12 @@ footer {
     #gallery,
     .mottoVertical {
         max-width: 80vw;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-left: 10%;
     }
 
 }
