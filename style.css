@@ -1,4 +1,27 @@
-/* navigation  Mateusz */
+/* navigation  Mateuszzz */
+body {margin:0;}
+
+.navigation {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navigation a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 19px;
+}
+
+.navigation a:hover {
+  background: #ddd;
+  color: black;
+}
 
 
 /* hero Bartek */
