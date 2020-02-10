@@ -5,11 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- font awsome -->
+    <script src="https://kit.fontawesome.com/c0b38c2141.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,400i,700&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="app.js" defer></script>
+
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
+
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -36,6 +48,43 @@
             </ul>
         </div>
     </nav>
+    <section class="flex-container flex-column w-100 mainContainer">
+        <div class="header col-md-10 d-flex d-xl-none no-gutters mx-0 p-0 border mottoVertical">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit laborum rerum alias, veritatis
+            ut illum sit velit eius dignissimos delectus aliquam possimus voluptates sapiente, consequatur quisquam
+            a? Soluta, repudiandae debitis.
+        </div>
+        <div class="d-flex flex-row mx-0 justify-content-around" id="secondRow">
+            <div class="p-0 d-none d-xl-flex col-xl-2 mottoHorizontal">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit laborum rerum alias, veritatis
+                ut illum sit velit eius dignissimos delectus aliquam possimus voluptates sapiente, consequatur quisquam
+                a? Soluta, repudiandae debitis.
+            </div>
+            <div class="col-12 col-md-10 col-xl-8" id="gallery">
+                <img class="d-flex w-100" src="img/samochod.png" alt="Second slide">
+            </div>
+        </div>
+        <!-- <footer class="d-flex w-100">
+            <a href="http://www.example.com/default.htm">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="http://www.example.com/default.htm">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <span id="footerQuote" class="">Giftmatcher2020</span>
+        </footer> -->
+    </section>
+    <footer class="d-flex w-100">
+        <a href="http://www.example.com/default.htm">
+            <i class="fab fa-facebook-square"></i>
+        </a>
+        <a href="http://www.example.com/default.htm">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <span id="footerQuote" class="">Giftmatcher2020</span>
+    </footer>
+    <script src="app.js" defer></script>
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
@@ -45,5 +94,46 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <section class="premiere-main">
+        <div class="premiere">
+            <h3>Sign up for app premiere!</h3>
+            <form class="premiere" action="" method="post">
+                <label for="email" class="premiere-label">Your email:</label>
+                <input type="email" class="premiere-label" />
+                <button class="submit" type="submit" href="#">Sign me up!</button>
+                <p>
+                    Your data is safe - email provided will be used only to remind you
+                    about premiere of our application. We will send you just one mail, so
+                    dont worry about unwanted spam!
+                </p>
+            </form>
+        </div>
+        <img src="./img/236.jpg" alt="pink-car-with-gift">
+    </section>
+    <section class="team">
+        <h3>Meet our team!</h3>
+        <div class="members">
+            <div class="bartek">
+                <img src="" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla incidunt aperiam nostrum. Similique
+                    ut porro accusantium, dolor earum qui soluta.</p>
+            </div>
+            <div class="mateusz">
+                <img src="" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ratione nisi voluptatum totam?
+                    Libero consequatur ipsam architecto impedit, blanditiis ducimus.</p>
+            </div>
+            <div class="dominik">
+                <img src="" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eum velit assumenda dicta eligendi
+                    itaque consectetur ullam quis, autem sequi!</p>
+            </div>
+            <div class="borys">
+                <img src="" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates consectetur veritatis ipsum
+                    itaque labore architecto recusandae voluptate excepturi. Nihil, quam.</p>
+            </div>
+        </div>
 </body>
+
 </html>
