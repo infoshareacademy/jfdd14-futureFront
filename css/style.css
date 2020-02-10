@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -134,3 +135,79 @@ footer {
     }
 
 }
+
+/* navigation  Mateusz */
+
+/* hero Bartek */
+/* test na branch feature-28-premiera */
+
+/* opis aplikacji skrót Dominik */
+
+/* opis aplikacji długi Dominik */
+
+/* Premier Borys */
+* {
+  box-sizing: border-box;
+}
+.premiere {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(252, 187, 167);
+  
+}
+
+form label,
+form input {
+  margin: 10px;
+}
+
+form .submit {
+  width: 20vw;
+  border: none;
+  border-radius: 5px;
+  background-color: aquamarine;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  padding: 1vh;
+}
+
+.premiere p::before {
+  content: "\002A";
+  color: red;
+}
+
+.premiere p{
+  padding: 2vh;
+}
+
+img{
+  width: 100%;
+}
+.team h3{
+  text-align: center;
+}
+.members{
+  display: flex;
+}
+@media (min-width:720px) {
+    body {
+      font-size: 1.5rem;
+    }
+
+    .premiere-main{
+      display: flex;
+    }
+
+    img{
+      width: 50%;
+    }
+
+}
+/* Team information  */
+
+
+
+
+/*footer */
