@@ -8,7 +8,15 @@
 }
 
 body {
-    background-image: url(/img/tlo.jpg)
+    background-image: url(/img/tlo.jpg);
+}
+
+.mainMenu {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 3;
+    opacity: 0.9;
 }
 
 .header {
@@ -17,10 +25,13 @@ body {
     /* margin-top: 80px; */
     text-align: center;
     justify-content: center;
-    text-decoration: none;
-    font-weight: 200;
+    font-weight: 300;
 }
 
+h1 {
+    font-size: small;
+    font-weight: 300;
+}
 
 #secondRow {
     align-items: center;
@@ -38,11 +49,11 @@ img {
     object-position: bottom;
 }
 
-#gallery,
 .mottoVertical {
     max-width: 50vw;
     overflow: hidden;
     align-self: center;
+    padding-top: 700px;
     /* border: 1px solid; */
 }
 
@@ -127,9 +138,6 @@ footer {
 
 @media (orientation: portrait) {
 
-    header {
-        margin-bottom: 5vw;
-    }
 
     .mainContainer {
         justify-content: space-around;
