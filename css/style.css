@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -8,23 +7,24 @@
 }
 
 body {
-    background-image: url(/img/tlo.jpg);
+    margin: 0;
+    padding: 0;
+    /* background-image: url(/img/tlo.jpg); */
 }
 
 .mainMenu {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     top: 0;
     z-index: 3;
     opacity: 0.9;
 }
 
-.header {
-    position: relative;
-    top: 80px;
-    /* margin-top: 80px; */
+header {
+    align-items: center;
     text-align: center;
     justify-content: center;
+    font-size: 1.5rem;
     font-weight: 300;
 }
 
@@ -34,29 +34,43 @@ h1 {
 }
 
 #secondRow {
+    flex-wrap: nowrap;
     align-items: center;
+    justify-content: center;
     /* height: auto; */
     overflow: hidden;
-    flex-grow: 2;
+    /* flex-grow: 2; */
 }
 
 img {
     display: block;
     max-width: 90%;
     height: auto;
+    margin-left: 10%;
     /* border: 1px solid; */
     /* object-fit: cover; */
     object-position: bottom;
+    /* float: right; */
 }
 
 .mottoVertical {
+    flex-direction: column;
+
+    font-size: x-large;
+
+    justify-content: center;
+    align-items: center;
     max-width: 50vw;
     overflow: hidden;
     align-self: center;
-    padding-top: 700px;
-    /* border: 1px solid; */
+    padding-top: 50px
+        /* border: 1px solid; */
 }
 
+#gallery {
+    justify-content: center;
+    align-items: center;
+}
 
 i.fab {
     transform: scale(1.5);
@@ -90,70 +104,134 @@ footer {
 }
 
 
-.mainContainer {
+.heroContainer {
+    background-image: url(/img/tlo.jpg);
+    justify-content: space-around;
+    padding-top: 56px;
     min-height: 100vh;
     max-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    padding: 0px 0px 0px 0px;
-    opacity: 100%;
-    -webkit-animation-name: example;
+}
+
+
+
+
+@media only screen and (min-width: 992px) and (orientation: landscape) {
+
+
+    .heroContainer {
+        /* justify-content: start; */
+        justify-content: space-around;
+    }
+
+    #secondRow {
+
+        justify-content: space-around;
+
+    }
+
+    #gallery {
+        /* max-width: 80vw; */
+        /* justify-content: center;
+        align-items: center; */
+
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    img {
+        /* max-width: 100%; */
+        margin-left: 0px;
+    }
+
+}
+
+.mottoHorizontal {
+    align-self: flex-start;
+}
+
+.mottoHorizontal, .mottoVertical {
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    opacity: 0;
+    -webkit-animation-name: motto;
     /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 2s;
     /* Safari 4.0 - 8.0 */
-    animation-name: example;
+    animation-name: motto;
     animation-duration: 2s;
-    /* animation-delay: 5.2s; */
+    animation-delay: 5s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
 }
 
 /* Safari 4.0 - 8.0 */
-@-webkit-keyframes example {
+@-webkit-keyframes motto {
     from {
-        margin-left: 100%;
-        height: 100%;
+        opacity: 0;
+        /* height: 100%; */
     }
 
     to {
+        opacity: 1;
+        /* height: 100%; */
+    }
+}
+
+/* Standard syntax */
+@keyframes motto {
+    from {
+        opacity: 0;
+        /* height: 100%; */
+    }
+
+    to {
+        opacity: 1;
+        /* height: 100%; */
+    }
+}
+
+#gallery {
+    -webkit-animation-name: example;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    from {
+        margin-left: 150%;
+        /* height: 100%; */
+    }
+    
+    to {
         margin-left: 0px;
-        height: 100%;
+        /* height: 100%; */
     }
 }
 
 /* Standard syntax */
 @keyframes example {
     from {
-        margin-left: 100%;
-        height: 100%;
+        margin-left: 150%;
+        /* height: 100%; */
     }
 
     to {
         margin-left: 0px;
-        height: 100%;
+        /* height: 100%; */
     }
-}
-
-
-@media (orientation: portrait) {
-
-
-    .mainContainer {
-        justify-content: space-around;
-    }
-
-    #gallery,
-    .mottoVertical {
-        max-width: 80vw;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-        margin-left: 10%;
-    }
-
 }
 
 
@@ -167,65 +245,70 @@ footer {
 /* opis aplikacji długi Dominik */
 
 /* Premier Borys */
-* {
-  box-sizing: border-box;
+/* * {
+    box-sizing: border-box;
 }
+
 .premiere {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(252, 187, 167);
-  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(252, 187, 167);
+
 }
 
 form label,
 form input {
-  margin: 10px;
+    margin: 10px;
 }
 
 form .submit {
-  width: 20vw;
-  border: none;
-  border-radius: 5px;
-  background-color: aquamarine;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-  font-weight: bold;
-  padding: 1vh;
+    width: 20vw;
+    border: none;
+    border-radius: 5px;
+    background-color: aquamarine;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    padding: 1vh;
 }
 
 .premiere p::before {
-  content: "\002A";
-  color: red;
+    content: "\002A";
+    color: red;
 }
 
-.premiere p{
-  padding: 2vh;
+.premiere p {
+    padding: 2vh;
 }
 
-img{
-  width: 100%;
+img {
+    width: 100%;
 }
-.team h3{
-  text-align: center;
+
+.team h3 {
+    text-align: center;
 }
-.members{
-  display: flex;
+
+.members {
+    display: flex;
 }
+
 @media (min-width:720px) {
     body {
-      font-size: 1.5rem;
+        font-size: 1.5rem;
     }
 
-    .premiere-main{
-      display: flex;
+    .premiere-main {
+        display: flex;
     }
 
-    img{
-      width: 50%;
+    img {
+        width: 50%;
     }
 
-}
+} */
+
 /* Team information  */
 
 
