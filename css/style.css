@@ -349,13 +349,17 @@ form .submit {
     justify-content: center;
     box-shadow: none;
 }
+
 .progress{
     width: 80%;
 }
 .techCell-social{
     margin-top: 30px;
+    text-align: center;
 }
-
+.tech h6{
+    text-align: center;
+}
 
 
 
