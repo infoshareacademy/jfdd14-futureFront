@@ -306,6 +306,18 @@ i.fas:hover {
 /* opis aplikacji skrót Dominik */
 
 /* opis aplikacji długi Dominik */
+.functions-flex-container{
+    display: block;
+    text-align: center;
+    
+}
+.functions-long{
+    
+    justify-content: center;
+}
+.functions-long-intro{
+    padding: 5vw;
+}
 
 /* Premier Borys */
 
@@ -317,8 +329,12 @@ i.fas:hover {
     align-items: center;
 
 }
+.premiere img{
+    max-width: 50px;
+}
+    
 
-.premiere-main img {
+.premiere-main img{
     width: 100%;
     margin: 0;
 }
@@ -347,9 +363,6 @@ form .submit {
     padding: 2vh;
 }
 
-/* img {
-    width: 100%;
-} */
 
 .team h3 {
     text-align: center;
@@ -358,7 +371,10 @@ form .submit {
 .members {
     display: flex;
 }
-
+.premiere .btn-secondary{
+    min-width: 10vw;
+    
+}
 @media (min-width:720px) {
     body {
         font-size: 1.5rem;
@@ -368,7 +384,14 @@ form .submit {
         display: flex;
         justify-content: center;
     }
-
+    .functions-flex-container{
+        display: flex;
+        
+    }
+    .functions-long-intro{
+        padding: 5vw 25vw;
+        text-align: center;
+    }
 }
 
 /* Team information  */
@@ -414,6 +437,9 @@ form .submit {
 
 .progress {
     width: 80%;
+}
+.techCell-social{
+    margin-top: 30px;
 }
 
 
