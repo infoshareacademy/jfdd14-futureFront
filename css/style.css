@@ -26,16 +26,26 @@ body {
 }
 
 header {
+    flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;
-    font-size: 2.5vh;
-    font-style: italic;
-    font-weight: 300;
+    /* font-style: italic; */
     letter-spacing: 2px;
     padding: 10px 50px;
-
     /* text-shadow: 2px 2px 8px rgba(28,12,7,0.32); */
+
+}
+
+.subHeaderLine1 {
+    font-size: 3vh;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.subHeaderLine2 {
+    font-size: 2vh;
+    letter-spacing: 5px;
 }
 
 h1 {
@@ -275,8 +285,11 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: center;
     box-shadow: none;
-    margin: 10vw auto;
+    /* margin: 10vw auto; */
+    min-height: 80vh;
+    margin: 10vh auto;
 }
 
 .shortInfoHeader {
@@ -334,18 +347,25 @@ i.fas:hover {
 }
 
 .functions-long {
+    min-height: 100vh;
     min-width: 100vw;
     justify-content: center;
+    text-align: center;
+    font-weight: 500;
     /* background-color: rgb(227, 188, 190); */
     /* padding: 80px 0; */
     background-image: url(/img/235.jpg);
     background-repeat: no-repeat;
+    /* background-size: 100% auto; */
     background-size: cover;
     background-position: bottom;
+    margin-bottom: 80px;
 }
 
 .functions-long-intro {
     padding: 5vw;
+    letter-spacing: 3px;
+    font-weight: 500;
 }
 
 /* Premier Borys */
