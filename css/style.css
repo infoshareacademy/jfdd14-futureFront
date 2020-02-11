@@ -298,7 +298,10 @@ form .submit {
 .members {
     display: flex;
 }
-
+.premiere .btn-secondary{
+    min-width: 10vw;
+    
+}
 @media (min-width:720px) {
     body {
         font-size: 1.5rem;
@@ -348,6 +351,9 @@ form .submit {
 }
 .progress{
     width: 80%;
+}
+.techCell-social{
+    margin-top: 30px;
 }
 
 
