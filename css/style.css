@@ -38,6 +38,9 @@ h1 {
     font-size: small;
     font-weight: 300;
 }
+.shortInfoHeader {
+    font-weight: 500;
+}
 
 #secondRow {
     flex-wrap: nowrap;
@@ -126,7 +129,7 @@ footer {
 @media only screen and (min-width: 992px) {
 
     header {
-font-size: 3vw;
+        font-size: 3vw;
 
     }
 
@@ -202,6 +205,7 @@ font-size: 3vw;
     }
 }
 
+
 #gallery {
     -webkit-animation-name: example;
     /* Safari 4.0 - 8.0 */
@@ -244,12 +248,59 @@ font-size: 3vw;
 @media only screen and (min-width: 1000px) {
 
     header {
-font-size: 2vw;
+        font-size: 2vw;
     }
 }
+
+
+/* opis aplikacji skrót Dominik */
+.shortInfo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: none;
+    margin: 10vw auto;
+}
+
+.infoCell {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-basis: 100%;
+    margin: 20px;
+    padding: 15px;
+    box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    max-width: 30vh;
+    height: 50vh;
+}
+
+i.fas {
+    transform: scale(1.5);
+    margin: 10px;
+    opacity: 0.4;
+    color: teal;
+    background-color: transparent;
+    text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 1.5s ease;
+}
+
+i.fas:hover {
+    color: rgba(0, 128, 128, 0.822);
+    opacity: 0.8;
+}
+
+
+
+
+
+
 /* navigation  Mateusz */
 
-/* hero Bartek */
+
 /* test na branch feature-28-premiera */
 
 /* opis aplikacji skrót Dominik */
