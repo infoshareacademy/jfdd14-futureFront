@@ -330,6 +330,9 @@ form label,
 form input {
   margin: 10px;
 }
+form input {
+  width: 15vw;
+}
 
 form .submit {
   width: 20vw;
@@ -402,6 +405,7 @@ form .submit {
 }
 
 /* Team information  */
+
 .techCell {
   flex-direction: column;
   justify-content: center;
@@ -409,15 +413,16 @@ form .submit {
   display: flex;
   flex-basis: 100%;
   margin: 20px;
-  padding: 15px;
+  padding: 5px;
   box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
   max-width: 30vh;
   height: 30vh;
+  background-color: white;
 }
 
 .techCell img {
-  max-height: 80%;
+  max-height: 70%;
   padding: 15%;
 }
 
@@ -426,7 +431,7 @@ form .submit {
 }
 
 #bootstrapLogo {
-  margin-top: 10px;
+  margin: 10px 0 0;
   transform: scale(1.4);
 }
 
@@ -441,13 +446,16 @@ form .submit {
   justify-content: center;
   box-shadow: none;
 }
-
-.progress {
-  width: 80%;
+.tech-container {
+  background-color: rgb(227, 188, 190);
+  padding: 5vh;
+}
+.tech-container h3 {
+  text-align: center;
+  padding: 5vh;
 }
 
 .techCell-social {
-  margin-top: 30px;
   text-align: center;
 }
 .tech h6 {
