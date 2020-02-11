@@ -301,7 +301,9 @@ img {
 .members {
     display: flex;
 }
-
+.premiere .btn-secondary{
+    width: 10vw;
+}
 @media (min-width:720px) {
     body {
         font-size: 1.5rem;
@@ -351,6 +353,9 @@ img {
 }
 .progress{
     width: 80%;
+}
+.techCell-social{
+    margin-top: 30px;
 }
 
 
