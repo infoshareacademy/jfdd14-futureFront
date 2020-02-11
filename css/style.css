@@ -250,6 +250,11 @@ footer {
 /* opis aplikacji skrót Dominik */
 
 /* opis aplikacji długi Dominik */
+.functions-long{
+    display: block;
+    text-align: center;
+    
+}
 
 /* Premier Borys */
  
@@ -261,6 +266,11 @@ footer {
     align-items: center;
     
 }
+.premiere img{
+    max-width: 5vw;
+}
+    
+
 .premiere-main img{
     width: 100%;
     margin: 0;
@@ -311,7 +321,10 @@ form .submit {
         display: flex;
         justify-content: center;
     }
-
+    .functions-long{
+        display: flex;
+        
+    }
 }
 
 /* Team information  */
