@@ -252,17 +252,18 @@ footer {
 /* opis aplikacji długi Dominik */
 
 /* Premier Borys */
-/* * {
-    box-sizing: border-box;
-}
+ 
 
 .premiere {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(252, 187, 167);
-
+    
+}
+.premiere-main img{
+    width: 100%;
+    margin: 0;
 }
 
 form label,
@@ -308,15 +309,49 @@ img {
 
     .premiere-main {
         display: flex;
+        justify-content: center;
     }
 
-    img {
-        width: 50%;
-    }
-
-} */
+}
 
 /* Team information  */
+.techCell {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-basis: 100%;
+    margin: 20px;
+    padding: 15px;
+    box-shadow: 0px 6px 19px 0px rgba(0,0,0,0.1);
+    border-radius: 25px;
+    max-width: 30vh;
+    height: 30vh;
+}
+.techCell img {
+    max-height: 80%;
+    padding: 15%
+}
+#htmlLogo {
+    transform: scale(0.88);
+}
+#bootstrapLogo {
+    margin-top: 10px;
+    transform: scale(1.4);
+}
+#xdLogo {
+    transform: scale(0.88);
+}
+.tech {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: none;
+}
+.progress{
+    width: 80%;
+}
 
 
 
