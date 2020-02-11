@@ -30,7 +30,11 @@ header {
     text-align: center;
     justify-content: center;
     font-size: 3vh;
+    font-style: italic;
     font-weight: 300;
+    letter-spacing: 2px;
+    padding: 10px 50px;
+
     /* text-shadow: 2px 2px 8px rgba(28,12,7,0.32); */
 }
 
@@ -39,9 +43,6 @@ h1 {
     font-weight: 300;
 }
 
-.shortInfoHeader {
-    font-weight: 500;
-}
 
 #secondRow {
     flex-wrap: nowrap;
@@ -124,41 +125,14 @@ footer {
     flex-direction: column;
 }
 
-
-
-
-@media only screen and (min-width: 992px) {
-
-    header {
-        font-size: 3vw;
-
-    }
-
-    .heroContainer {
-        /* justify-content: start; */
-        justify-content: space-around;
-    }
-
-    #secondRow {
-        /* margin: 0 80px; */
-        justify-content: space-around;
-    }
-
-    #gallery {
-        /* justify-content: center;
-        align-items: center; */
-        justify-content: flex-end;
-        align-items: flex-end;
-    }
-
-    img {
-        margin-left: 0px;
-    }
-
-}
-
 .mottoHorizontal {
     align-self: flex-start;
+    font-size: 2vw;
+}
+
+.mottoHorizontal div {
+    padding: 30px;
+    padding-top: 80px;
 }
 
 .mottoHorizontal,
@@ -167,7 +141,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: x-large;
+    /* font-size: x-large; */
     opacity: 0;
     -webkit-animation-name: motto;
     /* Safari 4.0 - 8.0 */
@@ -246,12 +220,50 @@ footer {
     }
 }
 
+@media only screen and (min-width: 992px) {
+
+    header {
+        font-size: 1.5rem;
+    }
+
+    .heroContainer {
+        /* justify-content: start; */
+        justify-content: space-around;
+    }
+
+    #secondRow {
+        /* margin: 0 80px; */
+        justify-content: space-around;
+    }
+
+    #gallery {
+        /* justify-content: center;
+        align-items: center; */
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    img {
+        margin-left: 0px;
+        margin-right: 10%;
+    }
+
+}
+
 @media only screen and (min-width: 1000px) {
 
     header {
-        font-size: 2vw;
+        font-size: 2rem;
     }
 }
+
+@media only screen and (min-width: 1200px) {
+
+    header {
+        font-size: 1.5rem;
+    }
+}
+
 
 
 /* opis aplikacji skrót Dominik */
@@ -264,6 +276,10 @@ footer {
     margin: 10vw auto;
 }
 
+.shortInfoHeader {
+    font-weight: 500;
+}
+
 .infoCell {
     flex-direction: column;
     justify-content: flex-start;
@@ -271,13 +287,13 @@ footer {
     text-align: center;
     display: flex;
     flex-basis: 100%;
-    margin: 20px;
-    padding: 15px;
+    margin: 40px;
+    padding: 40px 15px;
     padding-top: 40px;
     box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
-    max-width: 30vh;
-    height: 50vh;
+    /* max-width: 30vh; */
+    /* height: 50vh; */
     background-color: rgba(227, 188, 190, 0.432);
 }
 
@@ -331,9 +347,7 @@ i.fas:hover {
 
 /* Premier Borys */
 
-.premiere-main{
-
-}
+.premiere-main {}
 
 .premiere {
     display: flex;
