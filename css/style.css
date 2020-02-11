@@ -273,16 +273,18 @@ footer {
     flex-basis: 100%;
     margin: 20px;
     padding: 15px;
+    padding-top: 40px;
     box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
     max-width: 30vh;
     height: 50vh;
+    background-color: rgba(227, 188, 190, 0.432);
 }
 
 i.fas {
-    transform: scale(1.5);
+    /* transform: scale(1.5); */
     margin: 10px;
-    opacity: 0.4;
+    opacity: 0.6;
     color: teal;
     background-color: transparent;
     text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
