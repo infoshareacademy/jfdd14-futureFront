@@ -111,7 +111,8 @@ footer {
 
 
 .heroContainer {
-    background-image: url(/img/tlo.jpg);
+    background-color: rgb(227, 188, 190);
+    /* background-image: url(/img/tlo.jpg); */
     justify-content: space-around;
     padding-top: 56px;
     min-height: 100vh;
