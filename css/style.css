@@ -302,7 +302,8 @@ img {
     display: flex;
 }
 .premiere .btn-secondary{
-    width: 10vw;
+    min-width: 10vw;
+    
 }
 @media (min-width:720px) {
     body {
