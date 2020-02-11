@@ -38,6 +38,7 @@ h1 {
     font-size: small;
     font-weight: 300;
 }
+
 .shortInfoHeader {
     font-weight: 500;
 }
@@ -306,21 +307,31 @@ i.fas:hover {
 /* opis aplikacji skrót Dominik */
 
 /* opis aplikacji długi Dominik */
-.functions-flex-container{
+.functions-flex-container {
     display: block;
     text-align: center;
-    
 }
-.functions-long{
-    
+
+.functions-long {
+    min-width: 100vw;
     justify-content: center;
+    /* background-color: rgb(227, 188, 190); */
+    /* padding: 80px 0; */
+    background-image: url(/img/235.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
 }
-.functions-long-intro{
+
+.functions-long-intro {
     padding: 5vw;
 }
 
 /* Premier Borys */
 
+.premiere-main{
+
+}
 
 .premiere {
     display: flex;
@@ -329,12 +340,13 @@ i.fas:hover {
     align-items: center;
 
 }
-.premiere img{
+
+.premiere img {
     max-width: 50px;
 }
-    
 
-.premiere-main img{
+
+.premiere-main img {
     width: 100%;
     margin: 0;
 }
@@ -371,10 +383,12 @@ form .submit {
 .members {
     display: flex;
 }
-.premiere .btn-secondary{
+
+.premiere .btn-secondary {
     min-width: 10vw;
-    
+
 }
+
 @media (min-width:720px) {
     body {
         font-size: 1.5rem;
@@ -384,11 +398,13 @@ form .submit {
         display: flex;
         justify-content: center;
     }
-    .functions-flex-container{
+
+    .functions-flex-container {
         display: flex;
-        
+
     }
-    .functions-long-intro{
+
+    .functions-long-intro {
         padding: 5vw 25vw;
         text-align: center;
     }
@@ -438,7 +454,8 @@ form .submit {
 .progress {
     width: 80%;
 }
-.techCell-social{
+
+.techCell-social {
     margin-top: 30px;
 }
 
