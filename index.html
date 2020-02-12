@@ -37,39 +37,40 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#Home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Product</a>
+              <a class="nav-link" href="#Product">Product</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#About">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Team</a>
+              <a class="nav-link" href="#tech">Team</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#Premiere">Premiere</a>
             </li>
+
           </ul>
         </div>
       </nav>
     </div>
 
-    <section class="container-fluid heroContainer">
+    <section id="Home" class="container-fluid heroContainer">
       <header class="d-flex">
         <div class="subHeaderLine1">KONIEC ROZCZAROWAŃ</div>
         <div class="subHeaderLine2">GIFTmatcher - obdarowywanie nigdy nie było takie proste.</div>
       </header>
       <div class=" col-10 d-flex d-lg-none no-gutters m-0 p-0 mottoVertical">
         <div class="d-flex p-4"><strong>GIFTmatcher</strong></div>
-        <button type="button" class="btn btn-secondary">Zapraszamy na premierę</button>
+        <button type="button" class="btn btn-secondary"><a href="#Premiere">Zapraszamy na premierę</a></button>
       </div>
       <div class="d-flex row px-1" id="secondRow">
         <div class="p-0 d-none d-lg-flex col-lg-3 offset-lg-2 mottoHorizontal">
           <div class="d-flex">GIFTmatcher</div>
-          <button type="button" class="btn btn-secondary shadow">Zapraszamy na
-            premierę</button>
+          <button type="button" class="btn btn-secondary shadow"><a href="#Premiere">Zapraszamy na
+              premierę</a></button>
         </div>
         <div class="d-flex col-12 col-lg-6 p-0 m-0" id="gallery">
           <img class="d-flex" src="img/samochod.png" alt="Second slide">
@@ -78,7 +79,7 @@
       </div>
     </section>
 
-    <section class="shortInfo" id="shortInfo">
+    <section id="Product" class="shortInfo" id="shortInfo">
       <div class="infoCell col-md-4 col-xl-2">
         <i class="fas fa-hand-holding-heart fa-4x"></i>
         <div class="my-5 shortInfoHeader">Porady zakupowe</div>
@@ -99,9 +100,10 @@
         <div class="my-5 shortInfoHeader">Nieograniczona liczba list</div>
         <div>Zapisuj pomysły dla różnych znajomych i na różne okazje</div>
       </div>
+      </div>
     </section>
 
-    <section class="functions-long">
+    <section id="About" class="functions-long">
       <div class="functions-long-intro">
         Nie wiesz co kupić na prezent? Nasza aplikacja ci to ułatwi. System analizy bazujący na danych z
         portalu
@@ -170,7 +172,7 @@
 
 
 
-    <section class="premiere-main">
+    <section class="premiere-main" id="Premiere">
       <div class="premiere p-5">
         <img src="img/logo.png" alt="" class="premiere-logo pb-3">
         <h3 class="pb-3">Zapisz sie na premiere!</h3>
@@ -182,7 +184,7 @@
             Twoje dane sa bezpieczne - podany adres email bedzie uzyty tylko w celu przypomnienia Ci
             o premierze naszej aplikacji. Wyslemy tylko jeden email!
           </p>
-        </form>
+      </div>
       </div>
 
     </section>
@@ -244,6 +246,7 @@
       </div>
     </section>
 
+
     <footer class="d-flex w-100">
       <a href="http://www.example.com/default.htm">
         <i class="fab fa-facebook-square"></i>
@@ -267,5 +270,16 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"></script>
   </body>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
 
 </html>
