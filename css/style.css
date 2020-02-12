@@ -429,9 +429,9 @@ form .submit {
 }
 
 @media (min-width:720px) {
-    body {
+    /* body {
         font-size: 1.5rem;
-    }
+    } */
 
     .premiere-main {
         display: flex;
