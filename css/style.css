@@ -335,6 +335,7 @@ i.fas:hover {
 .functions-flex-container {
     display: block;
     text-align: center;
+    padding: 50px;
 }
 
 .functions-long {
@@ -442,7 +443,7 @@ form .submit {
 
     .functions-flex-container {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     .func-long-col1 {
@@ -459,17 +460,19 @@ form .submit {
     }
 
     .functions-long {
+        min-height: 100vh;
         min-width: 100vw;
-        min-height: 80vh;
         justify-content: center;
+        text-align: center;
+        font-weight: 500;
         /* background-color: rgb(227, 188, 190); */
         /* padding: 80px 0; */
-        background-image: url(/jfdd14-futureFront/img/235.jpg);
+        background-image: url(/img/235.jpg);
         background-repeat: no-repeat;
+        /* background-size: 100% auto; */
         background-size: cover;
-        background-position: center;
-        font-size: 1.2rem;
-        padding: 2vh;
+        background-position: bottom;
+        margin-bottom: 80px;
     }
 }
 
