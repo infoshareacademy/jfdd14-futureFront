@@ -53,6 +53,10 @@ h1 {
     font-weight: 300;
 }
 
+h3 {
+    font-size: small;
+    font-weight: 300;
+}
 
 #secondRow {
     flex-wrap: nowrap;
@@ -115,7 +119,7 @@ i.fab:hover {
 footer {
     justify-content: center;
     align-items: center;
-    padding: 50px 0px;
+    padding-bottom: 50px;
     font-size: 1.5vh;
     letter-spacing: 1px;
     text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -427,6 +431,10 @@ form .submit {
 
 .team h3 {
     text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
 }
 
 .members {
