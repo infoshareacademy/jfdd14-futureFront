@@ -25,6 +25,16 @@ body {
     justify-content: space-around;
 }
 
+.Premiere_button {
+  text-decoration: none;
+  color: white;
+}
+
+.Premiere_button:hover {
+  text-decoration: none;
+  color: white;
+}
+
 header {
     flex-direction: column;
     align-items: center;
