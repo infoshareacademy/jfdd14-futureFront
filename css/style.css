@@ -362,6 +362,7 @@ i.fas:hover {
     background-size: cover;
     background-position: bottom;
     margin-bottom: 80px;
+    
 }
 
 .functions-long-intro {
@@ -436,12 +437,9 @@ form .submit {
 }
 
 .team h3 {
-    text-align: center;
+  margin-top: 53px;
 }
 
-.members {
-    display: flex;
-}
 
 .premiere .btn-secondary {
     min-width: 10vw;
@@ -530,6 +528,7 @@ form .submit {
     padding: 1vh;
     height: auto;
     display: block;
+    margin: 0;
    
 }
 
