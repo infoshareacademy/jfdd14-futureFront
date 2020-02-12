@@ -129,7 +129,7 @@ footer {
     font-size: 1.5vh;
     letter-spacing: 1px;
     text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-top: 90px;
+    /* margin-top: 90px; */
 }
 
 .footerImg {
@@ -368,12 +368,19 @@ i.fas:hover {
     padding: 5vw;
     letter-spacing: 3px;
     font-weight: 500;
+    font-size: 2vh;
 }
 
 /* Premier Borys */
 
 .premiere-main {
+    height: 100vh;
     margin: 2vh;
+    background-image: url(/img/233.jpg);
+    background-repeat: no-repeat;
+    /* background-size: 100% auto; */
+    background-size: cover;
+    background-position: bottom;
 }
 
 .premiere {
@@ -382,7 +389,9 @@ i.fas:hover {
     justify-content: center;
     align-items: center;
 }
-
+.premiere h3{
+    text-align: center;
+}
 .premiere img {
     max-width: 50px;
 }
@@ -390,6 +399,10 @@ i.fas:hover {
 .premiere-main img {
     width: 100%;
     margin: 0;
+}
+
+form {
+    background: rgba(0, 128, 128, 0.233);
 }
 
 form label,
@@ -418,6 +431,8 @@ form .submit {
 
 .premiere p {
     padding: 2vh;
+    text-align: center;
+    font-size: 0.8rem;
 }
 
 .team h3 {
@@ -432,6 +447,15 @@ form .submit {
     min-width: 10vw;
 }
 
+@media (min-aspect-ratio: 16/9) {
+    .functions-long-intro {
+        padding: 2vw;
+        letter-spacing: 3px;
+        font-weight: 500;
+        font-size: 1.5vh;
+    }
+  }
+
 @media (min-width:720px) {
     /* body {
         font-size: 1.5rem;
@@ -440,16 +464,13 @@ form .submit {
     .premiere-main {
         display: flex;
         justify-content: center;
+        padding-bottom: 30vh;
     }
 
     .functions-flex-container {
         display: flex;
     }
 
-    .premiere-main {
-        display: flex;
-        justify-content: center;
-    }
 
     .functions-flex-container {
         display: flex;
@@ -477,7 +498,7 @@ form .submit {
         font-weight: 500;
         /* background-color: rgb(227, 188, 190); */
         /* padding: 80px 0; */
-        background-image: url(/img/235.jpg);
+        /* background-image: url(/img/235.jpg); */
         background-repeat: no-repeat;
         /* background-size: 100% auto; */
         background-size: cover;
@@ -495,27 +516,28 @@ form .submit {
     display: flex;
     flex-basis: 100%;
     margin: 20px;
-    padding: 5px;
+    padding: 5vh;
     box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
     max-width: 30vh;
-    height: 30vh;
-    background-color: white;
+    /* background-color: rgba(0, 128, 128, 0.2); */
+    background-color: rgba(227, 188, 190, 0.4);
+    height: auto;
 }
 
 .techCell img {
-    max-height: 70%;
-    padding: 15%;
+    width: 100%;
+    padding: 1vh;
+    height: auto;
+    display: block;
+   
 }
 
 #htmlLogo {
     transform: scale(0.88);
 }
 
-#bootstrapLogo {
-    margin: 10px 0 0;
-    transform: scale(1.4);
-}
+
 
 #xdLogo {
     transform: scale(0.88);
@@ -530,7 +552,8 @@ form .submit {
 }
 
 .tech-container {
-    background-color: rgb(227, 188, 190);
+    min-height: 100vh;
+    /* background-color: rgb(227, 188, 190); */
     padding: 5vh;
 }
 
