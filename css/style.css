@@ -346,7 +346,7 @@ i.fas:hover {
     font-weight: 500;
     /* background-color: rgb(227, 188, 190); */
     /* padding: 80px 0; */
-    background-image: url(/img/235.jpg/);
+    background-image: url(/img/235.jpg);
     background-repeat: no-repeat;
     /* background-size: 100% auto; */
     background-size: cover;
@@ -358,12 +358,19 @@ i.fas:hover {
     padding: 5vw;
     letter-spacing: 3px;
     font-weight: 500;
+    font-size: 2vh;
 }
 
 /* Premier Borys */
 
 .premiere-main {
+    height: 100vh;
     margin: 2vh;
+    background-image: url(/img/233.jpg);
+    background-repeat: no-repeat;
+    /* background-size: 100% auto; */
+    background-size: cover;
+    background-position: bottom;
 }
 
 .premiere {
@@ -380,6 +387,10 @@ i.fas:hover {
 .premiere-main img {
     width: 100%;
     margin: 0;
+}
+
+form {
+    background: rgba(0, 128, 128, 0.233);
 }
 
 form label,
@@ -408,6 +419,8 @@ form .submit {
 
 .premiere p {
     padding: 2vh;
+    text-align: center;
+    font-size: 0.8rem;
 }
 
 .team h3 {
@@ -422,6 +435,15 @@ form .submit {
     min-width: 10vw;
 }
 
+@media (min-aspect-ratio: 16/9) {
+    .functions-long-intro {
+        padding: 2vw;
+        letter-spacing: 3px;
+        font-weight: 500;
+        font-size: 1.5vh;
+    }
+  }
+
 @media (min-width:720px) {
     /* body {
         font-size: 1.5rem;
@@ -430,16 +452,13 @@ form .submit {
     .premiere-main {
         display: flex;
         justify-content: center;
+        padding-bottom: 30vh;
     }
 
     .functions-flex-container {
         display: flex;
     }
 
-    .premiere-main {
-        display: flex;
-        justify-content: center;
-    }
 
     .functions-flex-container {
         display: flex;
@@ -467,7 +486,7 @@ form .submit {
         font-weight: 500;
         /* background-color: rgb(227, 188, 190); */
         /* padding: 80px 0; */
-        background-image: url(/img/235.jpg);
+        /* background-image: url(/img/235.jpg); */
         background-repeat: no-repeat;
         /* background-size: 100% auto; */
         background-size: cover;
@@ -490,7 +509,8 @@ form .submit {
     border-radius: 25px;
     max-width: 30vh;
     height: 30vh;
-    background-color: white;
+    /* background-color: rgba(0, 128, 128, 0.2); */
+    background-color: rgba(227, 188, 190, 0.4);
 }
 
 .techCell img {
@@ -520,7 +540,7 @@ form .submit {
 }
 
 .tech-container {
-    background-color: rgb(227, 188, 190);
+    /* background-color: rgb(227, 188, 190); */
     padding: 5vh;
 }
 
