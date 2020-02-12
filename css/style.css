@@ -568,5 +568,8 @@ form .submit {
 .tech h6 {
     text-align: center;
 }
+.tech a{
+    text-decoration: none;
+}
 
 /*footer */
