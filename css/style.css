@@ -372,7 +372,9 @@ i.fas:hover {
     justify-content: center;
     align-items: center;
 }
-
+.premiere h3{
+    text-align: center;
+}
 .premiere img {
     max-width: 50px;
 }
