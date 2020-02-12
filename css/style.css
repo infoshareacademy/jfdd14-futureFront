@@ -43,6 +43,11 @@ h1 {
   font-weight: 500;
 }
 
+.Premiere_button {
+  text-decoration: none;
+  color: white;
+}
+
 #secondRow {
   flex-wrap: nowrap;
   align-items: center;
