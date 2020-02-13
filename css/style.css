@@ -272,6 +272,7 @@ footer {
         margin-left: 0px;
         margin-right: 10%;
     }
+
 }
 
 @media only screen and (min-width: 1000px) {
@@ -361,8 +362,7 @@ i.fas:hover {
     /* background-color: rgb(227, 188, 190); */
     /* padding: 80px 0; */
     background-image: url(/img/235.jpg);
-    background-repeat: no-repeat;
-    /* background-size: 100% auto; */
+    background-repeat: 
     background-size: cover;
     background-position: bottom;
     margin-bottom: 80px;
@@ -416,7 +416,8 @@ form input {
 }
 
 form input {
-    width: 15vw;
+    display: flex-box;
+    width: 30vw;
 }
 
 form .submit {
@@ -465,6 +466,10 @@ h3 {
     /* body {
         font-size: 1.5rem;
     } */
+
+    form input {
+        width: 30vw;
+    }
 
     .premiere-main {
         display: flex;
