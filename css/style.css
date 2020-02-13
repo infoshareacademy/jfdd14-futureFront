@@ -17,7 +17,15 @@ body {
     width: 100vw;
     top: 0;
     z-index: 3;
-    opacity: 0.8;
+    /* opacity: 0.8; */
+}
+
+.navbar {
+ background: rgba(0, 128, 128, 0) !important;
+}
+
+.navbar:hover {
+    background: rgba(255, 255, 255, 0.842) !important;
 }
 
 .navbar-nav {
@@ -25,14 +33,18 @@ body {
     justify-content: space-around;
 }
 
+.navbar-brand {
+    display: none;
+}
+
 .Premiere_button {
-  text-decoration: none;
-  color: white;
+    text-decoration: none;
+    color: white;
 }
 
 .Premiere_button:hover {
-  text-decoration: none;
-  color: white;
+    text-decoration: none;
+    color: white;
 }
 
 header {
@@ -101,6 +113,7 @@ img {
     /* border: 1px solid; */
 }
 
+
 #gallery {
     justify-content: center;
     align-items: center;
@@ -145,7 +158,7 @@ footer {
     background-color: rgb(227, 188, 190);
     /* background-image: url(/img/tlo.jpg); */
     justify-content: space-around;
-    padding-top: 56px;
+    /* padding-top: 56px; */
     min-height: 100vh;
     max-height: 100vh;
     display: flex;
@@ -254,6 +267,7 @@ footer {
     .heroContainer {
         /* justify-content: start; */
         justify-content: space-around;
+        padding-top: 53;
     }
 
     #secondRow {
@@ -272,6 +286,15 @@ footer {
         margin-left: 0px;
         margin-right: 10%;
     }
+
+    .navbar-brand {
+        display: flex;
+    }
+
+    .navbar {
+ background: rgba(255, 255, 255, 0.863) !important;
+}
+
 }
 
 @media only screen and (min-width: 1000px) {
@@ -366,7 +389,7 @@ i.fas:hover {
     background-size: cover;
     background-position: bottom;
     margin-bottom: 80px;
-    
+
 }
 
 .functions-long-intro {
@@ -394,9 +417,11 @@ i.fas:hover {
     justify-content: center;
     align-items: center;
 }
-.premiere h3{
+
+.premiere h3 {
     text-align: center;
 }
+
 .premiere img {
     max-width: 50px;
 }
@@ -441,7 +466,7 @@ form .submit {
 }
 
 .team h3 {
-  margin-top: 53px;
+    margin-top: 53px;
 }
 
 h3 {
@@ -459,7 +484,8 @@ h3 {
         font-weight: 500;
         font-size: 1.5vh;
     }
-  }
+}
+
 
 @media (min-width:720px) {
     /* body {
@@ -515,7 +541,7 @@ h3 {
 /* Team information  */
 
 .techCell {
-    flex-direction: column;
+    /* flex-direction: column;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -524,19 +550,38 @@ h3 {
     padding: 5vh;
     box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
-    max-width: 30vh;
+    max-width: 30vh; */
+
     /* background-color: rgba(0, 128, 128, 0.2); */
-    background-color: rgba(227, 188, 190, 0.4);
-    height: auto;
+
+    /* background-color: rgba(227, 188, 190, 0.4); */
+
+    /* background-color:  #6c757d5d; */
+
+    /* height: auto; */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-basis: 100%;
+    margin: 40px;
+    padding: 40px 15px;
+    padding-top: 40px;
+    box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    /* max-width: 30vh; */
+    /* height: 50vh; */
+    background-color: rgba(227, 188, 190, 0.432);
 }
 
 .techCell img {
-    width: 100%;
+    /* width: 100%; */
     padding: 1vh;
     height: auto;
     display: block;
     margin: 0;
-   
+
 }
 
 #htmlLogo {
@@ -575,8 +620,33 @@ h3 {
 .tech h6 {
     text-align: center;
 }
-.tech a{
+
+.tech a {
     text-decoration: none;
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+    .mottoVertical {
+        display: none !important;
+    }
+
+    .subHeaderLine1 {
+        font-size: 1rem;
+    }
+
+    .subHeaderLine2 {
+        font-size: 0.8rem;
+    }
+
+    .functions-long-intro {
+        font-size: 0.7rem;
+        padding-top: 8px;
+    }
+
+    .premiere-logo {
+        display: none;
+    }
+
 }
 
 /*footer */
