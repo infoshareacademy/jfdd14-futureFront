@@ -443,8 +443,8 @@ form input {
 }
 
 form input {
-    display: flex-box;
-    width: 30vw;
+    display: flex-box; 
+    width: 30vw; 
 }
 
 form .submit {
