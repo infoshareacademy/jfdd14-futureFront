@@ -362,7 +362,10 @@ i.fas:hover {
     /* background-color: rgb(227, 188, 190); */
     /* padding: 80px 0; */
     background-image: url(/img/235.jpg);
-    background-repeat: 
+    /*background-repeat: no-
+    form input {
+        width: 20vw;
+    }0% auto; */
     background-size: cover;
     background-position: bottom;
     margin-bottom: 80px;
