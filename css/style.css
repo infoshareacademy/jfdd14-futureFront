@@ -11,6 +11,9 @@ body {
     padding: 0;
     /* background-image: url(/img/tlo.jpg); */
 }
+html {
+    scroll-behavior: smooth;
+  }
 
 .mainMenu {
     position: fixed;
@@ -311,6 +314,8 @@ footer {
     header {
         font-size: 2rem;
     }
+    
+    
 }
 
 @media only screen and (min-width: 1200px) {
@@ -318,6 +323,7 @@ footer {
     header {
         font-size: 1.5rem;
     }
+    
 }
 
 
@@ -552,6 +558,7 @@ h3 {
         background-position: bottom;
         margin-bottom: 80px;
     }
+    
 }
 
 /* Team information  */
@@ -637,7 +644,16 @@ h3 {
 .tech a {
     text-decoration: none;
 }
-
+@media (min-width: 1000px) {
+    form input {
+        width: 30vw;
+    }
+}
+@media (min-width: 1400px) {
+    form input {
+        width: 20vw;
+    }
+}
 @media (orientation: landscape) and (max-height: 600px) {
     .mottoVertical {
         display: none !important;
