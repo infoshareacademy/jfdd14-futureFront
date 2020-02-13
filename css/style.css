@@ -27,9 +27,18 @@ html {
  background: rgba(0, 128, 128, 0) !important;
 }
 
-.navbar:hover {
+/* .navbar:hover {
+    background: rgba(255, 255, 255, 0.842) !important;
+} */
+
+.white {
     background: rgba(255, 255, 255, 0.842) !important;
 }
+
+.transparent {
+    background: rgba(255, 255, 255, 0) !important;
+}
+
 
 .navbar-nav {
     width: 100%;
