@@ -287,8 +287,6 @@ footer {
         margin-right: 10%;
     }
 
-<<<<<<< HEAD
-=======
     .navbar-brand {
         display: flex;
     }
@@ -297,8 +295,7 @@ footer {
  background: rgba(255, 255, 255, 0.863) !important;
 }
 
->>>>>>> b335a9dcdb67200f66912144b93c7038e9743ee8
-}
+
 
 @media only screen and (min-width: 1000px) {
 
@@ -653,7 +650,4 @@ h3 {
     .premiere-logo {
         display: none;
     }
-
 }
-
-/*footer */
