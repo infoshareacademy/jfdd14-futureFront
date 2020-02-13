@@ -12,6 +12,6 @@ $('body').on('click', function(){
 //     $('.navbar').addClass("white")
 // });
 
-$('.navbar').on('click', function(){
+$('.navbar-toggler').on('click', function(){
     $('.navbar').toggleClass("white")
 });
