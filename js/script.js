@@ -5,11 +5,11 @@ $(".navbar-nav>li>a").on("click", function() {
 });
 
 $("body").on("click", function() {
-  let bbb = document.querySelector(".navbar-collapse");
+  let navbarQuery = document.querySelector(".navbar-collapse");
 
   $(".navbar-collapse").collapse("hide");
 
-  if (bbb.className == "navbar-collapse collapsing") {
+  if (navbarQuery.className == "navbar-collapse collapsing") {
     $(".navbar").removeClass("white");
   }
 });
