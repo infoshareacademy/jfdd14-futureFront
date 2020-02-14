@@ -6,69 +6,17 @@
     font-weight: 300;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    /* background-image: url(/img/tlo.jpg); */
-}
 html {
     scroll-behavior: smooth;
   }
 
-.mainMenu {
-    position: fixed;
-    width: 100vw;
-    top: 0;
-    z-index: 3;
-    /* opacity: 0.8; */
-}
-
-.navbar {
- background: rgba(0, 128, 128, 0) !important;
-}
-
-/* .navbar:hover {
-    background: rgba(255, 255, 255, 0.842) !important;
-} */
-
-.white {
-    background: rgba(255, 255, 255, 0.842) !important;
-}
-
-.transparent {
-    background: rgba(255, 255, 255, 0) !important;
-}
-
-
-.navbar-nav {
-    width: 100%;
-    justify-content: space-around;
-}
-
-.navbar-brand {
-    display: none;
-}
-
-.Premiere_button {
-    text-decoration: none;
-    color: white;
-}
-
-.Premiere_button:hover {
-    text-decoration: none;
-    color: white;
-}
-
-header {
+  header {
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;
-    /* font-style: italic; */
     letter-spacing: 2px;
     padding: 10px 50px;
-    /* text-shadow: 2px 2px 8px rgba(28,12,7,0.32); */
-
 }
 
 .subHeaderLine1 {
@@ -82,6 +30,53 @@ header {
     letter-spacing: 5px;
 }
 
+.mainMenu {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 3;
+}
+
+.navbar {
+ background: rgba(0, 128, 128, 0) !important;
+}
+
+.white {
+    background: rgba(255, 255, 255, 0.842) !important;
+}
+
+.transparent {
+    background: rgba(255, 255, 255, 0) !important;
+}
+
+.navbar-nav {
+    width: 100%;
+    justify-content: space-around;
+}
+
+.navbar-brand {
+    display: none;
+}
+
+.heroContainer {
+    background-color: rgb(227, 188, 190);
+    justify-content: space-around;
+    min-height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.premiereButton {
+    text-decoration: none;
+    color: white;
+}
+
+.premiereButton:hover {
+    text-decoration: none;
+    color: white;
+}
+
 h1 {
     font-size: small;
     font-weight: 300;
@@ -90,15 +85,14 @@ h1 {
 h3 {
     font-size: small;
     font-weight: 300;
+    font-size: 1.5rem;
 }
 
-#secondRow {
+#carInviteContainer {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    /* height: auto; */
     overflow: hidden;
-    /* flex-grow: 2; */
 }
 
 img {
@@ -107,136 +101,14 @@ img {
     max-width: 80%;
     height: auto;
     margin-left: 10%;
-    /* border: 1px solid; */
-    /* object-fit: cover; */
     object-position: bottom;
-    /* float: right; */
 }
 
-.mottoVertical {
-    flex-direction: column;
-    font-size: x-large;
+#carImgContainer {
     justify-content: center;
     align-items: center;
-    /* width: 50vw; */
-    overflow: hidden;
-    align-self: center;
-    padding-top: 50px;
-    /* border: 1px solid; */
-}
-
-
-#gallery {
-    justify-content: center;
-    align-items: center;
-}
-
-i.fab {
-    transform: scale(1.5);
-    margin: 10px;
-    opacity: 0.4;
-    color: teal;
-    background-color: transparent;
-    text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: all 1.5s ease;
-}
-
-i.fab:hover {
-    color: rgba(0, 128, 128, 0.822);
-    opacity: 0.8;
-}
-
-#footerQuote {
-    margin-left: 10px;
-    font-size: 1.5vh;
-}
-
-footer {
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 50px;
-    font-size: 1.5vh;
-    letter-spacing: 1px;
-    text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /* margin-top: 90px; */
-}
-
-.footerImg {
-    opacity: 0.5;
-    transform: scale(0.8);
-}
-
-.heroContainer {
-    background-color: rgb(227, 188, 190);
-    /* background-image: url(/img/tlo.jpg); */
-    justify-content: space-around;
-    /* padding-top: 56px; */
-    min-height: 100vh;
-    max-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.mottoHorizontal {
-    align-self: flex-start;
-    font-size: 2vw;
-}
-
-.mottoHorizontal div {
-    padding: 30px;
-    padding-top: 80px;
-}
-
-.mottoHorizontal,
-.mottoVertical {
-
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* font-size: x-large; */
-    opacity: 0;
-    -webkit-animation-name: motto;
-    /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 2s;
-    /* Safari 4.0 - 8.0 */
-    animation-name: motto;
-    animation-duration: 2s;
-    animation-delay: 5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes motto {
-    from {
-        opacity: 0;
-        /* height: 100%; */
-    }
-
-    to {
-        opacity: 1;
-        /* height: 100%; */
-    }
-}
-
-/* Standard syntax */
-@keyframes motto {
-    from {
-        opacity: 0;
-        /* height: 100%; */
-    }
-
-    to {
-        opacity: 1;
-        /* height: 100%; */
-    }
-}
-
-#gallery {
     -webkit-animation-name: example;
-    /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 3s;
-    /* Safari 4.0 - 8.0 */
     animation-name: example;
     animation-duration: 3s;
     animation-delay: 1s;
@@ -244,91 +116,75 @@ footer {
     animation-timing-function: ease-in-out;
 }
 
-/* Safari 4.0 - 8.0 */
 @-webkit-keyframes example {
     from {
-        margin-left: 150%;
-        /* height: 100%; */
+        margin-left: 150%;   
     }
-
     to {
         margin-left: 0px;
-        /* height: 100%; */
     }
 }
 
-/* Standard syntax */
 @keyframes example {
     from {
         margin-left: 150%;
-        /* height: 100%; */
     }
-
     to {
         margin-left: 0px;
-        /* height: 100%; */
     }
 }
 
-@media only screen and (min-width: 992px) {
-
-    header {
-        font-size: 1.5rem;
-    }
-
-    .heroContainer {
-        /* justify-content: start; */
-        justify-content: space-around;
-        padding-top: 53;
-    }
-
-    #secondRow {
-        /* margin: 0 80px; */
-        justify-content: space-around;
-    }
-
-    #gallery {
-        /* justify-content: center;
-        align-items: center; */
-        justify-content: flex-end;
-        align-items: flex-end;
-    }
-
-    img {
-        margin-left: 0px;
-        margin-right: 10%;
-    }
-
-    .navbar-brand {
-        display: flex;
-    }
-
-    .navbar {
- background: rgba(255, 255, 255, 0.863) !important;
+.inviteVertical {
+    font-size: x-large;
+    overflow: hidden;
+    align-self: center;
+    padding-top: 50px;
 }
 
-
-
-@media only screen and (min-width: 1000px) {
-
-    header {
-        font-size: 2rem;
-    }
-    
-    
+.inviteHorizontal {
+    align-self: flex-start;
+    font-size: 2vw;
 }
 
-@media only screen and (min-width: 1200px) {
-
-    header {
-        font-size: 1.5rem;
-    }
-    
+.inviteHorizontal div {
+    padding: 30px;
+    padding-top: 80px;
 }
 
+.inviteHorizontal,
+.inviteVertical {
 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    -webkit-animation-name: motto;
+    -webkit-animation-duration: 2s;
+    animation-name: motto;
+    animation-duration: 2s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
 
-/* opis aplikacji skrót Dominik */
+@-webkit-keyframes motto {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes motto {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .shortInfo {
     display: flex;
     flex-direction: row;
@@ -336,7 +192,6 @@ footer {
     justify-content: center;
     align-content: center;
     box-shadow: none;
-    /* margin: 10vw auto; */
     min-height: 80vh;
     margin: 10vh auto;
 }
@@ -357,13 +212,10 @@ footer {
     padding-top: 40px;
     box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
-    /* max-width: 30vh; */
-    /* height: 50vh; */
     background-color: rgba(227, 188, 190, 0.432);
 }
 
 i.fas {
-    /* transform: scale(1.5); */
     margin: 10px;
     opacity: 0.6;
     color: teal;
@@ -377,53 +229,36 @@ i.fas:hover {
     opacity: 0.8;
 }
 
-/* navigation  Mateusz */
-
-/* test na branch feature-28-premiera */
-
-/* opis aplikacji skrót Dominik */
-
-/* opis aplikacji długi Dominik */
-.functions-flex-container {
+.functionLongHeaderContainer {
     display: block;
     text-align: center;
     padding: 50px;
 }
 
-.functions-long {
+.functionLongHeader {
     min-height: 100vh;
     min-width: 100vw;
     justify-content: center;
     text-align: center;
     font-weight: 500;
-    /* background-color: rgb(227, 188, 190); */
-    /* padding: 80px 0; */
     background-image: url(/img/235.jpg);
-    /*background-repeat: no-
-    form input {
-        width: 20vw;
-    }0% auto; */
     background-size: cover;
     background-position: bottom;
     margin-bottom: 80px;
-
 }
 
-.functions-long-intro {
+.functionLongHeaderText {
     padding: 5vw;
     letter-spacing: 3px;
     font-weight: 500;
     font-size: 2vh;
 }
 
-/* Premier Borys */
-
 .premiere-main {
     height: 100vh;
     margin: 2vh;
     background-image: url(/img/233.jpg);
     background-repeat: no-repeat;
-    /* background-size: 100% auto; */
     background-size: cover;
     background-position: bottom;
 }
@@ -483,105 +318,15 @@ form .submit {
     font-size: 0.8rem;
 }
 
-.team h3 {
-    margin-top: 53px;
-}
-
-h3 {
-    font-size: 1.5rem;
-}
-
 .premiere .btn-secondary {
     min-width: 10vw;
 }
 
-@media (min-aspect-ratio: 16/9) {
-    .functions-long-intro {
-        padding: 2vw;
-        letter-spacing: 3px;
-        font-weight: 500;
-        font-size: 1.5vh;
-    }
+.team h3 {
+    margin-top: 53px;
 }
 
-
-@media (min-width:720px) {
-    /* body {
-        font-size: 1.5rem;
-    } */
-
-    form input {
-        width: 30vw;
-    }
-
-    .premiere-main {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 30vh;
-    }
-
-    .functions-flex-container {
-        display: flex;
-    }
-
-
-    .functions-flex-container {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .func-long-col1 {
-        width: 30%;
-    }
-
-    .func-long-col2 {
-        width: 30%;
-    }
-
-    .functions-long-intro {
-        padding: 5vw 25vw;
-        text-align: center;
-    }
-
-    .functions-long {
-        min-height: 100vh;
-        min-width: 100vw;
-        justify-content: center;
-        text-align: center;
-        font-weight: 500;
-        /* background-color: rgb(227, 188, 190); */
-        /* padding: 80px 0; */
-        /* background-image: url(/img/235.jpg); */
-        background-repeat: no-repeat;
-        /* background-size: 100% auto; */
-        background-size: cover;
-        background-position: bottom;
-        margin-bottom: 80px;
-    }
-    
-}
-
-/* Team information  */
-
-.techCell {
-    /* flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-basis: 100%;
-    margin: 20px;
-    padding: 5vh;
-    box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 25px;
-    max-width: 30vh; */
-
-    /* background-color: rgba(0, 128, 128, 0.2); */
-
-    /* background-color: rgba(227, 188, 190, 0.4); */
-
-    /* background-color:  #6c757d5d; */
-
-    /* height: auto; */
+.teamCell {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -593,28 +338,17 @@ h3 {
     padding-top: 40px;
     box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
-    /* max-width: 30vh; */
-    /* height: 50vh; */
     background-color: rgba(227, 188, 190, 0.432);
 }
 
-.techCell img {
-    /* width: 100%; */
+.teamCell img {
     padding: 1vh;
     height: auto;
     display: block;
     margin: 0;
-
 }
 
-
-
-
-#xdLogo {
-    transform: scale(0.88);
-}
-
-.tech {
+.team {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -622,40 +356,157 @@ h3 {
     box-shadow: none;
 }
 
-.tech-container {
+.teamContainer {
     min-height: 100vh;
-    /* background-color: rgb(227, 188, 190); */
     padding: 5vh;
 }
 
-.tech-container h3 {
+.teamContainer h3 {
     text-align: center;
     padding: 5vh;
 }
 
-.techCell-social {
+.teamSocial {
     text-align: center;
 }
 
-.tech h6 {
+.team h6 {
     text-align: center;
 }
 
-.tech a {
+.team a {
     text-decoration: none;
 }
-@media (min-width: 1000px) {
+
+i.fab {
+    transform: scale(1.5);
+    margin: 10px;
+    opacity: 0.4;
+    color: teal;
+    background-color: transparent;
+    text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 1.5s ease;
+}
+
+i.fab:hover {
+    color: rgba(0, 128, 128, 0.822);
+    opacity: 0.8;
+}
+
+#footerQuote {
+    margin-left: 10px;
+    font-size: 1.5vh;
+}
+
+footer {
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    font-size: 1.5vh;
+    letter-spacing: 1px;
+    text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.footerImg {
+    opacity: 0.5;
+    transform: scale(0.8);
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .functionLongHeaderText {
+        padding: 2vw;
+        letter-spacing: 3px;
+        font-weight: 500;
+        font-size: 1.5vh;
+    }
+}
+
+@media (min-width:720px) {
+  
     form input {
         width: 30vw;
+        max-width: 370px;
     }
-}
-@media (min-width: 1400px) {
-    form input {
-        width: 20vw;
+
+    .premiere-main {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30vh;
     }
+
+    .functionLongHeaderContainer {
+        display: flex;
+    }
+
+    .functionLongHeaderContainer {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .functionsLongFirstColumn {
+        width: 30%;
+    }
+
+    .func-long-col2 {
+        width: 30%;
+    }
+
+    .functionLongHeaderText {
+        padding: 5vw 25vw;
+        text-align: center;
+    }
+
+    .functionLongHeader {
+        min-height: 100vh;
+        min-width: 100vw;
+        justify-content: center;
+        text-align: center;
+        font-weight: 500;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        margin-bottom: 80px;
+    }
+    
 }
+
+@media only screen and (min-width: 992px) {
+
+    header {
+        font-size: 1.5rem;
+    }
+
+    .heroContainer {
+        justify-content: space-around;
+        padding-top: 53;
+    }
+
+    #carInviteContainer {
+        justify-content: space-around;
+    }
+
+    #carImgContainer {
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    img {
+        margin-left: 0px;
+        margin-right: 10%;
+    }
+
+    .navbar-brand {
+        display: flex;
+    }
+
+    .navbar {
+ background: rgba(255, 255, 255, 0.863) !important;
+    }
+
+}
+
 @media (orientation: landscape) and (max-height: 600px) {
-    .mottoVertical {
+    .inviteVertical {
         display: none !important;
     }
 
@@ -667,13 +518,12 @@ h3 {
         font-size: 0.8rem;
     }
 
-    .functions-long-intro {
+    .functionLongHeaderText {
         font-size: 0.7rem;
         padding-top: 8px;
     }
 
-    .premiere-logo {
+    .PremiereLogo {
         display: none;
     }
-
-}}
+}

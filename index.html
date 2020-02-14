@@ -16,14 +16,10 @@
   <script src="js/script.js" defer></script>
 
   <title>Document</title>
-  <!-- <link rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+
 </head>
 
 <body>
-
-  <body>
 
     <div class="mainMenu">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -54,33 +50,34 @@
       </nav>
     </div>
 
-    <div class="Nav_id_position" id="Home"></div>
+    <div class="navIdPositioner" id="Home"></div>
 
     <section class="container-fluid heroContainer">
       <header class="d-flex">
         <div class="subHeaderLine1">KONIEC ROZCZAROWAŃ</div>
         <div class="subHeaderLine2">GIFTmatcher - obdarowywanie nigdy nie było takie proste.</div>
       </header>
-      <div class=" col-10 d-flex d-lg-none no-gutters m-0 p-0 mottoVertical">
+      <div class=" col-10 d-flex d-lg-none no-gutters m-0 p-0 inviteVertical">
         <div class="d-flex p-4"><strong>GIFTmatcher</strong></div>
-        <button type="button" class="btn btn-secondary" id="buttonFront"><a class="Premiere_button" href="#Premiere">Zapraszamy na
+        <button type="button" class="btn btn-secondary" id="buttonFront"><a class="premiereButton"
+            href="#Premiere">Zapraszamy na
             premierę</a></button>
       </div>
-      <div class="d-flex row px-1" id="secondRow">
-        <div class="p-0 d-none d-lg-flex col-lg-3 offset-lg-2 mottoHorizontal">
+      <div class="d-flex row px-1" id="carInviteContainer">
+        <div class="p-0 d-none d-lg-flex col-lg-3 offset-lg-2 inviteHorizontal">
           <div class="d-flex">GIFTmatcher</div>
           <button type="button" class="btn btn-secondary shadow">
-            <a class="Premiere_button" href="#Premiere">Zapraszamy na premierę</a>
+            <a class="premiereButton" href="#Premiere">Zapraszamy na premierę</a>
           </button>
         </div>
-        <div class="d-flex col-12 col-lg-6 p-0 m-0" id="gallery">
-          <img class="d-flex" src="img/samochod.png" alt="Second slide" id="hearoImgAnime">
+        <div class="d-flex col-12 col-lg-6 p-0 m-0" id="carImgContainer">
+          <img class="d-flex" src="img/samochod.png" alt="PinkCar" id="carImg">
         </div>
       </div>
       </div>
     </section>
 
-    <div class="Nav_id_position" id="Product"></div>
+    <div class="navIdPositioner" id="Product"></div>
 
     <section class="shortInfo" id="shortInfo">
       <div class="infoCell col-md-4 col-xl-2">
@@ -106,10 +103,10 @@
       </div>
     </section>
 
-    <div class="Nav_id_position" id="About"></div>
+    <div class="navIdPositioner" id="About"></div>
 
-    <section class="functions-long">
-      <div class="functions-long-intro">
+    <section class="functionLongHeader">
+      <div class="functionLongHeaderText">
         Nie wiesz co kupić na prezent? Nasza aplikacja ci to ułatwi. System analizy bazujący na danych z
         portalu
         społecznościowego Facebook, pozwoli zawęzić obszar poszukiwań. Otrzymasz propozycję dopasowaną
@@ -118,22 +115,22 @@
       </div>
     </section>
 
-    <div class="functions-flex-container">
-      <div class="func-long-col1">
-        <div class="func-long-1">
+    <div class="functionLongHeaderContainer">
+      <div class="functionsLongFirstColumn">
+        <div>
           <i class="fas fa-gift fa-4x"></i>
           <p>Korzystaj z automatycznych powiadomień.<br>
             Nasza aplikacja poinformuje Cię jeżeli poszukiwany przez Ciebie produkt pojawi się w okolicznym sklepie,
             bądź na aukcji</p>
         </div>
-        <div class="func-long-2">
+        <div>
           <i class="fas fa-save fa-4x"></i>
           <p>Twórz własne listy z prezentami oraz zapisuj je do późniejszego wykorzystania.<br>
             Dziel się listą prezentów ze znajomymi i rodziną.<br>
             Dodawaj własne propozycję prezentów do list udostępnionych przez innych
           </p>
         </div>
-        <div class="func-long-3">
+        <div>
           <i class="fas fa-microphone-alt fa-4x"></i>
           <p>Synchronizuj aplikacje z Siri i Amazon. <br>
             Korzystaj z Siri aby wyszukiwać i dodawać prezenty nawet gdy masz zajęte ręce.<br>
@@ -141,23 +138,23 @@
           </p>
         </div>
       </div>
-      <div class="func-long-col2">
-        <div class="func-long-5">
+      <div class="functionsLongSecondColumn">
+        <div>
           <i class="fas fa-mobile-alt fa-4x"></i>
           <p>Korzystaj z mobilnej aplikacji. <br>
             Dzięki temu masz dostęp do listy swoich prezentów niezależnie od lokalizacji w której się znajdujesz.</p>
         </div>
-        <div class="func-long-6">
+        <div>
           <i class="fas fa-gavel fa-4x"></i>
           <p>Synchronizacja z najbardziej popularnymi serwisami aukcyjnymi takimi jak ebay.com czy allegro.pl. <br>
             Dzięku temu możesz wyszukać produkty po okazyjnych cenach.</p>
         </div>
-        <div class="func-long-7">
+        <div>
           <i class="fas fa-store fa-4x"></i>
           <p>Wyszukuj lokalnie punktów w których możesz nabyć poszukiwany produkt.<br>
             Jeżeli wspierasz lokalny handel lub preferujesz zakup osobiście.</p>
         </div>
-        <div class="func-long-8">
+        <div>
           <i class="fas fa-camera fa-4x"></i>
           <p>Wykorzystuj swój aparat w celu łatwiejszego wyszukiwania produktów. <br>
             Jeżeli nie potrafisz zidentyfikować produktu nasza aplikacja zrobi to za Ciebie.</p>
@@ -165,14 +162,15 @@
       </div>
     </div>
 
-    <div class="Nav_id_position" id="Premiere"></div>
-    <section class="premiere-main" id="Premiere">
+    <div class="navIdPositioner" id="Premiere"></div>
+
+    <section class="premiere-main">
       <div class="premiere p-5">
-        <img src="img/logo.png" alt="" class="premiere-logo pb-3">
+        <img src="img/logo.png" alt="" class="PremiereLogo pb-3">
         <h3 class="pb-3">Zapisz się na premiere!</h3>
         <form class="premiere" action="" method="post">
-          <label for="email" class="premiere-label">Twoj email:</label>
-          <input type="email" class="premiere-label">
+          <label for="email" class="PremiereEmailLabel">Twoj email:</label>
+          <input type="email" class="PremiereEmailLabel">
           <button type="button" class="btn btn-secondary shadow">Zapisz mnie!</button>
           <p>
             Twoje dane sa bezpieczne - podany adres email bedzie uzyty tylko w celu przypomnienia Ci
@@ -182,14 +180,14 @@
       </div>
     </section>
 
-    <div class="Nav_id_position" id="Team"></div>
+    <div class="navIdPositioner" id="Team"></div>
 
-    <section class="tech-container" id="tech">
+    <section class="teamContainer">
       <h3>Poznaj nasz zespół</h3>
-      <div class="tech">
-        <div class="techCell col-md-4 col-xl-2">
-          <img class="rounded-circle" src="img/bartek.jpg" id="bootstrapLogo" alt="Bartek zdjecie" />
-          <div class="techCell-social">
+      <div class="team">
+        <div class="teamCell col-md-4 col-xl-2">
+          <img class="rounded-circle" src="img/bartek.jpg" alt="Bartek zdjecie" />
+          <div class="teamSocial">
             <h6>Bartek Ciesielski</h6>
             <a href="https://github.com/bartek-ciesielski" target="_blank">
               <i class="fab fa-github"></i>
@@ -199,9 +197,9 @@
             </a>
           </div>
         </div>
-        <div class="techCell col-md-4 col-xl-2"">
-          <img class ="rounded-circle" src="img/mateusz3.jpg" alt="Mateusz zdjecie" />
-          <div class="techCell-social">
+        <div class="teamCell col-md-4 col-xl-2">
+          <img class="rounded-circle" src="img/mateusz3.jpg" alt="Mateusz zdjecie" />
+          <div class="teamSocial">
             <h6>Mateusz Kujawinski</h6>
             <a href="https://github.com/Kujawdett" target="_blank">
               <i class="fab fa-github"></i>
@@ -211,33 +209,33 @@
             </a>
           </div>
         </div>
-        <div class="techCell col-md-4 col-xl-2""> 
-          <img class="rounded-circle" src="img/dominik.jpg"  alt="Dominik zdjecie" />
-          <div class="techCell-social">
-            <h6>Dominik Pilawski</h6>
-            <a href="https://github.com/DominikPilawski">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="www.linkedin.com/in/dominik-pilawski">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-        </div>
-        <div class="techCell col-md-4 col-xl-2"">
-          <img class="rounded-circle" src="img/borys.jpg"  alt="Borys zdjecie" />
-          <div class="techCell-social">
-            <h6>Borys Maciuch</h6>
-            <a href="https://github.com/BorysMaciuch" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/borys-maciuch-943b78117/" target="_blank">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
+        <div class="teamCell col-md-4 col-xl-2"> 
+          <img class="rounded-circle" src="img/dominik.jpg" alt="Dominik zdjecie" />
+        <div class="teamSocial">
+          <h6>Dominik Pilawski</h6>
+          <a href="https://github.com/DominikPilawski">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="www.linkedin.com/in/dominik-pilawski">
+            <i class="fab fa-linkedin"></i>
+          </a>
         </div>
       </div>
+      <div class="teamCell col-md-4 col-xl-2">
+        <img class="rounded-circle" src="img/borys.jpg" alt="Borys zdjecie" />
+        <div class="teamSocial">
+          <h6>Borys Maciuch</h6>
+          <a href="https://github.com/BorysMaciuch" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/borys-maciuch-943b78117/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+      </div>
     </section>
-    
+
     <footer class="d-flex w-100">
       <a href="http://www.example.com/default.htm">
         <i class="fab fa-facebook-square"></i>
@@ -260,7 +258,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"></script>
-      <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" else { return false; href="css/style.css" />
+
   </body>
 
 </html>
