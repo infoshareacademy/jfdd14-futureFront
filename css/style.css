@@ -353,12 +353,11 @@ form .submit {
     box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
     background-color: rgba(227, 188, 190, 0.432);
-
     transition: all 0.6s ease;
 }
 
 .teamCell:hover {
-    transform: scale(1.1);
+    transform: scale(1.25);
     transition: all 0.6s ease;
 }
 
@@ -407,7 +406,7 @@ i.fab {
     color: teal;
     background-color: transparent;
     text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: all 1.5s ease;
+    transition: all 0.6s ease;
 }
 
 i.fab:hover {
