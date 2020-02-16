@@ -284,7 +284,9 @@ i.fas:hover {
 }
 
 form {
-    background: rgba(0, 128, 128, 0.233);
+    /* background: rgba(0, 128, 128, 0.233); */
+    background: rgba(190, 201, 201, 0.233);
+
 }
 
 form label,
@@ -357,7 +359,7 @@ form .submit {
 }
 
 .teamContainer {
-    min-height: 100vh;
+    min-height: 80vh;
     padding: 5vh;
 }
 
@@ -443,13 +445,12 @@ footer {
         justify-content: space-around;
     }
 
-    .functionsLongFirstColumn {
+    .functionsLongFirstColumn,
+    .functionsLongSecondColumn  {
         width: 30%;
     }
 
-    .func-long-col2 {
-        width: 30%;
-    }
+
 
     .functionLongHeaderText {
         padding: 5vw 25vw;
