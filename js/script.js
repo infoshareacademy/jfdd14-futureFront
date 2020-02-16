@@ -5,13 +5,15 @@ $('.navbar-nav>li>a').on('click', function(){
 
 $('body').on('click', function(){
     $('.navbar-collapse').collapse('hide');
-    // $('.navbar').removeClass("white")
+    // $('.navbar').toggleClass("white");
 });
 
-// $('.navbar').on('click', function(){
-//     $('.navbar').addClass("white")
+
+// $('.navbar-nav>li>a').on('click', function(){
+//     $('.navbar').toggleClass("white")
 // });
 
-$('.navbar').on('click', function(){
-    $('.navbar').toggleClass("white")
-});
+
+// $('.navbar-toggler').on('click', function(){
+//     $('.navbar').toggleClass("white")
+// });
