@@ -417,13 +417,13 @@ i.fab:hover {
 
 #footerQuote {
     margin-left: 10px;
-    font-size: 1.5vh;
+    font-size: 1rem;
 }
 
 footer {
     justify-content: center;
     align-items: center;
-    padding-bottom: 50px;
+    padding-bottom: 10vh;
     font-size: 1.5vh;
     letter-spacing: 1px;
     text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
