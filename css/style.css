@@ -423,7 +423,7 @@ i.fab:hover {
 footer {
     justify-content: center;
     align-items: center;
-    padding-bottom: 10vh;
+    padding-bottom: 15vh;
     font-size: 1.5vh;
     letter-spacing: 1px;
     text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
