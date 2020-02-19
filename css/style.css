@@ -342,24 +342,24 @@ form .submit {
 
 .teamCell {
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     text-align: center;
     display: flex;
     flex-basis: 100%;
     margin: 40px;
-    padding: 40px 15px;
-    padding-top: 40px;
+    /* padding: 40px 15px; */
+    /* padding-top: 40px; */
     box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
     background-color: rgba(227, 188, 190, 0.432);
     transition: all 0.6s ease;
 }
 
-.teamCell:hover {
+/* .teamCell:hover {
     transform: scale(1.25);
     transition: all 0.6s ease;
-}
+} */
 
 .teamCell img {
     padding: 1vh;
@@ -389,6 +389,7 @@ form .submit {
 
 .teamSocial {
     text-align: center;
+    z-index: 3;
 }
 
 .team h6 {

@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,400i,700&display=swap" rel="stylesheet" />
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/animation.css" />
   <script src="js/script.js" defer></script>
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon_io/apple-touch-icon.png">
@@ -79,7 +80,7 @@
         <img class="d-flex" src="img/samochod.png" alt="PinkCar" id="carImg">
       </div>
     </div>
-    </div>
+    </!DOCTYPE>
   </section>
 
   <div class="navIdPositioner" id="Product"></div>
@@ -191,18 +192,31 @@
   <section class="teamContainer">
     <h3>Poznaj nasz zespół</h3>
     <div class="team">
-      <div class="teamCell col-md-4 col-xl-2" id="spinner">
-        <img class="rounded-circle" src="img/Bartek_BW.jpg" alt="Bartek zdjecie" />
-        <div class="teamSocial">
+
+      <div class="teamCell col-md-4 col-xl-2 flip-card-inner" id="spinner">
+
+        <div class="flip-card-front p-0 m-0 d-flex justify-content-center">
+          <img class="rounded-circle" src="img/Bartek_BW.jpg" alt="Bartek zdjecie" />
           <h6>Bartek Ciesielski</h6>
+        </div>
+
+        <div class="teamSocial flip-card-back">
+
           <a href="https://github.com/bartek-ciesielski" target="_blank">
-            <i class="fab fa-github"></i>
+            <i class="fab fa-github fa-2x p-2"></i>
           </a>
-          <a href="https://www.linkedin.com/in/bartek-ciesielski-b40782175/" target="_blank    ">
-            <i class="fab fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/bartek-ciesielski-b40782175/" target="_blank">
+            <i class="fab fa-linkedin fa-2x p-2"></i>
           </a>
         </div>
+
       </div>
+
+
+
+
+
+
       <div class="teamCell col-md-4 col-xl-2">
         <img class="rounded-circle" src="img/Mateusz_BW.jpg" alt="Mateusz zdjecie" />
         <div class="teamSocial">
