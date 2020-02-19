@@ -417,9 +417,20 @@ i.fab:hover {
 /* COOKIES */
 
 .cookies {
-    background-color: red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(207, 155, 158);
+    z-index: 2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+    padding: 1vh;
 
 }
+/* end COOKIES */
 
 #footerQuote {
     margin-left: 10px;
