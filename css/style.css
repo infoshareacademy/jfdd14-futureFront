@@ -414,6 +414,13 @@ i.fab:hover {
     opacity: 0.8;
 }
 
+/* COOKIES */
+
+.cookies {
+    background-color: red;
+
+}
+
 #footerQuote {
     margin-left: 10px;
     font-size: 1rem;
