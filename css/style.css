@@ -436,11 +436,16 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20vh;
+    height: auto;
     background-color: red;
     margin: 0;
     padding: 0;
     
+}
+
+.calculatorDiscount{
+    display: flex;
+    flex-direction: column;
 }
 
 @media (min-aspect-ratio: 16/9) {
