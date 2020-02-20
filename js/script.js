@@ -32,6 +32,13 @@ function testing() {
 
 }
 
+const discount = document.querySelector('#disc1');
+discount.addEventListener('change',e => {
+  if(e.target.checked) {
+    calculatorPrice.innerHTML = 5;
+  }
+});
+
 
 
 
