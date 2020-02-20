@@ -24,7 +24,7 @@ var slider = document.querySelector('#myRange');
 var calculatorPrice = document.querySelector('.calculatorPrice');
 
 
-calculatorPrice.innerHTML = `${slider.value}$;` 
+calculatorPrice.innerHTML = `${slider.value}$` 
 
 
 function testing() {
@@ -32,14 +32,34 @@ function testing() {
 
 }
 
-const discount = document.querySelector('#disc1');
-discount.addEventListener('change',e => {
+const discount1 = document.querySelector('#disc1');
+/* discount1.addEventListener('change',e => {
   if(e.target.checked) {
     calculatorPrice.innerHTML = 5;
   }
+}); */
+const discount2 = document.querySelector('#disc2');
+discount2.addEventListener('change',e => {
+  if(e.target.checked) {
+    calculatorPrice.innerHTML = 6;
+  }
+});
+const discount3 = document.querySelector('#disc3');
+discount3.addEventListener('change',e => {
+  if(e.target.checked) {
+    calculatorPrice.innerHTML = 7;
+  }
 });
 
+function discount() {
+  discount1.addEventListener('change',e => {
+    if(e.target.checked) {
+      calculatorPrice.innerHTML = 5;
+      console.log(e.target.checked)
+    }
+    if(e.target.checked == false) {
+      calculatorPrice.innerHTML = `${slider.value}$`;
+    }
 
-
-
-
+  });
+}
