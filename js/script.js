@@ -17,3 +17,22 @@ $("body").on("click", function() {
 $(".navbar-toggler").on("click", function() {
   $(".navbar").toggleClass("white");
 });
+
+
+//price calculator
+var slider = document.querySelector('#myRange');
+var calculatorPrice = document.querySelector('.calculatorPrice');
+
+
+calculatorPrice.innerHTML = `${slider.value}$;` 
+
+
+function testing() {
+  calculatorPrice.innerHTML = `${slider.value}$`;
+
+}
+
+
+
+
+

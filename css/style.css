@@ -432,6 +432,16 @@ footer {
     opacity: 0.5;
     transform: scale(0.8);
 }
+.calculator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    background-color: red;
+    margin: 0;
+    padding: 0;
+    
+}
 
 @media (min-aspect-ratio: 16/9) {
     .functionLongHeaderText {
