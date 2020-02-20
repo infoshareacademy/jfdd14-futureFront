@@ -171,20 +171,35 @@
 
   <div class="navIdPositioner" id="Premiere"></div>
 
-  <section class="premiere-main m-0">
-    <div class="premiere p-5">
+  <section class="premiere-main m-0 d-flex">
+    <div class="premiere p-3 col-5 offset-6 d-none d-md-flex">
       <img src="img/logo.png" alt="" class="PremiereLogo pb-3">
-      <h3 class="pb-3">Zapisz się na premiere!</h3>
+      <h3 class="pb-3 mb-2">Zapisz się na premiere!</h3>
       <form class="premiere" action="" method="post">
-        <label for="email" class="PremiereEmailLabel">Twoj email:</label>
+        <label for="email" class="PremiereEmailLabel m-0 p-0">Twoj email:</label>
         <input type="email" class="PremiereEmailLabel">
-        <button type="button" class="btn btn-secondary shadow">Zapisz mnie!</button>
+        <button type="button" class="btn btn-secondary shadow m-4">Zapisz mnie!</button>
         <p>
           Twoje dane sa bezpieczne - podany adres email bedzie uzyty tylko w celu przypomnienia Ci
           o premierze naszej aplikacji. Wyslemy tylko jeden email!
         </p>
+      </form>
     </div>
+
+    <div class="premiere mt-5 p-1 d-flex d-md-none justify-content-start">
+      <img src="img/logo.png" alt="" class="PremiereLogo pb-3">
+      <h3 class="pb-3">Zapisz się na premiere!</h3>
+      <form class="premiere" action="" method="post">
+        <label for="email" class="PremiereEmailLabel m-0 p-0">Twoj email:</label>
+        <input type="email" class="PremiereEmailLabel">
+        <button type="button" class="btn btn-secondary shadow m-4">Zapisz mnie!</button>
+        <p>
+          Twoje dane sa bezpieczne - podany adres email bedzie uzyty tylko w celu przypomnienia Ci
+          o premierze naszej aplikacji. Wyslemy tylko jeden email!
+        </p>
+      </form>
     </div>
+
   </section>
 
   <div class="navIdPositioner" id="Team"></div>

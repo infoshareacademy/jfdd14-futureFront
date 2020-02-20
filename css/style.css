@@ -296,7 +296,7 @@ i.fas:hover {
 
 form {
     /* background: rgba(0, 128, 128, 0.233); */
-    background: rgba(255, 255, 255, 0.233);
+    /* background: rgba(255, 255, 255, 0.233); */
     border-radius: 25px;
 
 }
@@ -308,7 +308,7 @@ form input {
 
 form input {
     display: flex-box;
-    width: 30vw;
+    width: 50vw;
 }
 
 form .submit {
@@ -452,6 +452,7 @@ footer {
 
     .premiere-main {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         margin: 0;
         padding-bottom: 30vh;
