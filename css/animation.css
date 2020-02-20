@@ -1,52 +1,24 @@
- /* #stage {
-    margin: 1em auto;
-    -webkit-perspective: 1200px;
-    -moz-perspective: 1200px;
-    -ms-perspective: 1200px;
-    perspective: 1200px;
-  } */
 
-
-  #spinner:hover {
-    -webkit-animation-name: spinner;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-duration: 2s;
-
-    animation-name: spinner;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
+  
+  .flipCardInner {
+    transition: transform 0.6s;
     transform-style: preserve-3d;
-    animation-play-state: running;
+    perspective: 1000px;
   }
-
-  #spinner{
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
+  
+  .flipCardInner:hover {
+    transform: rotateY(180deg);
   }
-
-  /* WebKit and Opera browsers */
-  @-webkit-keyframes spinner {
-    from { -webkit-transform: rotateY(0deg);    }
-    to   { -webkit-transform: rotateY(-360deg); }
+  
+  .flipCardFront, .flipCardBack {
+    flex-direction: column;
+    align-items: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
-
-  /* all other browsers */
-  @keyframes spinner {
-    from {
-      -moz-transform: rotateY(0deg);
-      -ms-transform: rotateY(0deg);
-      transform: rotateY(0deg);
-    }
-    to {
-      -moz-transform: rotateY(-360deg);
-      -ms-transform: rotateY(-360deg);
-      transform: rotateY(-90deg);
-    }
+   
+  .flipCardBack {
+    position: absolute;
+    z-index: 4;
+    transform: rotateY(180deg);
   }
