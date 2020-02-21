@@ -1,22 +1,38 @@
+const navbar = document.querySelector('.navbar');
+const navbarCollapse = document.querySelector('.navbar-collapse');
+const navbarToggler = document.querySelector('#btnToggler');
+const body = document.querySelector('body');
 $(".navbar-nav>li>a").on("click", function() {
   $(".navbar-collapse").collapse("hide");
-  // $('.navbar').addClass("transparent");
-  $(".navbar").toggleClass("white");
 });
-
+  //$('.navbar').addClass("transparent");
+  /* $(".navbar").toggleClass("white"); 
+});
+/* 
 $("body").on("click", function() {
   let navbarQuery = document.querySelector(".navbar-collapse");
 
   $(".navbar-collapse").collapse("hide");
 
   if (navbarQuery.className == "navbar-collapse collapsing") {
-    $(".navbar").removeClass("white");
+    navbar.classList.remove("white");
   }
-});
+}); */
+body.addEventListener('click', function() {
+  navbarCollapse.collapse("hide");
+  if (navbarCollapse.className == "navbar-collapse collapsing") {
+    navbar.classList.remove("white");
+  }
+})
 
-$(".navbar-toggler").on("click", function() {
+/* $(".navbar-toggler").on("click", function() {
   $(".navbar").toggleClass("white");
-});
+}); */
+
+navbarToggler.addEventListener('click',function(){
+  console.log('bbb');
+  navbar.classList.add('white');
+})
 
 
 //price calculator
