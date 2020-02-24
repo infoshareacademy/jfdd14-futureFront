@@ -149,6 +149,97 @@ img {
         margin-left: 0px;
     }
 }
+/* Gallery */
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  .slideshow-container img {
+    max-width: 100%
+  }
+  
+  .mySlides {
+    display: none;
+  }
+
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #c9539c;
+  }
+  
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 1,5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+/* End of gallery*/
 
 .inviteVertical {
     font-size: x-large;
@@ -203,42 +294,6 @@ img {
     }
 }
 
-.shortInfo {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    box-shadow: none;
-    min-height: 80vh;
-    margin: 10vh auto;
-}
-
-.shortInfoHeader {
-    font-weight: 500;
-}
-
-.infoCell {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    flex-basis: 100%;
-    margin: 40px;
-    padding: 40px 15px;
-    padding-top: 40px;
-    box-shadow: 0px 6px 19px 0px rgb(0, 0, 0, 0.1);
-    border-radius: 25px;
-    background-color: rgba(227, 188, 190, 0.432);
-
-    transition: all 0.6s ease;
-}
-
-/* .infoCell:hover {
-    transform: scale(1.1);
-    transition: all 0.6s ease;
-} */
 
 i.fas {
     margin: 10px;
@@ -362,18 +417,11 @@ form .submit {
     display: flex;
     flex-basis: 100%;
     margin: 40px;
-    /* padding: 40px 15px; */
-    /* padding-top: 40px; */
     box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
     background-color: rgba(227, 188, 190, 0.432);
     transition: all 0.6s ease;
 }
-
-/* .teamCell:hover {
-    transform: scale(1.25);
-    transition: all 0.6s ease;
-} */
 
 .teamCell img {
     padding: 1vh;
