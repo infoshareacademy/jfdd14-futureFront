@@ -269,7 +269,7 @@ img {
     -webkit-animation-duration: 2s;
     animation-name: motto;
     animation-duration: 2s;
-    animation-delay: 5s;
+    /* animation-delay: 1s; */
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
 }
@@ -365,7 +365,7 @@ i.fas:hover {
 
 form {
     /* background: rgba(0, 128, 128, 0.233); */
-    background: rgba(255, 255, 255, 0.233);
+    /* background: rgba(255, 255, 255, 0.233); */
     border-radius: 25px;
 
 }
@@ -377,7 +377,7 @@ form input {
 
 form input {
     display: flex-box;
-    width: 30vw;
+    width: 50vw;
 }
 
 form .submit {
@@ -456,6 +456,7 @@ form .submit {
 
 .team h6 {
     text-align: center;
+    font-size: 1rem !important;
 }
 
 .team a {
@@ -532,6 +533,7 @@ footer {
 
     .premiere-main {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         margin: 0;
         padding-bottom: 30vh;
@@ -604,6 +606,10 @@ footer {
     .navbar {
         background: rgba(255, 255, 255, 0.863) !important;
     }
+    .functionLongHeaderText {
+        font-size: 1.5rem;
+        padding-top: 80px;
+    }
 
 }
 
@@ -621,7 +627,7 @@ footer {
     }
 
     .functionLongHeaderText {
-        font-size: 0.7rem;
+        font-size: 1rem;
         padding-top: 8px;
     }
 
