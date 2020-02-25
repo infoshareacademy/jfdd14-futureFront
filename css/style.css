@@ -254,13 +254,13 @@ i.fas:hover {
     opacity: 0.8;
 }
 
-/* .functionLongHeaderContainer {
+.functionLongHeaderContainer {
     display: flex;
     flex-wrap: wrap;
    flex-basis: 50%;
     text-align: center;
     padding: 50px;
-} */
+}
 
 .smallContainers {
 width: 50vw;
