@@ -286,3 +286,14 @@ position: absolute;
   /* .monster {
     animation: play 5s steps(10) infinite;
   } */
+
+  .score {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 30px;
+      color: rgba(227, 188, 190);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      font-weight: bolder;
+  }
