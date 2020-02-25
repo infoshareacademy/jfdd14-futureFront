@@ -3,6 +3,9 @@ console.log("start")
 
 
 const jump = function(){
+
+let hero = document.querySelector("#hero");
+
 let metrNaPix = 19.2; //wspolczynik dlugosci obrazu dla 1460
 
 
@@ -26,11 +29,12 @@ setInterval(function () {
 
       console.log(x_coord, y_coord, speed_x, speed_y);
       speed_y -= 10 * time_step * metrNaPix * metrNaPix;
-      let ball = document.querySelector(".hero");
-      ball.style.top = `${y_coord}px`;
-      ball.style.left = `${x_coord}px`;
-      console.log(ball.style.top = `${y_coord}px`, "ball y");
-      console.log(ball.style.left = `${x_coord}px`, "ball x");
+    //   let hero = document.querySelector("#hero");
+      hero.style.top = `${y_coord}px`;
+      hero.style.left = `${x_coord}px`;
+      console.log(y_coord, "coord y");
+      console.log(hero.style.left = `${x_coord}px`, "ball x");
+      console.log(speed_y, "speed y");
       // in one second the speed has changed 9.81m/s
 
       // Final stage: ball shape, mass and viscosity of air causes a counter force
@@ -43,17 +47,39 @@ setInterval(function () {
 
       speed_x *= 0.99;
       speed_y *= 0.99;
+
+    //   console.log(parseInt(hero.style.top), "style to hero")
+    //   if( parseInt(hero.style.top) == 245){
+    //       hero.classList.remove("heroFlying")
+
+          console.log(parseInt(hero.style.top), "style to hero")
+          if( parseInt(y_coord) > 244){
+              hero.classList.remove("heroFlying")
    }
+}
 }, 1000 / fps);
+
+
 }
 
-jump()
+// jump()
 
 document.addEventListener('keydown', function(e){
     if(e.key == 'b') {
 console.log("jump");
-let hero = document.querySelector(".hero");
-hero.style = `background-image: url("/img/game/sprite_sheet/__jet_pack_man_no_weapon_white_helmet_flying.png");`
+let hero = document.querySelector("#hero");
+hero.classList.add("heroFlying")
         jump();
     }
     });
+
+
+//     setInterval(function(){
+//         console.log("2 interwal");
+//         let hero = document.querySelector("#hero");
+//         console.log(hero.style.top, "style to hero")
+//         if( hero.style.top == "245.055px"){
+//             hero.classList.remove("heroFlying")
+//         }
+
+// }, 100);
