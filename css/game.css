@@ -20,6 +20,16 @@ body{
     background-position: bottom; */
 }
 
+/* .gameCanva{
+    width: 142vh;
+    height: 80vh;
+    position: absolute;
+    top: 10vh;
+    left: calc(142vh/2);
+    background-color: lawngreen;
+    z-index:5;
+} */
+
 .area {
     width: 100vw;
     height: 100vh;
@@ -182,8 +192,9 @@ position: absolute;
     position: absolute;
     /* transform: scaleX(-1); */
     transform: scale(-0.6, 0.6);
+
     /* transform-origin: left center; */
-    /* animation: slide-left 3s forwards; */
+    animation: slide-left 3s forwards;
     /* animation: scrollGood 5s linear infinite; */
 
 }

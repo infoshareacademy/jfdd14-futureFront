@@ -3,10 +3,19 @@ const ctx = canvas.getContext("2d");
 const scale = 20;
 const rows = canvas.height / scale;
 const columns = canvas.width / scale;
+const checkCollision = (rect1, rect2) => {
 
+
+  return (rect1.x < rect2.x + rect2.width &&
+    rect1.x + rect1.width > rect2.x &&
+    rect1.y < rect2.y + rect2.height &&
+    rect1.y + rect1.height > rect2.y)
+  }
 class Snake {
   velX = scale * 1;
   velY = -20;
+  height = 20;
+  width = 20;
   x = 0;
   y = 700 - scale;
   appendRect = () => {
@@ -50,6 +59,8 @@ class Snake {
 class Diamond {
   velX = scale * 1;
   velY = 0;
+  height = 20;
+  width = 20;
   x = 700;
   y = 700 - scale;
   appendRect = () => {
@@ -86,6 +97,11 @@ function diamondMove() {
   diamond.clearRect();
   diamond.moveRect();
   diamond.appendRect();
+  if(checkCollision(snake ,diamond)) {
+    console.log("kolizja");
+  } else {
+    console.log("nie kolicja");
+  }
 }
 //movement
 
@@ -100,7 +116,8 @@ document.addEventListener("keypress", function(e) {
     snake.appendRect();
   }
   if (e.key == "w") {
-    jump = true;
+    snake.velX = 0;
+    snake.velY = -20;
     snake.clearRect();
 
     snake.moveRect();
@@ -123,4 +140,14 @@ document.addEventListener("keypress", function(e) {
     snake.moveRect();
     snake.appendRect();
   }
+  if(checkCollision(snake ,diamond)) {
+    console.log("kolizja");
+  } else {
+    console.log("nie kolicja");
+  }
 });
+
+
+
+
+
