@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+.gameContainer {
+    width: 1200px;
+    height: 45vw;
+    position: absolute;
+    top:;
+    left: 10vw;
+    background-color: lawngreen;
+    /* background: url('/img/game/game_background_2/layers/sky.png') center center fixed; */
+    object-fit: cover;
+    /* animation: play 2s steps(30) infinite; */
+    animation: scrollLeft 2s linear infinite;
+    /* animation: scrollGood 2s linear infinite; */
+}

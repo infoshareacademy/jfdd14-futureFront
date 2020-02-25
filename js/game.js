@@ -124,17 +124,18 @@ requestAnimationFrame(performAnimation) //odpala animacje na bazie requestAnimat
 //     )
 //stop
 const move = moveRect = () => {
-    console.log("dupa")
+
     const  zombie = [...document.querySelectorAll('.zombieImg')];
     const  zombieDiv = [...document.querySelectorAll('.monster')];
     x += velX;
     y += velY;
-    acc += turbo;
+    // acc += turbo;
     zombieDiv.forEach(element => {
         element.style.top = `${y}px`;
         element.style.right = `${x}px`;
-        // elemnet.style.animation = `playX ${1 / acc}s steps(5) infinite, playY ${3 / acc}s steps(3) infinite`;
-console.log(element)});
+        element.style.animation = `playX ${1 / turbo}s steps(5) infinite, playY ${3 / turbo}s steps(3) infinite`;
+        console.log(acc);
+        console.log(element)});
 
 // zombieDiv.forEach(element => {element.setAttribute("style",`"top:${y}px; right:${x}px"`);
 // console.log(element)});
@@ -143,7 +144,7 @@ console.log(element)});
  }
 
 
-document.addEventListener('keypress', function(e){
+document.addEventListener('keydown', function(e){
     console.log(e.key);
     if(e.key == 'Enter'){
         console.log('bb')
@@ -168,13 +169,22 @@ document.addEventListener('keypress', function(e){
         velY = 0;
         move();
     }
-
-    // if(e.key == 'b') {
-    //     turbo = 2;
-    //     move();
-    // }
-
+    if(e.key == 'b') {
+        turbo = 5;
+        acc = 5;
+        move();
+    }
 })
+
+
+document.addEventListener('keyup', function(e){
+if(e.key == 'b') {
+    turbo = 1;
+    velX = 0;
+    acc = 1;
+    move();
+}
+});
 
 // function animate() {
 //     setTimeout(function () {
