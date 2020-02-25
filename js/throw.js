@@ -1,8 +1,8 @@
 let metrNaPix = 19.2; //wspolczynik dlugosci obrazu dla 1460
 
 
-let speed = 90 * metrNaPix; // 30 meters per second or 108 km/hour -- quite fast ...
-let angle = 70 * Math.PI / 180;  // 30 degree angle, moved to radians.
+let speed = 100 * metrNaPix; // 30 meters per second or 108 km/hour -- quite fast ...
+let angle = 90 * Math.PI / 180;  // 30 degree angle, moved to radians.
 
 let speed_x = speed * Math.cos(angle);
 let speed_y = speed * Math.sin(angle);  // now you have initial direction vector
