@@ -1,5 +1,8 @@
 console.log("start")
 
+
+
+const jump = function(){
 let metrNaPix = 19.2; //wspolczynik dlugosci obrazu dla 1460
 
 
@@ -9,7 +12,7 @@ let angle = 90 * Math.PI / 180;  // 30 degree angle, moved to radians.
 let speed_x = speed * Math.cos(angle);
 let speed_y = speed * Math.sin(angle);  // now you have initial direction vector
 
-let x_coord = -100;
+let x_coord = -100; //pzycja hero
 
 let y_coord = 230;  // assuming quadrant 1 of traditional cartesian coordinate system
 const fps = 60;
@@ -42,12 +45,15 @@ setInterval(function () {
       speed_y *= 0.99;
    }
 }, 1000 / fps);
+}
 
-document.addEventListener('keyup', function(e){
+jump()
+
+document.addEventListener('keydown', function(e){
     if(e.key == 'b') {
-        turbo = 1;
-        velX = 0;
-        acc = 1;
-        move();
+console.log("jump");
+let hero = document.querySelector(".hero");
+hero.style = `background-image: url("/img/game/sprite_sheet/__jet_pack_man_no_weapon_white_helmet_flying.png");`
+        jump();
     }
     });
