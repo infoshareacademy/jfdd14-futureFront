@@ -6,14 +6,44 @@
 
 .gameContainer {
     width: 1200px;
-    height: 45vw;
+    height: 675px;
     position: absolute;
-    top:;
-    left: 10vw;
-    background-color: lawngreen;
-    /* background: url('/img/game/game_background_2/layers/sky.png') center center fixed; */
+    top: 100px;
+    left: 200px;
+    border: 2px solid;
+    /* background-color: lawngreen; */
+    /* background: url('/img/game/background_world/Layers/Ground.png') center bottom;
     object-fit: cover;
+    object-position: bottom; */
     /* animation: play 2s steps(30) infinite; */
-    animation: scrollLeft 2s linear infinite;
+    /* animation: scrollLeft 2s linear infinite; */
     /* animation: scrollGood 2s linear infinite; */
 }
+
+.ground{
+    display: block;
+    position: absolute;
+    top: 475px;
+    left:0;
+    width: 1200px;
+    height: 200px;
+    background: url('/img/game/background_world/Layers/Ground.png' );
+    background-attachment: inherit;
+    background-size: contain;
+    animation: scrollLeft 0s linear infinite;
+    /* animation: play 2s steps(30) infinite; */
+    /* animation: scrollLeft 5s linear infinite; */
+    /* animation: scrollGood 2s linear infinite; */
+}
+
+
+@keyframes scrollLeft {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: -1200px;
+    }
+}
+
