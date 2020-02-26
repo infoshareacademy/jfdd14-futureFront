@@ -1,6 +1,7 @@
 console.log("start")
 
 const zombie = document.querySelector('.zombieRun')
+const hero = document.querySelector('.heroRun')
 
 const jump = function () {
 
@@ -20,6 +21,7 @@ const jump = function () {
     let y_coord = 230;  // assuming quadrant 1 of traditional cartesian coordinate system
     const fps = 60;
     let time_step = 1.0 / fps;    // every frame...
+
 
     setInterval(function () {
         if (y_coord < 231 && x_coord < 1920) {
@@ -68,6 +70,16 @@ document.addEventListener('keypress', function(e) {
         zombie.style.left ="50px"
     }
 })
+g
+const checkCollision = (rect1, rect2) => {
+
+
+    return (rect1.left < rect2.left + rect2.width &&
+      rect1.left + rect1.width > rect2.left &&
+      rect1.top < rect2.top + rect2.height &&
+      rect1.top + rect1.height > rect2.top)
+    }
+
 // jump()
 
 document.addEventListener('keydown', function (e) {
@@ -107,12 +119,3 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
-//     setInterval(function(){
-//         console.log("2 interwal");
-//         let hero = document.querySelector("#hero");
-//         console.log(hero.style.top, "style to hero")
-//         if( hero.style.top == "245.055px"){
-//             hero.classList.remove("heroFlying")
-//         }
-
-// }, 100);
