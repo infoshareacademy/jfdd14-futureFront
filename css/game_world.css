@@ -1,173 +1,207 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding:0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .gameContainer {
-    width: 1200px;
-    height: 675px;
-    position: absolute;
-    top: 100px;
-    left: 200px;
-    border: 2px solid;
-    /* background-color: lawngreen; */
-    /* background: url('/img/game/background_world/Layers/Ground.png') center bottom;
+  width: 1200px;
+  height: 675px;
+  position: absolute;
+  top: 100px;
+  left: 200px;
+  border: 2px solid;
+  /* background-color: lawngreen; */
+  /* background: url('/img/game/background_world/Layers/Ground.png') center bottom;
     object-fit: cover;
     object-position: bottom; */
-    /* animation: play 2s steps(30) infinite; */
-    /* animation: scrollLeft 2s linear infinite; */
-    /* animation: scrollGood 2s linear infinite; */
-    transform: scale(1);
+  /* animation: play 2s steps(30) infinite; */
+  /* animation: scrollLeft 2s linear infinite; */
+  /* animation: scrollGood 2s linear infinite; */
+  transform: scale(1);
 }
 
 /* ****************** BACKGROUND *********************** */
 
-.sky{
-    display: block;
-    position: absolute;
-    top:0;
-    left:0;
-    width: 1200px;
-    height: 675px;
-    background: url('/img/game/background_world/Layers/Sky.png' );
-    background-attachment: inherit;
-    background-size: contain;
-    animation: scrollLeft 50s linear infinite;
+.sky {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url('/img/game/background_world/Layers/Sky.png');
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 50s linear infinite;
 }
 
-.bgdecor{
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1200px;
-    height: 675px;
-    background: url('/img/game/background_world/Layers/BG_Decor.png' );
-    background-attachment: inherit;
-    background-size: contain;
-    animation: scrollLeft 30s linear infinite;
+.bgdecor {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url('/img/game/background_world/Layers/BG_Decor.png');
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 30s linear infinite;
 }
 
-.middledecor{
-    display: block;
-    position: absolute;
-    top: 0;
-    left:0;
-    width: 1200px;
-    height: 675px;
-    background: url('/img/game/background_world/Layers/Middle_Decor.png' );
-    background-attachment: inherit;
-    background-size: contain;
-    animation: scrollLeft 20s linear infinite;
+.middledecor {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url('/img/game/background_world/Layers/Middle_Decor.png');
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 20s linear infinite;
 }
 
-.foreground{
-    display: block;
-    position: absolute;
-    top: 0;
-    left:0;
-    width: 1200px;
-    height: 675px;
-    background: url('/img/game/background_world/Layers/Foreground.png' );
-    background-attachment: inherit;
-    background-size: contain;
-    animation: scrollLeft 15s linear infinite;
+.foreground {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url('/img/game/background_world/Layers/Foreground.png');
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 15s linear infinite;
 }
 
-.ground{
-    display: block;
-    position: absolute;
-    top: 0;
-    left:0;
-    width: 1200px;
-    height: 675px;
-    background: url('/img/game/background_world/Layers/Ground.png' );
-    background-attachment: inherit;
-    background-size: contain;
-    animation: scrollLeft 2s linear infinite;
-    z-index: 5;
+.ground {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url('/img/game/background_world/Layers/Ground.png');
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 4s linear infinite;
+  z-index: 5;
 
 }
 
-.stop{
+.stop {
   animation: scrollLeft 2s linear backwards;
 }
+
 /* @keyframes duration | timing-function | delay |
 iteration-count | direction | fill-mode | play-state | name */
 
 
 @keyframes scrollLeft {
-    0% {
-        background-position: 0px;
-    }
+  0% {
+    background-position: 0px;
+  }
 
-    100% {
-        background-position: -1200px;
-    }
+  100% {
+    background-position: -1200px;
+  }
 }
 
 
-.paused{
+.paused {
   animation-play-state: paused;
 }
 
-/* ****************** PLAYER *********************** */
 
 
-  @keyframes playXzombie {
-    from {background-position-x: 0px;}
-    to {background-position-x: -1808px;}
-  }
-  @keyframes playYzombie {
-    from {background-position-y: 0px;}
-    to {background-position-y: -2935px;}
-  }
+/* ****************BULLETS******************** */
 
-
-.bullet{
+.bulletDivHero {
   position: absolute;
-    top: 550px;
-    left: 0px;
-    z-index: 3;
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    animation: scrollRight 2s linear forwards;
+  z-index: 9;
+  top: 570px;
+  left: 250px;
+  z-index: 3;
+  width: 20px;
+  height: 20px;
+  /* background-color: red; */
+  animation: scrollRight 2s linear forwards;
+}
+
+
+.bulletHero {
+  position: absolute;
+  top: -133px;
+  left: -117px;
+  width: 256px;
+  height: 256px;
+  z-index: 9;
+  background-image: url("/img/game/sprite_sheet/shots/3.png");
+
+  animation: playXbullet .4s steps(8) infinite,
+    playYbullet .8s steps(4) infinite;
+  transform: scale(0.1)
 }
 
 
 
 @keyframes scrollRight {
   0% {
-    left: 200px;
+    left: 260px;
   }
 
   100% {
-  left: 1900px;
+    left: 1900px;
   }
 }
 
 
-/* *************************************************************** */
-.heroContainer{
+@keyframes playXbullet {
+  from {
+    background-position-x: 0px;
+  }
+
+  to {
+    background-position-x: -2048px;
+  }
+}
+
+@keyframes playYbullet {
+  from {
+    background-position-y: 0px;
+  }
+
+  to {
+    background-position-y: -1024px;
+  }
+}
+
+/* **************************CONTAINERS************************************* */
+
+.heroContainer {
   position: absolute;
   top: 440px;
-    left:0px;
-width: 264.3px;
-height: 191.7px;
-background-color: hotpink;
-z-index: 8;
+  left: 0px;
+  width: 264.3px;
+  height: 191.7px;
+  /* background-color: hotpink; */
+  z-index: 4;
 }
-.zombieContainer{
+
+.zombieContainer {
   position: absolute;
   top: 440px;
-    left:500px;
-width: 135.6px;
-height: 176.1px;
-background-color: hotpink;
-z-index: 8;
+  left: 500px;
+  width: 135.6px;
+  height: 176.1px;
+  background-color: hotpink;
+  z-index: 8;
 }
+
+
+/* ******************ZOMBIE************* */
+
 .zombieRun {
   position: absolute;
   top: -200px;
@@ -178,104 +212,185 @@ z-index: 8;
   background-image: url("/img/game/sprite_sheet/Run.png");
 
   animation: playXzombie .4s steps(4) infinite,
-             playYzombie .5s steps(5) infinite;
+    playYzombie .5s steps(5) infinite;
   transform: scale(-0.3, 0.3)
 }
-  .heroRun {
-    position: absolute;
-    top: -200px;
-    left:-300px;
-    z-index: 3;
-    width: 881px;
-    height: 639px;
-    background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_standing_run.png");
-
-    animation: playX .3s steps(5) infinite,
-               playY .9s steps(3) infinite;
-    transform: scale(0.3)
-  }
-  @keyframes playX {
-    from {background-position-x: 0px;}
-    to {background-position-x: -4405px;}
-  }
-  @keyframes playY {
-    from {background-position-y: 0px;}
-    to {background-position-y: -1917px;}
-  }
 
 
-  .heroJump{
-    position: absolute;
-    z-index: 3;
-    width: 881px;
-    height: 639px;
-    background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_standing_jump.png");
-
-    animation: playX1 .5s steps(5) infinite,
-               playY1 1s steps(2) infinite;
-    transform: scale(0.3)
-  }
-  @keyframes playX1 {
-    from {background-position-x: 0px;}
-    to {background-position-x: -4405px;}
-  }
-  @keyframes playY1 {
-    from {background-position-y: 0px;}
-    to {background-position-y: -1278px;}
+@keyframes playXzombie {
+  from {
+    background-position-x: 0px;
   }
 
-
-  .heroFlying {
-    position: absolute;
-    z-index: 3;
-    width: 692px;
-    height: 599px;
-    background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_red_helmet_flying.png");
-
-    animation: playX .4s steps(5) infinite,
-               playY 1.2s steps(3) infinite;
-    transform: scale(0.3)
+  to {
+    background-position-x: -1808px;
   }
-  @keyframes playX {
-    from {background-position-x: 0px;}
-    to {background-position-x: -4405px;}
-  }
-  @keyframes playY {
-    from {background-position-y: 0px;}
-    to {background-position-y: -1917px;}
+}
+
+@keyframes playYzombie {
+  from {
+    background-position-y: 0px;
   }
 
-  .heroFlyingShooting{
-    position: absolute;
-    z-index: 3;
-    width: 881px;
-    height: 639px;
-    background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_red_helmet_flying_shoot.png");
+  to {
+    background-position-y: -2935px;
+  }
+}
 
-    animation: playX1 .05s steps(5) infinite,
-               playY1 .1s steps(2) infinite;
-    transform: scale(0.3)
-  }
-  @keyframes playX1 {
-    from {background-position-x: 0px;}
-    to {background-position-x: -4405px;}
-  }
-  @keyframes playY1 {
-    from {background-position-y: 0px;}
-    to {background-position-y: -1278px;}
+
+/* ****************** PLAYER *********************** */
+
+.heroRun {
+  position: absolute;
+  top: -200px;
+  left: -300px;
+  z-index: 3;
+  width: 881px;
+  height: 639px;
+  background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_standing_run.png");
+
+  animation: playXrun .3s steps(5) infinite,
+    playYrun .9s steps(3) infinite;
+  transform: scale(0.3)
+}
+
+@keyframes playXrun {
+  from {
+    background-position-x: 0px;
   }
 
-  .heroStandingShooting{
-    position: absolute;
-    z-index: 3;
-    width: 881px;
-    height: 639px;
-    background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_standing_shoot.png");
+  to {
+    background-position-x: -4405px;
+  }
+}
 
-    animation: playX2 .1s steps(5) infinite;
-    transform: scale(0.3);
+@keyframes playYrun {
+  from {
+    background-position-y: 0px;
   }
-  @keyframes playX2 {
-    from {background-position-x: 0px;}
-    to {background-position-x: -4405px;}
+
+  to {
+    background-position-y: -1917px;
   }
+}
+
+
+.heroJump {
+  position: absolute;
+  z-index: 3;
+  width: 881px;
+  height: 639px;
+  background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_standing_jump.png");
+
+  animation: playX1jump .5s steps(5) infinite,
+    playY1jump 1s steps(2) infinite;
+  transform: scale(0.3)
+}
+
+@keyframes playX1jump {
+  from {
+    background-position-x: 0px;
+  }
+
+  to {
+    background-position-x: -4405px;
+  }
+}
+
+@keyframes playY1jump {
+  from {
+    background-position-y: 0px;
+  }
+
+  to {
+    background-position-y: -1278px;
+  }
+}
+
+
+.heroFlying {
+  position: absolute;
+  z-index: 3;
+  /* width: 692px;
+  height: 599px; */
+  width: 881;
+  height: 639;
+  background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_red_helmet_flying.png");
+
+  animation: playXfly .4s steps(5) infinite,
+    playYfly 1.2s steps(3) infinite;
+  transform: scale(0.3)
+}
+
+@keyframes playXfly {
+  from {
+    background-position-x: 0px;
+  }
+
+  to {
+    background-position-x: -4405px;
+  }
+}
+
+@keyframes playYfly {
+  from {
+    background-position-y: 0px;
+  }
+
+  to {
+    background-position-y: -1917px;
+  }
+}
+
+.heroFlyingShooting {
+  position: absolute;
+  z-index: 3;
+  width: 881px;
+  height: 639px;
+  background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_red_helmet_flying_shoot.png");
+
+  animation: playX1flyShoot .05s steps(5) infinite,
+    playY1flyShoot .1s steps(2) infinite;
+  transform: scale(0.3)
+}
+
+@keyframes playX1flyShoot {
+  from {
+    background-position-x: 0px;
+  }
+
+  to {
+    background-position-x: -4405px;
+  }
+}
+
+@keyframes playY1flyShoot {
+  from {
+    background-position-y: 0px;
+  }
+
+  to {
+    background-position-y: -1278px;
+  }
+}
+
+.heroStandingShooting {
+  position: absolute;
+  z-index: 3;
+  width: 881px;
+  height: 639px;
+  background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_standing_shoot.png");
+
+  animation: playX2standShoot .1s steps(5) infinite;
+  transform: scale(0.3);
+}
+
+@keyframes playX2standShoot {
+  from {
+    background-position-x: 0px;
+  }
+
+  to {
+    background-position-x: -4405px;
+  }
+}
