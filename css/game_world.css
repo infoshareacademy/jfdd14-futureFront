@@ -90,9 +90,9 @@
 
 }
 
-.stop {
+/* .stop {
   animation: scrollLeft 2s linear backwards;
-}
+} */
 
 /* @keyframes duration | timing-function | delay |
 iteration-count | direction | fill-mode | play-state | name */
@@ -117,22 +117,22 @@ iteration-count | direction | fill-mode | play-state | name */
 
 /* ****************BULLETS******************** */
 
-.bulletDivHero {
+.bulletContainerHero {
   position: absolute;
   z-index: 9;
-  top: 570px;
-  left: 250px;
+  /* top: 320px;  nadawane z pozycji hero.top przy tworzeniu bullet*/
+  left: 400px;
   z-index: 3;
   width: 20px;
   height: 20px;
   /* background-color: red; */
-  animation: scrollRight 2s linear forwards;
+  animation: scrollRight 1s linear forwards;
 }
 
 
 .bulletHero {
   position: absolute;
-  top: -133px;
+  top: -120px;
   left: -117px;
   width: 256px;
   height: 256px;
@@ -148,7 +148,7 @@ iteration-count | direction | fill-mode | play-state | name */
 
 @keyframes scrollRight {
   0% {
-    left: 260px;
+    left: 400px;
   }
 
   100% {
@@ -181,10 +181,10 @@ iteration-count | direction | fill-mode | play-state | name */
 
 .heroContainer {
   position: absolute;
-  top: 440px;
-  left: 0px;
-  width: 264.3px;
-  height: 191.7px;
+  top: 460px;
+  left: 200px;
+  width: 130px;
+  height: 170px;
   /* background-color: hotpink; */
   z-index: 4;
 }
@@ -242,8 +242,8 @@ iteration-count | direction | fill-mode | play-state | name */
 
 .heroRun {
   position: absolute;
-  top: -200px;
-  left: -300px;
+  top: -220px;
+  left: -370px;
   z-index: 3;
   width: 881px;
   height: 639px;

@@ -23,16 +23,16 @@ const jump = function () {
     let speed_x = speed * Math.cos(angle);
     let speed_y = speed * Math.sin(angle);  // now you have initial direction vector
 
-    let x_coord = 0; //pzycja hero
+    let x_coord = 200; //pzycja hero
+    let y_coord = 445//dla top 562;
 
-    let y_coord = 425;  // assuming quadrant 1 of traditional cartesian coordinate system
     const fps = 60;
     let time_step = 1.0 / fps;    // every frame...
 
 
     setInterval(function () {
 
-        if (y_coord < 426 && x_coord < 1920) {
+        if (y_coord < 446 && x_coord < 1920) {
 
             x_coord += speed_x * time_step //* metrNaPix;
             y_coord -= speed_y * time_step //* metrNaPix;
@@ -63,7 +63,7 @@ const jump = function () {
             //       divHero.classList.remove("divHeroFlying")
 
             //console.log(parseInt(divHero.style.top), "style to divHero")
-            if (parseInt(y_coord) > 423) {
+            if (parseInt(y_coord) > 440) {
                 hero.classList.remove("heroFlying")
             }
             zombie3 = divZombie.getBoundingClientRect();
@@ -117,18 +117,22 @@ function shot() {
     const bulletDiv = document.createElement('div');
     const heroPos = divHero.getBoundingClientRect();
     world.append(bulletDiv)
-    bulletDiv.classList.add("bulletDivHero");
+    bulletDiv.classList.add("bulletContainerHero");
     bulletDiv.innerHTML = '<div class="bulletHero"></div>';
-    bulletDiv.style.top = `${parseInt(heroPos.top)}px`;
-    if (parseInt(heroPos.top) > 540) {
+    bulletDiv.style.top = `${parseInt(heroPos.top)-23}px`;
+    // bulletDiv.style.left = `${parseInt(heroPos.left)}px`;
+
+    if (parseInt(heroPos.top) > 558) {
         hero.classList.add("heroStandingShooting");
-        background.forEach(element => { element.classList.add("paused") });
+        setTimeout(function () {
+            background.forEach(element => { element.classList.add("paused") });
+        }, 200);
         setTimeout(function () {
             hero.classList.remove("heroStandingShooting")
             background.forEach(element => { element.classList.remove("paused") });
         }, 1000);
     }
-    if (parseInt(heroPos.top) < 540) {
+    if (parseInt(heroPos.top) < 560) {
         hero.classList.add("heroFlyingShooting");
         setTimeout(function () { hero.classList.remove("heroFlyingShooting") }, 1000);
     }
