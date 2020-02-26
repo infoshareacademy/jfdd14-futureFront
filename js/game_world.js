@@ -62,7 +62,16 @@ const jump = function () {
 
 }
 
-// jump()
+
+
+function shot(){
+    const world = document.querySelector(".gameContainer");
+    const bullet = document.createElement('div');
+    world.append(bullet)
+    bullet.classList.add("bullet")
+}
+
+
 
 document.addEventListener('keydown', function (e) {
     if (e.key == 'b') {
@@ -93,6 +102,7 @@ document.addEventListener('keydown', function (e) {
         let hero = document.querySelector("#hero");
         let background = document.querySelectorAll(".back")
         hero.classList.add("heroStandingShooting")
+        shot();
         background.forEach(element => { element.classList.add("paused")});
         setTimeout(function(){
             hero.classList.remove("heroStandingShooting")
@@ -100,6 +110,14 @@ document.addEventListener('keydown', function (e) {
         }, 1000);
     }
 });
+
+
+
+
+
+
+
+
 
 //     setInterval(function(){
 //         console.log("2 interwal");
