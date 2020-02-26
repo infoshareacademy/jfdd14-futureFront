@@ -1,6 +1,6 @@
 console.log("start")
 
-
+const zombie = document.querySelector('.zombieRun')
 
 const jump = function () {
 
@@ -56,12 +56,18 @@ const jump = function () {
             if (parseInt(y_coord) > 244) {
                 hero.classList.remove("heroFlying")
             }
+            
         }
     }, 1000 / fps);
 
 
 }
-
+document.addEventListener('keypress', function(e) {
+    if (e.key == 'g') {
+        console.log(e)
+        zombie.style.left ="50px"
+    }
+})
 // jump()
 
 document.addEventListener('keydown', function (e) {
