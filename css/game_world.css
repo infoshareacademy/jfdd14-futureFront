@@ -18,6 +18,7 @@
     /* animation: play 2s steps(30) infinite; */
     /* animation: scrollLeft 2s linear infinite; */
     /* animation: scrollGood 2s linear infinite; */
+    transform: scale(1);
 }
 
 /* ****************** BACKGROUND *********************** */
