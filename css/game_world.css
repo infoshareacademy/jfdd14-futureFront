@@ -18,6 +18,7 @@
     /* animation: play 2s steps(30) infinite; */
     /* animation: scrollLeft 2s linear infinite; */
     /* animation: scrollGood 2s linear infinite; */
+    transform: scale(1);
 }
 
 /* ****************** BACKGROUND *********************** */
@@ -115,25 +116,52 @@ iteration-count | direction | fill-mode | play-state | name */
 
 .zombieRun {
     position: absolute;
-    top: 230px;
+    top: 245px;
     left: 500px;
     z-index: 3;
-    width: 881px;
-    height: 639px;
+    width: 452px;
+    height: 587px;
     background-image: url("/img/game/sprite_sheet/Run.png");
 
-    animation: playX .3s steps(4) infinite,
-               playY .9s steps(5) infinite;
-    transform: scale(0.3)
+    animation: playXzombie .4s steps(4) infinite,
+               playYzombie .5s steps(5) infinite;
+    transform: scale(-0.3, 0.3)
   }
-  @keyframes playX {
+  @keyframes playXzombie {
     from {background-position-x: 0px;}
-    to {background-position-x: -4405px;}
+    to {background-position-x: -1808px;}
   }
-  @keyframes playY {
+  @keyframes playYzombie {
     from {background-position-y: 0px;}
-    to {background-position-y: -1917px;}
+    to {background-position-y: -2935px;}
   }
+
+
+.bullet{
+  position: absolute;
+    top: 528px;
+    left: 400px;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    animation: scrollRight 2s linear forwards;
+}
+
+
+
+@keyframes scrollRight {
+  0% {
+    left: 400px;
+  }
+
+  100% {
+  left: 1900px;
+  }
+}
+
+
+/* *************************************************************** */
 
   .heroRun {
     position: absolute;

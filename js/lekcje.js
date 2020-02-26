@@ -151,6 +151,26 @@ btn.addEventListener("click", function () {
 });
 
 
+let inputImg = document.querySelector('.imgUrl');
+let btn = document.querySelector('.addImg');
+
+function ifPositive(url) {
+    console.log(inputImg.value);
+    console.log(typeof (url));
+    return new Promise((resolve, reject) => {
+        Number(num) > 0 ? resolve(alert(num * num)) : reject(new Error("error"))
+            .then((num) => console.log(num))
+            .catch((error) => console.log(error))
+      });
+}
+
+
+btn.addEventListener("click", function () {
+    ifPositive(inputImg.value)
+        // .then((num) => console.log(num))
+        // .catch((error) => console.log(error))
+});
+
 // btn.addEventListener("click",
 // ifPositive(input.value)
 // .then((num) => console.log(num))

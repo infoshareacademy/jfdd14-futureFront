@@ -80,6 +80,23 @@ const checkCollision = (rect1, rect2) => {
       rect1.top + rect1.height > rect2.top)
     }
 
+
+
+
+function shot(){
+    const world = document.querySelector(".gameContainer");
+    const bullet = document.createElement('div');
+    world.append(bullet)
+    bullet.classList.add("bullet")
+}
+
+
+// document.addEventListener('keypress', function(e) {
+//     if (e.key == 'g') {
+//         console.log(e)
+//         zombie.style.left ="50px"
+//     }
+// })
 // jump()
 
 document.addEventListener('keydown', function (e) {
@@ -111,6 +128,7 @@ document.addEventListener('keydown', function (e) {
         let hero = document.querySelector("#hero");
         let background = document.querySelectorAll(".back")
         hero.classList.add("heroStandingShooting")
+        shot();
         background.forEach(element => { element.classList.add("paused")});
         setTimeout(function(){
             hero.classList.remove("heroStandingShooting")
@@ -119,3 +137,20 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
+
+
+
+
+
+
+
+
+//     setInterval(function(){
+//         console.log("2 interwal");
+//         let hero = document.querySelector("#hero");
+//         console.log(hero.style.top, "style to hero")
+//         if( hero.style.top == "245.055px"){
+//             hero.classList.remove("heroFlying")
+//         }
+
+// }, 100);
