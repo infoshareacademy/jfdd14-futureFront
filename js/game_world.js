@@ -4,10 +4,15 @@ const zombie = document.querySelector('.zombieRun')
 const hero = document.querySelector('.heroRun')
 const divZombie = document.querySelector('.zombieContainer')
 const divHero = document.querySelector('.heroContainer')
-
+divZombie.style.left = '500px'
+let zombie3 = divZombie.getBoundingClientRect();
+let hero3 = divHero.getBoundingClientRect();
+function rect() {
+   
+}
 const jump = function () {
 
-    let hero = document.querySelector("#hero");
+    //let hero = document.querySelector("#hero");
 
     let metrNaPix = 19.2; //wspolczynik dlugosci obrazu dla 1460
 
@@ -18,16 +23,16 @@ const jump = function () {
     let speed_x = speed * Math.cos(angle);
     let speed_y = speed * Math.sin(angle);  // now you have initial direction vector
 
-    let x_coord = -100; //pzycja hero
+    let x_coord = 0; //pzycja hero
 
-    let y_coord = 230;  // assuming quadrant 1 of traditional cartesian coordinate system
+    let y_coord = 440;  // assuming quadrant 1 of traditional cartesian coordinate system
     const fps = 60;
     let time_step = 1.0 / fps;    // every frame...
 
 
     setInterval(function () {
        
-        if (y_coord < 231 && x_coord < 1920) {
+        if (y_coord < 441 && x_coord < 1920) {
 
             x_coord += speed_x * time_step //* metrNaPix;
             y_coord -= speed_y * time_step //* metrNaPix;
@@ -35,10 +40,10 @@ const jump = function () {
             //console.log(x_coord, y_coord, speed_x, speed_y);
             speed_y -= 10 * time_step * metrNaPix * metrNaPix;
             //   let hero = document.querySelector("#hero");
-            hero.style.top = `${y_coord}px`;
-            hero.style.left = `${x_coord}px`;
+            divHero.style.top = `${y_coord}px`;
+            divHero.style.left = `${x_coord}px`;
             //console.log(y_coord, "coord y");
-            //console.log(hero.style.left = `${x_coord}px`, "ball x");
+            //console.log(divHero.style.left = `${x_coord}px`, "ball x");
             //console.log(speed_y, "speed y");
             // in one second the speed has changed 9.81m/s
 
@@ -53,20 +58,24 @@ const jump = function () {
             speed_x *= 0.99;
             speed_y *= 0.99;
 
-            //   console.log(parseInt(hero.style.top), "style to hero")
-            //   if( parseInt(hero.style.top) == 245){
-            //       hero.classList.remove("heroFlying")
+            //   console.log(parseInt(divHero.style.top), "style to divHero")
+            //   if( parseInt(divHero.style.top) == 245){
+            //       divHero.classList.remove("divHeroFlying")
 
-            //console.log(parseInt(hero.style.top), "style to hero")
-            if (parseInt(y_coord) > 244) {
+            //console.log(parseInt(divHero.style.top), "style to divHero")
+            if (parseInt(y_coord) > 439) {
                 hero.classList.remove("heroFlying")
             }
-            checkCollision(hero, zombie)
-            if(checkCollision(hero ,zombie)) {
+            zombie3 = divZombie.getBoundingClientRect();
+            checkCollision(zombie3 ,hero3)
+            /* if(checkCollision(hero3 ,zombie3)) {
+                console.log(hero3.right, zombie3.left)
                 console.log("kolizja");
               } else {
                 console.log("nie kolicja");
-            }
+            } */
+            
+            
         }
     }, 1000 / fps);
 
@@ -78,15 +87,16 @@ document.addEventListener('keypress', function(e) {
         divZombie.style.left ="250px"
     }
 })
-const heroheight = hero.style.left
-const checkCollision = (rect1, rect2) => {
-    console.log(`hero left ${rect1.left}, + zombie left ${rect2.left}, zombie width ${rect2.width}, hero width ${rect1.width}, hero top ${rect1.top}, zombie top ${rect2.top}, hero heigth ${rect1.height}, zombie heigth ${rect2.height}`)
+const heroheight = divHero.style.left
+const checkCollision = (zombie3, hero3) => {
+    if(parseInt(zombie3.left) < parseInt(hero3.right)) {
+        console.log('kolacja')
+    } else {console.log('nie kolacja')}
 
-
-    return (rect1.left < rect2.left + rect2.width &&
+    /* return (parseInt(zombie3.left) < parseInt(hero3.right)) */ /* + rect2.width &&
       rect1.left + rect1.width > rect2.left &&
       rect1.top < rect2.top + rect2.height &&
-      rect1.top + rect1.height > rect2.top)
+      rect1.top + rect1.height > rect2.top */
     }
 
 
@@ -156,10 +166,10 @@ document.addEventListener('keydown', function (e) {
 
 //     setInterval(function(){
 //         console.log("2 interwal");
-//         let hero = document.querySelector("#hero");
-//         console.log(hero.style.top, "style to hero")
-//         if( hero.style.top == "245.055px"){
-//             hero.classList.remove("heroFlying")
+//         let divHero = document.querySelector("#divHero");
+//         console.log(divHero.style.top, "style to divHero")
+//         if( divHero.style.top == "245.055px"){
+//             divHero.classList.remove("heroFlying")
 //         }
 
 // }, 100);

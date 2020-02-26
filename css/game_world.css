@@ -127,8 +127,8 @@ iteration-count | direction | fill-mode | play-state | name */
 
 .bullet{
   position: absolute;
-    top: 528px;
-    left: 400px;
+    top: 550px;
+    left: 0px;
     z-index: 3;
     width: 20px;
     height: 20px;
@@ -140,7 +140,7 @@ iteration-count | direction | fill-mode | play-state | name */
 
 @keyframes scrollRight {
   0% {
-    left: 400px;
+    left: 200px;
   }
 
   100% {
