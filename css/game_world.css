@@ -86,7 +86,15 @@
     background-size: contain;
     animation: scrollLeft 2s linear infinite;
     z-index: 5;
+
 }
+
+.stop{
+  animation: scrollLeft 2s linear backwards;
+}
+/* @keyframes duration | timing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+
 
 @keyframes scrollLeft {
     0% {
@@ -99,19 +107,23 @@
 }
 
 
+.paused{
+  animation-play-state: paused;
+}
+
 /* ****************** PLAYER *********************** */
 
-.heroRun {
+.zombieRun {
     position: absolute;
     top: 230px;
-    left:-100px;
+    left: 500px;
     z-index: 3;
     width: 881px;
     height: 639px;
-    background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_standing_run.png");
+    background-image: url("/img/game/sprite_sheet/Run.png");
 
-    animation: playX .4s steps(5) infinite,
-               playY 1.2s steps(3) infinite;
+    animation: playX .3s steps(4) infinite,
+               playY .9s steps(5) infinite;
     transform: scale(0.3)
   }
   @keyframes playX {
@@ -121,6 +133,49 @@
   @keyframes playY {
     from {background-position-y: 0px;}
     to {background-position-y: -1917px;}
+  }
+
+  .heroRun {
+    position: absolute;
+    top: 230px;
+    left:-100px;
+    z-index: 3;
+    width: 881px;
+    height: 639px;
+    background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_standing_run.png");
+
+    animation: playX .3s steps(5) infinite,
+               playY .9s steps(3) infinite;
+    transform: scale(0.3)
+  }
+  @keyframes playX {
+    from {background-position-x: 0px;}
+    to {background-position-x: -4405px;}
+  }
+  @keyframes playY {
+    from {background-position-y: 0px;}
+    to {background-position-y: -1917px;}
+  }
+
+
+  .heroJump{
+    position: absolute;
+    z-index: 3;
+    width: 881px;
+    height: 639px;
+    background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_standing_jump.png");
+
+    animation: playX1 .5s steps(5) infinite,
+               playY1 1s steps(2) infinite;
+    transform: scale(0.3)
+  }
+  @keyframes playX1 {
+    from {background-position-x: 0px;}
+    to {background-position-x: -4405px;}
+  }
+  @keyframes playY1 {
+    from {background-position-y: 0px;}
+    to {background-position-y: -1278px;}
   }
 
 
@@ -142,4 +197,39 @@
   @keyframes playY {
     from {background-position-y: 0px;}
     to {background-position-y: -1917px;}
+  }
+
+  .heroFlyingShooting{
+    position: absolute;
+    z-index: 3;
+    width: 881px;
+    height: 639px;
+    background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_red_helmet_flying_shoot.png");
+
+    animation: playX1 .05s steps(5) infinite,
+               playY1 .1s steps(2) infinite;
+    transform: scale(0.3)
+  }
+  @keyframes playX1 {
+    from {background-position-x: 0px;}
+    to {background-position-x: -4405px;}
+  }
+  @keyframes playY1 {
+    from {background-position-y: 0px;}
+    to {background-position-y: -1278px;}
+  }
+
+  .heroStandingShooting{
+    position: absolute;
+    z-index: 3;
+    width: 881px;
+    height: 639px;
+    background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_standing_shoot.png");
+
+    animation: playX2 .1s steps(5) infinite;
+    transform: scale(0.3);
+  }
+  @keyframes playX2 {
+    from {background-position-x: 0px;}
+    to {background-position-x: -4405px;}
   }

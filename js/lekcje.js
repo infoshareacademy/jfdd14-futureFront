@@ -48,19 +48,19 @@ function calculate(elements) {
 
 
 
-var req = new XMLHttpRequest();
-req.open('GET', 'https://jsonplaceholder.typicode.com/todos', true);
-req.onreadystatechange = function (aEvt) {
-    if (req.readyState == 4) {
-        if (req.status == 200) {
-            calculate(JSON.parse(req.responseText))
-        }
-        else
-            console.log("Błąd podczas ładowania strony\n");
-    }
-};
+// var req = new XMLHttpRequest();
+// req.open('GET', 'https://jsonplaceholder.typicode.com/todos', true);
+// req.onreadystatechange = function (aEvt) {
+//     if (req.readyState == 4) {
+//         if (req.status == 200) {
+//             calculate(JSON.parse(req.responseText))
+//         }
+//         else
+//             console.log("Błąd podczas ładowania strony\n");
+//     }
+// };
 
-console.log(req.total, " rozmiar")
+// console.log(req.total, " rozmiar")
 
 // req.addEventListener("progress", function(e) {
 //     if (e.lengthComputable) {
@@ -70,7 +70,8 @@ console.log(req.total, " rozmiar")
 //         console.log("nie da się wyliczyć postępu");
 //     }
 // });
-req.send(null);
+
+// req.send(null);
 
 // function onProgress(e) {
 //     var percentComplete = (e.position / e.totalSize)*100;
@@ -86,24 +87,75 @@ console.log("FEEEEEEEEEEEEETCH")
 
 
 
-fetch("https://jsonplaceholder.typicode.com/todos")
-    .then(response => response.json())
-    .then(response => {
-        response.map((element, index) => {
-            document.querySelector(".loading").style.display = 'block';
-            timer(2000, () => { textContainer.innerHTML += `${index}: ${element.title}<br>`;
-            document.querySelector(".loading").style.display = 'none'; });
-        });
-    })
+// fetch("https://jsonplaceholder.typicode.com/users")
+//     .then(response => response.json())
+//     .then(response => {
+//         response.map((element, index) => {
+//             document.querySelector(".loading").style.display = 'block';
+//             timer(2000, () => { textContainer.innerHTML += `${index}: ${element.name}<br>`;
+//             document.querySelector(".loading").style.display = 'none'; });
+//         });
+//     })
 
 
 
+function more() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+        .catch((error) => console.log(textContainer.innerHTML += `Error:  ${error}`))
+        .then(response => response.json())
+        .then(response => {
+            response.map((element, index) => {
+                document.querySelector(".loading").style.display = 'block';
+                timer(2000, () => {
+                textContainer.innerHTML += `${index}: ${element.name}<br>`;
+                    document.querySelector(".loading").style.display = 'none';
+                });
+            });
+        })
 
 
+}
+
+more()
 
 
+function square(num) {
+    return new Promise((resolve, reject) => {
+        num > 0 ? resolve(alert(num * num)) : reject(new Error("error"))
+    });
+}
+
+square(-4)
+    .then((num) => console.log(num))
+    .catch((error) => console.log(error))
 
 
+let input = document.querySelector('.newInput');
+let btn = document.querySelector('.send');
+
+function ifPositive(num) {
+    console.log(input.value);
+    console.log(typeof (num));
+    return new Promise((resolve, reject) => {
+        Number(num) > 0 ? resolve(alert(num * num)) : reject(new Error("error"))
+            .then((num) => console.log(num))
+            .catch((error) => console.log(error))
+      });
+}
+
+
+btn.addEventListener("click", function () {
+    ifPositive(input.value)
+        // .then((num) => console.log(num))
+        // .catch((error) => console.log(error))
+});
+
+
+// btn.addEventListener("click",
+// ifPositive(input.value)
+// .then((num) => console.log(num))
+// .catch((error) => console.log(error)
+// ))
 
 //   function onError(e) {
 //     alert("Podczas pobierania dokumentu wystąpił błąd " + e.target.status + ".");
