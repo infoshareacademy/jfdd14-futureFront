@@ -2,6 +2,8 @@ console.log("start")
 
 const zombie = document.querySelector('.zombieRun')
 const hero = document.querySelector('.heroRun')
+const divZombie = document.querySelector('.zombieContainer')
+const divHero = document.querySelector('.heroContainer')
 
 const jump = function () {
 
@@ -24,19 +26,20 @@ const jump = function () {
 
 
     setInterval(function () {
+       
         if (y_coord < 231 && x_coord < 1920) {
 
             x_coord += speed_x * time_step //* metrNaPix;
             y_coord -= speed_y * time_step //* metrNaPix;
 
-            console.log(x_coord, y_coord, speed_x, speed_y);
+            //console.log(x_coord, y_coord, speed_x, speed_y);
             speed_y -= 10 * time_step * metrNaPix * metrNaPix;
             //   let hero = document.querySelector("#hero");
             hero.style.top = `${y_coord}px`;
             hero.style.left = `${x_coord}px`;
-            console.log(y_coord, "coord y");
-            console.log(hero.style.left = `${x_coord}px`, "ball x");
-            console.log(speed_y, "speed y");
+            //console.log(y_coord, "coord y");
+            //console.log(hero.style.left = `${x_coord}px`, "ball x");
+            //console.log(speed_y, "speed y");
             // in one second the speed has changed 9.81m/s
 
             // Final stage: ball shape, mass and viscosity of air causes a counter force
@@ -54,11 +57,16 @@ const jump = function () {
             //   if( parseInt(hero.style.top) == 245){
             //       hero.classList.remove("heroFlying")
 
-            console.log(parseInt(hero.style.top), "style to hero")
+            //console.log(parseInt(hero.style.top), "style to hero")
             if (parseInt(y_coord) > 244) {
                 hero.classList.remove("heroFlying")
             }
-            
+            checkCollision(hero, zombie)
+            if(checkCollision(hero ,zombie)) {
+                console.log("kolizja");
+              } else {
+                console.log("nie kolicja");
+            }
         }
     }, 1000 / fps);
 
@@ -67,11 +75,12 @@ const jump = function () {
 document.addEventListener('keypress', function(e) {
     if (e.key == 'g') {
         console.log(e)
-        zombie.style.left ="50px"
+        divZombie.style.left ="250px"
     }
 })
-g
+const heroheight = hero.style.left
 const checkCollision = (rect1, rect2) => {
+    console.log(`hero left ${rect1.left}, + zombie left ${rect2.left}, zombie width ${rect2.width}, hero width ${rect1.width}, hero top ${rect1.top}, zombie top ${rect2.top}, hero heigth ${rect1.height}, zombie heigth ${rect2.height}`)
 
 
     return (rect1.left < rect2.left + rect2.width &&
@@ -101,7 +110,7 @@ function shot(){
 
 document.addEventListener('keydown', function (e) {
     if (e.key == 'b') {
-        console.log("jump");
+        
         let hero = document.querySelector("#hero");
         // hero.classList.add("heroJump")
         hero.classList.add("heroFlying")
