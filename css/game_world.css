@@ -121,7 +121,7 @@ iteration-count | direction | fill-mode | play-state | name */
   width: 20px;
   height: 20px;
   /* background-color: red; */
-  animation: scrollRight 10s linear forwards;
+  animation: scrollRight 5s linear forwards;
   /* animation: shotAtAngle 1s linear forwards; */
 }
 
@@ -199,19 +199,19 @@ iteration-count | direction | fill-mode | play-state | name */
   left: 500px;
   width: 135.6px;
   height: 176.1px;
-  background-color: hotpink;
+  /*background-color: hotpink;*/
   z-index: 8;
-  animation: scrollLeftZombie 0s linear forwards;
+  /*animation: scrollLeftZombie 6s linear forwards;*/
 }
-@keyframes scrollLeftZombie {
+/*@keyframes scrollLeftZombie {
   0% {
-    left: 1300px;
+    left: 1000px;
   }
 
   100% {
-    left: 1000px;
+    left: -200px;
   }
-}
+}*/
 
 .giftContainer {
   position: absolute;

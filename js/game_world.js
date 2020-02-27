@@ -5,44 +5,36 @@ const divZombie = document.querySelector(".zombieContainer");
 const divHero = document.querySelector(".heroContainer");
 divZombie.style.left = "500px";
 let zombieXPosition = 1200;
-let zombie3 = divZombie.getBoundingClientRect();
+let zombieContainerCoords = divZombie.getBoundingClientRect();
 let hero3 = divHero.getBoundingClientRect();
 let zombieX = 500;
-
 const heroheight = divHero.style.left;
-const gravity = 10;
-let metrNaPix = 19.2;
-let speed = 100 * metrNaPix;
-let angle = (90 * Math.PI) / 180;
-let speed_x = speed * Math.cos(angle);
-let speed_y = speed * Math.sin(angle);
-let x_coord = 200;
-let y_coord = 445;
 const fps = 60;
-let time_step = 1.0 / fps;
-
 //engine
 
 const engine = setInterval(function() {
   const bullets = [...document.querySelectorAll(".bulletContainerHero")];
-  zombie3 = divZombie.getBoundingClientRect();
+  zombieContainerCoords = divZombie.getBoundingClientRect();
   hero3 = divHero.getBoundingClientRect();
 
-  checkCollision(zombie3, hero3);
+  checkCollision(zombieContainerCoords, hero3);
   if (bullets.length > 0) {
     bullets.forEach(el => {
-      checkCollision(zombie3, el.getBoundingClientRect());
+      checkCollision(zombieContainerCoords, el.getBoundingClientRect());
     });
   }
+  zombieMove();
 }, 1000 / fps);
 
-const checkCollision = (zombie3, hero3) => {
-  console.log(zombie3.left, hero3.right);
+const checkCollision = (firstObject, secondObject) => {
   if (
-    parseInt(zombie3.left) < parseInt(hero3.right) + parseInt(hero3.width) &&
-    parseInt(zombie3.left) + parseInt(zombie3.width) > parseInt(hero3.left) &&
-    parseInt(zombie3.top) < parseInt(hero3.top) + parseInt(hero3.height) &&
-    parseInt(zombie3.top) + parseInt(zombie3.height) > parseInt(hero3.top)
+    parseInt(firstObject.left) < parseInt(secondObject.right) &&
+    parseInt(firstObject.left) + parseInt(firstObject.width) >
+      parseInt(secondObject.left) &&
+    parseInt(firstObject.top) <
+      parseInt(secondObject.top) + parseInt(secondObject.height) &&
+    parseInt(firstObject.top) + parseInt(firstObject.height) >
+      parseInt(secondObject.top)
   ) {
     console.log("kolacja");
   } else {
@@ -52,7 +44,7 @@ const checkCollision = (zombie3, hero3) => {
 //zombie move
 function zombieMove() {
   divZombie.style.left = `${zombieXPosition}px`;
-  zombieXPosition -= 5;
+  zombieXPosition -= 8;
   if (zombieXPosition < -150) {
     zombieXPosition = 1200;
     divZombie.style.left = `${zombieXPosition}px`;
@@ -127,7 +119,7 @@ document.addEventListener("keydown", function(e) {
     if (parseInt(heroPos.top) > 560) {
       let hero = document.querySelector("#hero");
       hero.classList.add("heroFlying");
-      console.log(hero.classList);
+
       jump();
     }
   }
@@ -135,13 +127,6 @@ document.addEventListener("keydown", function(e) {
 
 document.addEventListener("keydown", function(e) {
   if (e.key == "l") {
-    console.log("shoot");
     shot();
-  }
-});
-
-document.addEventListener("keypress", function(e) {
-  if (e.key == "g") {
-    divZombie.style.left = "250px";
   }
 });
