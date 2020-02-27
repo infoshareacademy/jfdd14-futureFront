@@ -105,7 +105,35 @@ const checkCollision = (zombie3, hero3) => {
       rect1.top + rect1.height > rect2.top */
 }
 
+//zombie move
+function zombieMove() {
+    divZombie.style.left = `${zombieXPosition}px`;
+    zombieXPosition -= 5;
+    if (zombieXPosition < -150) {
+      zombieXPosition = 1200;
+      divZombie.style.left = `${zombieXPosition}px`;
+    }
+  }
+              
+              divZombie.style.left =`${zombieX}px`
+              zombieX -= 10
+              console.log(zombieX)
+              
+  
+  
+  
+  const zombieTimeout = randomIntFromInterval(3000, 5000);
+  setTimeout(zombieInterval, zombieTimeout);
+  
+  function zombieInterval() {
+    setInterval(zombieMove, 10);
+  }
+  function randomIntFromInterval(min, max) {
+    
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
 
+  //zombie move end
 
 
 // function shot(){
