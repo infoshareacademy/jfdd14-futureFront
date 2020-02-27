@@ -1,6 +1,5 @@
 
-
-console.log("start")
+console.log("node");
 
 const add = (a,b,znak) => {
     if(typeof(a) !== "number" & typeof(b) !== "number"){console.log("Niepoprawne parametry"); return};
