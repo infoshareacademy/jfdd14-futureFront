@@ -119,7 +119,7 @@ function shot() {
     world.append(bulletDiv)
     bulletDiv.classList.add("bulletContainerHero");
     bulletDiv.innerHTML = '<div class="bulletHero"></div>';
-    bulletDiv.style.top = `${parseInt(heroPos.top)-23}px`;
+    bulletDiv.style.top = `${parseInt(heroPos.top) - 23}px`;
     // bulletDiv.style.left = `${parseInt(heroPos.left)}px`;
 
     if (parseInt(heroPos.top) > 558) {
@@ -166,13 +166,15 @@ function shot() {
 
 document.addEventListener('keydown', function (e) {
     if (e.key == 'b') {
-
-        let hero = document.querySelector("#hero");
-        // hero.classList.add("heroJump")
-        hero.classList.add("heroFlying")
-        // setTimeout(function(){ hero.classList.add("heroJump") }, 1000);
-        // setTimeout(function(){ hero.classList.add("heroFlying") }, 2000);
-        jump();
+        const heroPos = divHero.getBoundingClientRect();
+        if (parseInt(heroPos.top) > 560) {
+            let hero = document.querySelector("#hero");
+            // hero.classList.add("heroJump")
+            hero.classList.add("heroFlying")
+            // setTimeout(function(){ hero.classList.add("heroJump") }, 1000);
+            // setTimeout(function(){ hero.classList.add("heroFlying") }, 2000);
+            jump();
+        }
 
     }
 });
