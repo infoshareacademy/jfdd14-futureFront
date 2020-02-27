@@ -94,16 +94,18 @@ document.addEventListener('keypress', function (e) {
     }
 })
 const heroheight = divHero.style.left
-const checkCollision = (zombie3, hero3) => {
-    if (parseInt(zombie3.left) < parseInt(hero3.right)) {
-        console.log('kolacja')
-    } else { console.log('nie kolacja') }
 
-    /* return (parseInt(zombie3.left) < parseInt(hero3.right)) */ /* + rect2.width &&
-      rect1.left + rect1.width > rect2.left &&
-      rect1.top < rect2.top + rect2.height &&
-      rect1.top + rect1.height > rect2.top */
-}
+
+const checkCollision = (zombie3, hero3) => {
+    if (parseInt(zombie3.left) < parseInt(hero3.right) + parseInt(hero3.width) &&
+    parseInt(zombie3.left) + parseInt(zombie3.width) > parseInt(hero3.left) &&
+      parseInt(zombie3.top) < parseInt(hero3.top) + parseInt(hero3.height) &&
+      parseInt(zombie3.top) + parseInt(zombie3.height) > parseInt(hero3.top)){
+        console.log('kolacja')}
+    else { console.log('nie kolacja') }}
+
+ 
+
 
 
 
