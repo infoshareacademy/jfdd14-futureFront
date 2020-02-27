@@ -172,6 +172,7 @@ iteration-count | direction | fill-mode | play-state | name */
 }
 
 
+
 @keyframes playXbullet {
   from {
     background-position-x: 0px;
@@ -212,6 +213,16 @@ iteration-count | direction | fill-mode | play-state | name */
   height: 176.1px;
   background-color: hotpink;
   z-index: 8;
+  animation: scrollLeftZombie 7s linear forwards;
+}
+@keyframes scrollLeftZombie {
+  0% {
+    left: 1300px;
+  }
+
+  100% {
+    left: -200px;
+  }
 }
 
 .giftContainer {

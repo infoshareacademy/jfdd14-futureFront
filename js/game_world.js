@@ -23,17 +23,16 @@ let time_step = 1.0 / fps;
 
 //engine
 
-setInterval(function () {
-    console.log('bb')
+const engine =setInterval(function () {
     
-    zombieMove()
-        
-    
+    checkCollision(zombie3, hero3)
 }, 1000/fps);
 
 
-
 const checkCollision = (zombie3, hero3) => {
+    zombie3 = divZombie.getBoundingClientRect();
+    hero3 = divHero.getBoundingClientRect();
+    
     if (parseInt(zombie3.left) < parseInt(hero3.right) + parseInt(hero3.width) &&
     parseInt(zombie3.left) + parseInt(zombie3.width) > parseInt(hero3.left) &&
       parseInt(zombie3.top) < parseInt(hero3.top) + parseInt(hero3.height) &&
@@ -56,32 +55,38 @@ function zombieMove() {
  /*  const zombieTimeout = randomIntFromInterval(3000, 5000);
   setTimeout(zombieInterval, zombieTimeout); */
   
-function zombieInterval() {
-    setInterval(zombieMove, 10);
-}
+
 /* function randomIntFromInterval(min, max) {    
     return Math.floor(Math.random() * (max - min + 1) + min);
 } */
 //hero methods
 const jump = function () {
+    const gravity = 10;
+    let metrNaPix = 19.2; 
+    let speed = 100 * metrNaPix; 
+    let angle = 90 * Math.PI / 180;  
+    let speed_x = speed * Math.cos(angle);
+    let speed_y = speed * Math.sin(angle);  
+    let x_coord = 200; 
+    let y_coord = 445
+    const fps = 60;
+    let time_step = 1.0 / fps;
     
+    const jumpInterval = setInterval(function() {
+        if (y_coord < 446 && x_coord < 1920) {
+            x_coord += speed_x * time_step 
+            y_coord -= speed_y * time_step
+            speed_y -= gravity * time_step * metrNaPix * metrNaPix;
+            divHero.style.top = `${y_coord}px`;
+            divHero.style.left = `${x_coord}px`;
+            speed_x *= 0.99;
+            speed_y *= 0.99;
+            if (parseInt(y_coord) > 440) {
+                hero.classList.remove("heroFlying");
+            } 
+        }   
     
-    if (y_coord < 446 && x_coord < 1920) {
-
-        x_coord += speed_x * time_step 
-        y_coord -= speed_y * time_step
-  
-        speed_y -= gravity * time_step * metrNaPix * metrNaPix;
-       
-        divHero.style.top = `${y_coord}px`;
-        divHero.style.left = `${x_coord}px`;
-       
-        speed_x *= 0.99;
-        speed_y *= 0.99;
-    }
-    if (parseInt(y_coord) > 440) {
-        hero.classList.remove("heroFlying");
-    } 
+    }, 1000/fps)
 }
 
 function shot() {
@@ -95,7 +100,6 @@ function shot() {
     bulletDiv.innerHTML = '<div class="bulletHero"></div>';
     bulletDiv.style.top = `${parseInt(heroPos.top) - 23}px`;
     
-
     if (parseInt(heroPos.top) > 558) {
         hero.classList.add("heroStandingShooting");
         setTimeout(function () {
@@ -118,6 +122,7 @@ document.addEventListener('keydown', function (e) {
         if (parseInt(heroPos.top) > 560) {
             let hero = document.querySelector("#hero");
             hero.classList.add("heroFlying")
+            console.log(hero.classList)
             jump();
         }
     }
