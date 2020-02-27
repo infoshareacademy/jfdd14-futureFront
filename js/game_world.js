@@ -5,6 +5,8 @@ const hero = document.querySelector('.heroRun')
 const divZombie = document.querySelector('.zombieContainer')
 const divHero = document.querySelector('.heroContainer')
 divZombie.style.left = '500px'
+
+let zombieXPosition = 1200;
 let zombie3 = divZombie.getBoundingClientRect();
 let hero3 = divHero.getBoundingClientRect();
 let zombieX = 500
