@@ -127,6 +127,7 @@ iteration-count | direction | fill-mode | play-state | name */
   height: 20px;
   /* background-color: red; */
   animation: scrollRight 1s linear forwards;
+  /* animation: shotAtAngle 1s linear forwards; */
 }
 
 
@@ -142,6 +143,20 @@ iteration-count | direction | fill-mode | play-state | name */
   animation: playXbullet .4s steps(8) infinite,
     playYbullet .8s steps(4) infinite;
   transform: scale(0.1)
+}
+
+
+
+@keyframes shotAtAngle {
+  0% {
+    left: 400px;
+    top: inherit;
+  }
+
+  100% {
+    left: 1900px;
+    top: -1200px;
+  }
 }
 
 
