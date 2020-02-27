@@ -95,16 +95,6 @@ document.addEventListener('keypress', function (e) {
         divZombie.style.left = "250px"
     }
 })
-const heroheight = divHero.style.left
-
-
-const checkCollision = (zombie3, hero3) => {
-    if (parseInt(zombie3.left) < parseInt(hero3.right) + parseInt(hero3.width) &&
-    parseInt(zombie3.left) + parseInt(zombie3.width) > parseInt(hero3.left) &&
-      parseInt(zombie3.top) < parseInt(hero3.top) + parseInt(hero3.height) &&
-      parseInt(zombie3.top) + parseInt(zombie3.height) > parseInt(hero3.top)){
-        console.log('kolacja')}
-    else { console.log('nie kolacja') }}
 
  
 
@@ -117,6 +107,7 @@ function zombieMove() {
       zombieXPosition = 1200;
       divZombie.style.left = `${zombieXPosition}px`;
     }
+    checkCollision(zombie3, hero3)
   }
               
               divZombie.style.left =`${zombieX}px`
@@ -252,6 +243,16 @@ document.addEventListener('keydown', function (e) {
 //     }
 // });
 
+const heroheight = divHero.style.left 
+
+
+const checkCollision = (zombie3, hero3) => {
+    if (parseInt(zombie3.left) < parseInt(hero3.right) + parseInt(hero3.width) &&
+    parseInt(zombie3.left) + parseInt(zombie3.width) > parseInt(hero3.left) &&
+      parseInt(zombie3.top) < parseInt(hero3.top) + parseInt(hero3.height) &&
+      parseInt(zombie3.top) + parseInt(zombie3.height) > parseInt(hero3.top)){
+        console.log('kolacja')}
+    else { console.log('nie kolacja') }}
 
 
 
