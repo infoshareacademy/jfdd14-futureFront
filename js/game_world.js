@@ -7,6 +7,7 @@ const divHero = document.querySelector('.heroContainer')
 divZombie.style.left = '500px'
 let zombie3 = divZombie.getBoundingClientRect();
 let hero3 = divHero.getBoundingClientRect();
+let zombieX = 500
 function rect() {
    
 }
@@ -33,7 +34,7 @@ const jump = function () {
     setInterval(function () {
        
         if (y_coord < 441 && x_coord < 1920) {
-
+            
             x_coord += speed_x * time_step //* metrNaPix;
             y_coord -= speed_y * time_step //* metrNaPix;
 
@@ -75,6 +76,9 @@ const jump = function () {
                 console.log("nie kolicja");
             } */
             
+            divZombie.style.left =`${zombieX}px`
+            zombieX -= 10
+            console.log(zombieX)
             
         }
     }, 1000 / fps);
