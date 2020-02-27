@@ -7,6 +7,7 @@ const divHero = document.querySelector('.heroContainer')
 divZombie.style.left = '500px'
 let zombie3 = divZombie.getBoundingClientRect();
 let hero3 = divHero.getBoundingClientRect();
+let zombieX = 500
 function rect() {
 
 }
@@ -74,6 +75,11 @@ const jump = function () {
               } else {
                 console.log("nie kolicja");
             } */
+            
+            divZombie.style.left =`${zombieX}px`
+            zombieX -= 10
+            console.log(zombieX)
+            
 
 
         }
