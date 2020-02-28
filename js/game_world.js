@@ -10,6 +10,7 @@ let hero3 = divHero.getBoundingClientRect();
 let zombieX = 500;
 const heroheight = divHero.style.left;
 const fps = 60;
+let count = 0
 //engine
 
 const engine = setInterval(function() {
@@ -24,7 +25,7 @@ const engine = setInterval(function() {
       checkCollision(divZombie, el);
     });
   }
-let count = 0
+
 }, 1000 / fps);
  const checkCollision = (firstObject, secondObject) => {
      const boundingFirst = firstObject.getBoundingClientRect()
@@ -39,8 +40,15 @@ let count = 0
     parseInt(boundingFirst.top) + parseInt(boundingFirst.height) >
       parseInt(bounding.top)
   ) {
-        firstObject.style.display = 'none'
-      secondObject.style.display = 'none'
+    secondObject.firstElementChild.classList.add('heroDie')
+        count += 2
+        if(count >= 6) {
+         firstObject.style.display = 'none'
+        }
+          
+        
+        
+      
       
   } else {
     console.log("nie kolacja");
