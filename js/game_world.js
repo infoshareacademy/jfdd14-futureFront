@@ -13,10 +13,17 @@ const fps = 60;
 let count = 0
 //engine
 
+
+
 const engine = setInterval(function() {
   const bullets = [...document.querySelectorAll(".bulletContainerHero")];
+  const gifts = document.querySelectorAll(".giftContainer"); // gift faza testu
   zombieContainerCoords = divZombie.getBoundingClientRect();
   hero3 = divHero.getBoundingClientRect();
+  giftContainerColision = gifts.getBoundingClientRect(); //faza testu
+  checkCollision(giftContainerColision, hero3); //faza testu 
+
+
 
  checkCollision(divZombie, divHero);
   if (bullets.length > 0) {
@@ -164,3 +171,17 @@ document.addEventListener("keydown", function(e) {
     shot();
   }
 });
+
+
+// funkcja na pojawianie się monet w różnej pozycji 
+function coinSec(min, max){
+    
+    
+    return Math.floor( Math.random() * ( max - min + 1 ) + min );
+}
+
+const coin1 = document.querySelector(".giftContainer");
+
+
+coin1.style.top = `${coinSec(50, 520)}px`; 
+

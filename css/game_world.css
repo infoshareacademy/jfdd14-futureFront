@@ -33,7 +33,7 @@ background-color: rgb(227, 188, 190);
   left: 0;
   width: 1200px;
   height: 675px;
-  background: url("/img/game/background_world/Layers/Sky.png");
+  background: url('/img/game/background_world/Layers/Sky.png');
   background-attachment: inherit;
   background-size: contain;
   animation: scrollLeft 50s linear infinite;
@@ -45,7 +45,7 @@ background-color: rgb(227, 188, 190);
   left: 0;
   width: 1200px;
   height: 675px;
-  background: url("/img/game/background_world/Layers/BG_Decor.png");
+  background: url('/img/game/background_world/Layers/BG_Decor.png');
   background-attachment: inherit;
   background-size: contain;
   animation: scrollLeft 30s linear infinite;
@@ -57,7 +57,7 @@ background-color: rgb(227, 188, 190);
   left: 0;
   width: 1200px;
   height: 675px;
-  background: url("/img/game/background_world/Layers/Middle_Decor.png");
+  background: url('/img/game/background_world/Layers/Middle_Decor.png');
   background-attachment: inherit;
   background-size: contain;
   animation: scrollLeft 20s linear infinite;
@@ -69,7 +69,7 @@ background-color: rgb(227, 188, 190);
   left: 0;
   width: 1200px;
   height: 675px;
-  background: url("/img/game/background_world/Layers/Foreground.png");
+  background: url('/img/game/background_world/Layers/Foreground.png');
   background-attachment: inherit;
   background-size: contain;
   animation: scrollLeft 15s linear infinite;
@@ -81,7 +81,7 @@ background-color: rgb(227, 188, 190);
   left: 0;
   width: 1200px;
   height: 675px;
-  background: url("/img/game/background_world/Layers/Ground.png");
+  background: url('/img/game/background_world/Layers/Ground.png');
   background-attachment: inherit;
   background-size: contain;
   animation: scrollLeft 3s linear infinite;
@@ -172,6 +172,7 @@ iteration-count | direction | fill-mode | play-state | name */
   z-index: 4;
 }
 .zombieContainer {
+  display:none;
   position: absolute;
   top: 440px;
   left: 500px;
@@ -183,11 +184,10 @@ iteration-count | direction | fill-mode | play-state | name */
 }
 @keyframes scrollLeftZombie {
   0% {
-    left: 1000px;
+    left: 1600px;
   }
-
   100% {
-    left: -200px;
+    left: -300px;
   }
 }
 .penguinContainer {
