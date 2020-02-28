@@ -24,30 +24,35 @@ const engine = setInterval(function() {
 
 
 
-  checkCollision(zombieContainerCoords, hero3);
+ checkCollision(divZombie, divHero);
   if (bullets.length > 0) {
     bullets.forEach(el => {
-      checkCollision(zombieContainerCoords, el.getBoundingClientRect());
+       
+      checkCollision(divZombie, el);
     });
   }
-  zombieMove();
+let count = 0
 }, 1000 / fps);
+ const checkCollision = (firstObject, secondObject) => {
+     const boundingFirst = firstObject.getBoundingClientRect()
+   const bounding = secondObject.getBoundingClientRect()
 
-const checkCollision = (firstObject, secondObject) => {
   if (
-    parseInt(firstObject.left) < parseInt(secondObject.right) &&
-    parseInt(firstObject.left) + parseInt(firstObject.width) >
-      parseInt(secondObject.left) &&
-    parseInt(firstObject.top) <
-      parseInt(secondObject.top) + parseInt(secondObject.height) &&
-    parseInt(firstObject.top) + parseInt(firstObject.height) >
-      parseInt(secondObject.top)
+    parseInt(boundingFirst.left) < parseInt(bounding.right) &&
+    parseInt(boundingFirst.left) + parseInt(boundingFirst.width) >
+      parseInt(bounding.left) &&
+    parseInt(boundingFirst.top) <
+      parseInt(bounding.top) + parseInt(bounding.height) &&
+    parseInt(boundingFirst.top) + parseInt(boundingFirst.height) >
+      parseInt(bounding.top)
   ) {
-    console.log("kolacja");
+        firstObject.style.display = 'none'
+      secondObject.style.display = 'none'
+      
   } else {
     console.log("nie kolacja");
   }
-};
+}; 
 //zombie move
 function zombieMove() {
   divZombie.style.left = `${zombieXPosition}px`;
@@ -56,6 +61,14 @@ function zombieMove() {
     zombieXPosition = 1200;
     divZombie.style.left = `${zombieXPosition}px`;
   }
+}
+function zombieCreate() {
+    const zombieDiv = document.createElement('div')
+    const zombie = document.createElement('div')
+    zombieDiv.classList.add('zombieContainer')
+    zombie.classList.add('zombieRun')
+    setTimeout(world.append(zombieDiv),5000)
+    setTimeout(zombieDiv.append(zombie),5000)
 }
 
 //hero methods
@@ -132,6 +145,19 @@ document.addEventListener("keydown", function(e) {
   }
 });
 
+
+
+
+function outOfMap() {
+    const divsOutOfGameContainer = [...document.querySelectorAll("div")];
+ divsOutOfGameContainer.forEach(element => {console.log(element.getBoundingClientRect().left, "bullet left");});
+ const removeDivs = divsOutOfGameContainer.forEach(element => {
+     if(parseInt(element.getBoundingClientRect().left) > 1560
+     || parseInt(element.getBoundingClientRect().right) < 364) {element.style.display = 'none';
+     console.log(element, "check display")}
+ });
+}
+ 
 document.addEventListener("keydown", function(e) {
   if (e.key == "l") {
     shot();

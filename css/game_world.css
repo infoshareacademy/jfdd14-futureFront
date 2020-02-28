@@ -112,7 +112,7 @@ iteration-count | direction | fill-mode | play-state | name */
   width: 20px;
   height: 20px;
   /* background-color: red; */
-  animation: scrollRightBullet 1s linear forwards;
+  animation: scrollRightBullet 8s linear forwards;
   /* animation: shotAtAngle 1s linear forwards; */
 }
 .bulletHero {
@@ -178,8 +178,17 @@ iteration-count | direction | fill-mode | play-state | name */
   left: 500px;
   width: 135.6px;
   height: 176.1px;
-  /* background-color: hotpink; */
+
   z-index: 8;
+  animation: scrollLeftZombie 7s linear infinite;
+}
+@keyframes scrollLeftZombie {
+  0% {
+    left: 1600px;
+  }
+  100% {
+    left: -300px;
+  }
 }
 .penguinContainer {
   position: absolute;
@@ -187,7 +196,7 @@ iteration-count | direction | fill-mode | play-state | name */
   left: 900px;
   width: 120px;
   height: 140px;
-  /* background-color: hotpink; */
+  /* background-color: hotpink;*/ 
   z-index: 4;
   animation: scrollLeftPenguin 5s linear infinite;
 }
