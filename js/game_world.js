@@ -17,30 +17,35 @@ const engine = setInterval(function() {
   zombieContainerCoords = divZombie.getBoundingClientRect();
   hero3 = divHero.getBoundingClientRect();
 
-  checkCollision(zombieContainerCoords, hero3);
+ checkCollision(divZombie, divHero);
   if (bullets.length > 0) {
     bullets.forEach(el => {
-      checkCollision(zombieContainerCoords, el.getBoundingClientRect());
+       
+      checkCollision(divZombie, el);
     });
   }
-  
+let count = 0
 }, 1000 / fps);
+ const checkCollision = (firstObject, secondObject) => {
+     const boundingFirst = firstObject.getBoundingClientRect()
+   const bounding = secondObject.getBoundingClientRect()
 
-const checkCollision = (firstObject, secondObject) => {
   if (
-    parseInt(firstObject.left) < parseInt(secondObject.right) &&
-    parseInt(firstObject.left) + parseInt(firstObject.width) >
-      parseInt(secondObject.left) &&
-    parseInt(firstObject.top) <
-      parseInt(secondObject.top) + parseInt(secondObject.height) &&
-    parseInt(firstObject.top) + parseInt(firstObject.height) >
-      parseInt(secondObject.top)
+    parseInt(boundingFirst.left) < parseInt(bounding.right) &&
+    parseInt(boundingFirst.left) + parseInt(boundingFirst.width) >
+      parseInt(bounding.left) &&
+    parseInt(boundingFirst.top) <
+      parseInt(bounding.top) + parseInt(bounding.height) &&
+    parseInt(boundingFirst.top) + parseInt(boundingFirst.height) >
+      parseInt(bounding.top)
   ) {
-    console.log("kolacja");
+        firstObject.style.display = 'none'
+      secondObject.style.display = 'none'
+      
   } else {
     console.log("nie kolacja");
   }
-};
+}; 
 //zombie move
 function zombieMove() {
   divZombie.style.left = `${zombieXPosition}px`;
