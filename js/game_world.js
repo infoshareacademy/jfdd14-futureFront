@@ -8,6 +8,9 @@ let zombieXPosition = 1200;
 let zombie3 = divZombie.getBoundingClientRect();
 let hero3 = divHero.getBoundingClientRect();
 let zombieX = 500
+const divPenguin = document.querySelector('.penguinContainer')
+const fps = 60;
+const world = document.querySelector('.gameContainer')
 
 const heroheight = divHero.style.left
 const gravity = 10;
@@ -18,13 +21,13 @@ let speed_x = speed * Math.cos(angle);
 let speed_y = speed * Math.sin(angle);  
 let x_coord = 200; 
 let y_coord = 445
-const fps = 60;
+
 let time_step = 1.0 / fps;
 
 //engine
 
 const engine =setInterval(function () {
-    
+    outOfMap()
     checkCollision(zombie3, hero3)
 }, 1000/fps);
 
@@ -33,11 +36,11 @@ const checkCollision = (zombie3, hero3) => {
     zombie3 = divZombie.getBoundingClientRect();
     hero3 = divHero.getBoundingClientRect();
     
-    if (parseInt(zombie3.left) < parseInt(hero3.right) + parseInt(hero3.width) &&
+    if (parseInt(zombie3.left) < parseInt(hero3.right)&
     parseInt(zombie3.left) + parseInt(zombie3.width) > parseInt(hero3.left) &&
       parseInt(zombie3.top) < parseInt(hero3.top) + parseInt(hero3.height) &&
       parseInt(zombie3.top) + parseInt(zombie3.height) > parseInt(hero3.top)){
-        console.log('kolacja')
+        
     } else { console.log('nie kolacja') 
 }
 }
@@ -88,7 +91,14 @@ const jump = function () {
     
     }, 1000/fps)
 }
-
+function zombieCreate() {
+    const zombieDiv = document.createElement('div')
+    const zombie = document.createElement('div')
+    zombieDiv.classList.add('zombieContainer')
+    zombie.classList.add('zombieRun')
+    setTimeout(world.append(zombieDiv),5000)
+    setTimeout(zombieDiv.append(zombie),5000)
+}
 function shot() {
     const world = document.querySelector(".gameContainer");
     const hero = document.querySelector("#hero");
@@ -142,4 +152,13 @@ document.addEventListener('keypress', function (e) {
     }
 })
 
-
+function outOfMap() {
+    const divsOutOfGameContainer = [...document.querySelectorAll("div")];
+ divsOutOfGameContainer.forEach(element => {console.log(element.getBoundingClientRect().left, "bullet left");});
+ const removeDivs = divsOutOfGameContainer.forEach(element => {
+     if(parseInt(element.getBoundingClientRect().left) > 1560
+     || parseInt(element.getBoundingClientRect().right) < 364) {element.style.display = 'none';
+     console.log(element, "check display")}
+ });
+}
+ 
