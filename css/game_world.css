@@ -4,8 +4,8 @@
   padding: 0;
 }
 body{
-/* background-color: gray; */
-background-color: rgb(227, 188, 190);
+background-color: grey;
+/* background-color: rgb(227, 188, 190); */
 }
 .gameContainer {
   width: 1200px;
@@ -24,6 +24,20 @@ background-color: rgb(227, 188, 190);
   /* animation: scrollLeft 2s linear infinite; */
   /* animation: scrollGood 2s linear infinite; */
   transform: scale(1);
+}
+
+.frame{
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 12vw;
+  width: 1450px;
+  height: 845px;
+  background: url('/img/game/border_red.png');
+  /* background-attachment: inherit; */
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 9;
 }
 /* ****************** BACKGROUND *********************** */
 .sky {
@@ -178,7 +192,7 @@ iteration-count | direction | fill-mode | play-state | name */
   left: 500px;
   width: 135.6px;
   height: 176.1px;
-
+background-color: hotpink;
   z-index: 8;
   animation: scrollLeftZombie 7s linear infinite;
 }
