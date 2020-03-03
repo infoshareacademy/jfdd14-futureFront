@@ -78,31 +78,17 @@ function showSlides(n) {
 function scrollRotate() {
   const teamCells = [...document.querySelectorAll('.flipCardInner')];
   teamCells.forEach(element => {
-    if (element.getBoundingClientRect().bottom <= window.innerHeight) {
-      console.log(element.getBoundingClientRect().bottom, "bottom");
-      element.style.transform = "rotateY(180deg)"
+    if (element.getBoundingClientRect().bottom <= window.innerHeight){
+      element.style.transform = "rotateY(180deg)";
     }
-    if (element.getBoundingClientRect().bottom > window.innerHeight) {
-      console.log(window.innerHeight,"window h");
+    else {
       element.style.transform = "";
     };
   });
 }
 
-
 window.addEventListener('scroll', function () {
   scrollRotate()
 })
 
-
-function isInViewport(element) {
-  var rect = element.getBoundingClientRect();
-  var html = document.documentElement;
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || html.clientHeight) &&
-    rect.right <= (window.innerWidth || html.clientWidth)
-  );
-}
 

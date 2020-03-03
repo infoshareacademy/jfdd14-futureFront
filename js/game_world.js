@@ -21,7 +21,7 @@ const engine = setInterval(function() {
   zombieContainerCoords = divZombie.getBoundingClientRect();
   hero3 = divHero.getBoundingClientRect();
   //giftContainerColision = gifts.getBoundingClientRect(); //faza testu
-  //checkCollision(giftContainerColision, hero3); //faza testu 
+  //checkCollision(giftContainerColision, hero3); //faza testu
 
 
 
@@ -103,6 +103,12 @@ const jump = function() {
       speed_y *= 0.99;
       if (parseInt(y_coord) > 440) {
         hero.classList.remove("heroFlying");
+        hero.innerHTML -= `<audio autoplay>
+        <source src="/Game/audio/jetpack2.wav" type="audio/mpeg">
+      </audio>`;
+      hero.innerHTML += `<audio autoplay>
+      <source src="/Game/audio/run.wav" type="audio/mpeg">
+    </audio>`;
       }
     }
   }, 1000 / fps);
@@ -116,7 +122,12 @@ function shot() {
   const heroPos = divHero.getBoundingClientRect();
   world.append(bulletDiv);
   bulletDiv.classList.add("bulletContainerHero");
-  bulletDiv.innerHTML = '<div class="bulletHero"></div>';
+  bulletDiv.innerHTML = `<div class="bulletHero"></div>
+
+  <audio autoplay>
+  <source src="/Game/audio/laser.wav" type="audio/mpeg">
+</audio>`;
+
   bulletDiv.style.top = `${parseInt(heroPos.top) - 23}px`;
 
   if (parseInt(heroPos.top) > 558) {
@@ -147,7 +158,9 @@ document.addEventListener("keydown", function(e) {
     if (parseInt(heroPos.top) > 560) {
       let hero = document.querySelector("#hero");
       hero.classList.add("heroFlying");
-
+      hero.innerHTML += `<audio autoplay>
+      <source src="/Game/audio/jetpack2.wav" type="audio/mpeg">
+    </audio>`;
       jump();
     }
   }

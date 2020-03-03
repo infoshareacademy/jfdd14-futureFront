@@ -2,10 +2,10 @@
   
   .flipCardInner {
     /* position: absolute; */
-    transition: transform .6s;
+    transition: transform .6s .7s;
     transform-style: preserve-3d;
     perspective: 1000px;
-    transition-delay: .7s;
+    /* transition-delay: .7s; */
   }
 
 
