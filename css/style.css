@@ -331,10 +331,10 @@ i.fas {
     transition: all 1.5s ease;
 }
 
-i.fas:hover {
+/* i.fas:hover {
     color: rgba(0, 128, 128, 0.822);
     opacity: 0.8;
-}
+} */
 
 .functionLongHeaderContainer {
     display: block;
@@ -447,7 +447,7 @@ form .submit {
     box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
     background-color: rgba(227, 188, 190, 0.432);
-    transition: all 0.6s ease;
+    /* transition: all .6s ease; */
 }
 
 .teamCell img {
@@ -467,6 +467,7 @@ form .submit {
 }
 
 .teamContainer {
+    /* position: absolute; */
     min-height: 80vh;
     padding: 5vh;
 }
@@ -493,16 +494,15 @@ form .submit {
 i.fab {
     transform: scale(1.5);
     margin: 10px;
-    opacity: 0.8;
     color: teal;
     background-color: transparent;
     text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: all 0.6s ease;
+    /* transition: all 12s ease; */
 }
 
 i.fab:hover {
-    color: rgba(0, 128, 128, 0.822);
-    opacity: 0.8;
+    /* color: rgba(0, 128, 128, 0.822); */
+    /* opacity: 0.8; */
 }
 
 /* COOKIES */

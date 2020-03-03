@@ -20,8 +20,8 @@ const engine = setInterval(function() {
   const gifts = document.querySelectorAll(".giftContainer"); // gift faza testu
   zombieContainerCoords = divZombie.getBoundingClientRect();
   hero3 = divHero.getBoundingClientRect();
-  giftContainerColision = gifts.getBoundingClientRect(); //faza testu
-  checkCollision(giftContainerColision, hero3); //faza testu 
+  //giftContainerColision = gifts.getBoundingClientRect(); //faza testu
+  //checkCollision(giftContainerColision, hero3); //faza testu 
 
 
 
