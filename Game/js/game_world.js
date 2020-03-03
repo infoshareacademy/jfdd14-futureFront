@@ -1,15 +1,12 @@
 //consts + query selectors
 const zombie = document.querySelector(".zombieRun");
 const hero = document.querySelector(".heroRun");
-const divZombie = document.querySelector(".zombieContainer");
-const divZombie1 = document.querySelector(".zombieContainer1");
-const divZombie2 = document.querySelector(".zombieContainer2");
+const divZombie = document.querySelector("#zombie1");
+const divZombie1 = document.querySelector("#zombie2");
+const divZombie2 = document.querySelector("#zombie3");
 const divHero = document.querySelector(".heroContainer");
 const world = document.querySelector(".gameContainer");
-//divZombie.style.left = "500px";
-let zombieXPosition = 1200;
-/* let zombieContainerCoords = divZombie.getBoundingClientRect();
-let heroContainerCoords = divHero.getBoundingClientRect(); */
+
 let zombieX = 500;
 const heroheight = divHero.style.left;
 const fps = 60;
@@ -19,10 +16,6 @@ let count = 0;
 const engine = setInterval(function() {
   const bullets = [...document.querySelectorAll(".bulletContainerHero")];
   const giftContainer = document.querySelector(".giftContainer");
-
-  /* zombieContainerCoords = divZombie.getBoundingClientRect();
-  heroContainerCoords = divHero.getBoundingClientRect(); */
-  //zombieMove();
   //gift collision
   checkCollision(divHero, giftContainer);
   //zombie collision
@@ -33,6 +26,16 @@ const engine = setInterval(function() {
   if (bullets.length > 0) {
     bullets.forEach(el => {
       checkCollision(divZombie, el);
+    });
+  }
+  if (bullets.length > 0) {
+    bullets.forEach(el => {
+      checkCollision(divZombie1, el);
+    });
+  }
+  if (bullets.length > 0) {
+    bullets.forEach(el => {
+      checkCollision(divZombie2, el);
     });
   }
 }, 1000 / fps);
@@ -51,33 +54,26 @@ const checkCollision = (firstObject, secondObject) => {
   ) {
     //secondObject.firstElementChild.classList.add("heroDie");
     count += 2;
+    secondObject.style.display = "none";
     if (count >= 6) {
       firstObject.style.display = "none";
-      secondObject.style.display = "none";
     }
   } else {
   }
 };
-//zombie move
-/* function zombieMove() {
-  divZombie.style.left = `${zombieXPosition}px`;
-  zombieXPosition -= 8;
-  if (zombieXPosition < -150) {
-    zombieXPosition = 1200;
-    divZombie.style.left = `${zombieXPosition}px`;
-  }
-} */
-/* function zombieCreate() {
-  const zombieDiv = document.createElement("div");
-  const zombie = document.createElement("div");
-  zombieDiv.classList.add("zombieContainer");
-  zombie.classList.add("zombieRun");
-  world.append(zombieDiv);
-  zombieDiv.append(zombie);
+//zombie create
+
+function addZombieMoveClass1() {
+  divZombie1.classList.remove("deadZombieContainer");
+  divZombie1.classList.add("zombieContainer");
 }
-setTimeout(zombieCreate, 5000);
-setTimeout(zombieCreate, 10000);
- */
+function addZombieMoveClass2() {
+  divZombie2.classList.remove("deadZombieContainer");
+  divZombie2.classList.add("zombieContainer");
+}
+setTimeout(addZombieMoveClass1, 5000);
+setTimeout(addZombieMoveClass2, 10000);
+
 //hero methods
 const jump = function() {
   const gravity = 10;

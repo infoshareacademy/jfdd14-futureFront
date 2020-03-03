@@ -9,6 +9,17 @@
   z-index: 8;
   animation: scrollLeftZombie 7s linear infinite;
 }
+.deadZombieContainer {
+  display: none;
+  position: absolute;
+  top: 440px;
+  left: 500px;
+  width: 135.6px;
+  height: 176.1px;
+
+  z-index: 8;
+  /*animation: scrollLeftZombie 7s linear infinite;*/
+}
 @keyframes scrollLeftZombie {
   0% {
     left: 1600px;
