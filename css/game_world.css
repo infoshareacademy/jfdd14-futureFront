@@ -3,9 +3,9 @@
   margin: 0;
   padding: 0;
 }
-body{
-/* background-color: gray; */
-background-color: rgb(227, 188, 190);
+body {
+  /* background-color: gray; */
+  background-color: rgb(227, 188, 190);
 }
 .gameContainer {
   width: 1200px;
@@ -33,7 +33,7 @@ background-color: rgb(227, 188, 190);
   left: 0;
   width: 1200px;
   height: 675px;
-  background: url('/img/game/background_world/Layers/Sky.png');
+  background: url("/img/game/background_world/Layers/Sky.png");
   background-attachment: inherit;
   background-size: contain;
   animation: scrollLeft 50s linear infinite;
@@ -45,7 +45,7 @@ background-color: rgb(227, 188, 190);
   left: 0;
   width: 1200px;
   height: 675px;
-  background: url('/img/game/background_world/Layers/BG_Decor.png');
+  background: url("/img/game/background_world/Layers/BG_Decor.png");
   background-attachment: inherit;
   background-size: contain;
   animation: scrollLeft 30s linear infinite;
@@ -57,7 +57,7 @@ background-color: rgb(227, 188, 190);
   left: 0;
   width: 1200px;
   height: 675px;
-  background: url('/img/game/background_world/Layers/Middle_Decor.png');
+  background: url("/img/game/background_world/Layers/Middle_Decor.png");
   background-attachment: inherit;
   background-size: contain;
   animation: scrollLeft 20s linear infinite;
@@ -69,7 +69,7 @@ background-color: rgb(227, 188, 190);
   left: 0;
   width: 1200px;
   height: 675px;
-  background: url('/img/game/background_world/Layers/Foreground.png');
+  background: url("/img/game/background_world/Layers/Foreground.png");
   background-attachment: inherit;
   background-size: contain;
   animation: scrollLeft 15s linear infinite;
@@ -81,7 +81,7 @@ background-color: rgb(227, 188, 190);
   left: 0;
   width: 1200px;
   height: 675px;
-  background: url('/img/game/background_world/Layers/Ground.png');
+  background: url("/img/game/background_world/Layers/Ground.png");
   background-attachment: inherit;
   background-size: contain;
   animation: scrollLeft 3s linear infinite;
@@ -123,9 +123,9 @@ iteration-count | direction | fill-mode | play-state | name */
   height: 256px;
   z-index: 9;
   background-image: url("/img/game/sprite_sheet/shots/3.png");
-  animation: playXbullet .4s steps(8) infinite,
-    playYbullet .8s steps(4) infinite;
-  transform: scale(0.1)
+  animation: playXbullet 0.4s steps(8) infinite,
+    playYbullet 0.8s steps(4) infinite;
+  transform: scale(0.1);
 }
 @keyframes shotAtAngle {
   0% {
@@ -172,7 +172,7 @@ iteration-count | direction | fill-mode | play-state | name */
   z-index: 4;
 }
 .zombieContainer {
-  display:none;
+  /*display:none;*/
   position: absolute;
   top: 440px;
   left: 500px;
@@ -196,7 +196,7 @@ iteration-count | direction | fill-mode | play-state | name */
   left: 900px;
   width: 120px;
   height: 140px;
-  /* background-color: hotpink;*/ 
+  /* background-color: hotpink;*/
   z-index: 4;
   animation: scrollLeftPenguin 5s linear infinite;
 }
@@ -226,9 +226,8 @@ iteration-count | direction | fill-mode | play-state | name */
   height: 256px;
   z-index: 9;
   background-image: url("/img/game/sprite_sheet/shots/1.png");
-  animation: playXgift .4s steps(8) infinite,
-    playYgift .8s steps(4) infinite;
-  transform: scale(0.3)
+  animation: playXgift 0.4s steps(8) infinite, playYgift 0.8s steps(4) infinite;
+  transform: scale(0.3);
 }
 @keyframes playXcoin {
   from {
@@ -272,9 +271,9 @@ iteration-count | direction | fill-mode | play-state | name */
   width: 452px;
   height: 587px;
   background-image: url("/img/game/sprite_sheet/Run.png");
-  animation: playXzombie .4s steps(4) infinite,
-    playYzombie .5s steps(5) infinite;
-  transform: scale(-0.3, 0.3)
+  animation: playXzombie 0.4s steps(4) infinite,
+    playYzombie 0.5s steps(5) infinite;
+  transform: scale(-0.3, 0.3);
 }
 @keyframes playXzombie {
   from {
@@ -301,9 +300,8 @@ iteration-count | direction | fill-mode | play-state | name */
   width: 881px;
   height: 639px;
   background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_standing_run.png");
-  animation: playXrun .3s steps(5) infinite,
-    playYrun .9s steps(3) infinite;
-  transform: scale(0.3)
+  animation: playXrun 0.3s steps(5) infinite, playYrun 0.9s steps(3) infinite;
+  transform: scale(0.3);
 }
 @keyframes playXrun {
   from {
@@ -327,9 +325,8 @@ iteration-count | direction | fill-mode | play-state | name */
   width: 881px;
   height: 639px;
   background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_standing_jump.png");
-  animation: playX1jump .5s steps(5) infinite,
-    playY1jump 1s steps(2) infinite;
-  transform: scale(0.3)
+  animation: playX1jump 0.5s steps(5) infinite, playY1jump 1s steps(2) infinite;
+  transform: scale(0.3);
 }
 @keyframes playX1jump {
   from {
@@ -355,9 +352,8 @@ iteration-count | direction | fill-mode | play-state | name */
   width: 881;
   height: 639;
   background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_red_helmet_flying.png");
-  animation: playXfly .4s steps(5) infinite,
-    playYfly 1.2s steps(3) infinite;
-  transform: scale(0.3)
+  animation: playXfly 0.4s steps(5) infinite, playYfly 1.2s steps(3) infinite;
+  transform: scale(0.3);
 }
 @keyframes playXfly {
   from {
@@ -381,9 +377,9 @@ iteration-count | direction | fill-mode | play-state | name */
   width: 881px;
   height: 639px;
   background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_red_helmet_flying_shoot.png");
-  animation: playX1flyShoot .05s steps(5) infinite,
-    playY1flyShoot .1s steps(2) infinite;
-  transform: scale(0.3)
+  animation: playX1flyShoot 0.05s steps(5) infinite,
+    playY1flyShoot 0.1s steps(2) infinite;
+  transform: scale(0.3);
 }
 @keyframes playX1flyShoot {
   from {
@@ -407,7 +403,7 @@ iteration-count | direction | fill-mode | play-state | name */
   width: 881px;
   height: 639px;
   background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_standing_shoot.png");
-  animation: playX2standShoot .1s steps(5) infinite;
+  animation: playX2standShoot 0.1s steps(5) infinite;
   transform: scale(0.3);
 }
 @keyframes playX2standShoot {
@@ -426,7 +422,7 @@ iteration-count | direction | fill-mode | play-state | name */
   width: 881px;
   height: 639px;
   background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_red_helmet_standing_die.png");
-  animation: playX2Die .8s steps(4) 1;
+  animation: playX2Die 0.8s steps(4) 1;
   animation-fill-mode: forwards;
   transform: scale(0.3);
 }
@@ -439,7 +435,7 @@ iteration-count | direction | fill-mode | play-state | name */
   }
 }
 /* *************************PENGUIN****************************** */
-.penguinRun{
+.penguinRun {
   position: absolute;
   z-index: 3;
   top: -180px;
@@ -447,9 +443,9 @@ iteration-count | direction | fill-mode | play-state | name */
   width: 485px;
   height: 442px;
   background-image: url("/img/game/sprite_sheet/pinguin/run_shooting_forward.png");
-  animation: playXPenguinRun .5s steps(5) infinite,
-  playYPenguinRun 1.5s steps(3) infinite;
-  transform: scale(-0.3,0.3);
+  animation: playXPenguinRun 0.5s steps(5) infinite,
+    playYPenguinRun 1.5s steps(3) infinite;
+  transform: scale(-0.3, 0.3);
 }
 @keyframes playXPenguinRun {
   from {
@@ -476,7 +472,7 @@ iteration-count | direction | fill-mode | play-state | name */
   /* background-color: hotpink; */
   z-index: 4;
   animation: scrollLeftPenguin 5s linear infinite;
-             /* jumpPenguin 1s ease-out infinite; */
+  /* jumpPenguin 1s ease-out infinite; */
 }
 @keyframes jumpPenguin {
   0% {
@@ -518,9 +514,9 @@ iteration-count | direction | fill-mode | play-state | name */
   height: 256px;
   z-index: 9;
   background-image: url("/img/game/sprite_sheet/shots/3.png");
-  animation: playXbullet .4s steps(8) infinite,
-    playYbullet .8s steps(4) infinite;
-  transform: scale(0.1)
+  animation: playXbullet 0.4s steps(8) infinite,
+    playYbullet 0.8s steps(4) infinite;
+  transform: scale(0.1);
 }
 @keyframes shotAtAngle {
   0% {

@@ -10,33 +10,29 @@ let hero3 = divHero.getBoundingClientRect();
 let zombieX = 500;
 const heroheight = divHero.style.left;
 const fps = 60;
-let count = 0
+let count = 0;
 //engine
-
-
 
 const engine = setInterval(function() {
   const bullets = [...document.querySelectorAll(".bulletContainerHero")];
-  const gifts = document.querySelectorAll(".giftContainer"); // gift faza testu
+  const giftContainer = document.querySelector(".giftContainer");
   zombieContainerCoords = divZombie.getBoundingClientRect();
   hero3 = divHero.getBoundingClientRect();
-  giftContainerColision = gifts.getBoundingClientRect(); //faza testu
-  checkCollision(giftContainerColision, hero3); //faza testu 
-
-
-
- checkCollision(divZombie, divHero);
+  zombieMove();
+  //gift collision
+  checkCollision(divHero, giftContainer);
+  //zombie collision
+  checkCollision(divZombie, divHero);
+  //bullets collision
   if (bullets.length > 0) {
     bullets.forEach(el => {
-       
       checkCollision(divZombie, el);
     });
   }
-
 }, 1000 / fps);
- const checkCollision = (firstObject, secondObject) => {
-     const boundingFirst = firstObject.getBoundingClientRect()
-   const bounding = secondObject.getBoundingClientRect()
+const checkCollision = (firstObject, secondObject) => {
+  const boundingFirst = firstObject.getBoundingClientRect();
+  const bounding = secondObject.getBoundingClientRect();
 
   if (
     parseInt(boundingFirst.left) < parseInt(bounding.right) &&
@@ -47,20 +43,15 @@ const engine = setInterval(function() {
     parseInt(boundingFirst.top) + parseInt(boundingFirst.height) >
       parseInt(bounding.top)
   ) {
-    secondObject.firstElementChild.classList.add('heroDie')
-        count += 2
-        if(count >= 6) {
-         firstObject.style.display = 'none'
-        }
-          
-        
-        
-      
-      
+    secondObject.firstElementChild.classList.add("heroDie");
+    count += 2;
+    if (count >= 6) {
+      firstObject.style.display = "none";
+    }
   } else {
     console.log("nie kolacja");
   }
-}; 
+};
 //zombie move
 function zombieMove() {
   divZombie.style.left = `${zombieXPosition}px`;
@@ -71,12 +62,12 @@ function zombieMove() {
   }
 }
 function zombieCreate() {
-    const zombieDiv = document.createElement('div')
-    const zombie = document.createElement('div')
-    zombieDiv.classList.add('zombieContainer')
-    zombie.classList.add('zombieRun')
-    setTimeout(world.append(zombieDiv),5000)
-    setTimeout(zombieDiv.append(zombie),5000)
+  const zombieDiv = document.createElement("div");
+  const zombie = document.createElement("div");
+  zombieDiv.classList.add("zombieContainer");
+  zombie.classList.add("zombieRun");
+  setTimeout(world.append(zombieDiv), 5000);
+  setTimeout(zombieDiv.append(zombie), 5000);
 }
 
 //hero methods
@@ -153,35 +144,33 @@ document.addEventListener("keydown", function(e) {
   }
 });
 
-
-
-
 function outOfMap() {
-    const divsOutOfGameContainer = [...document.querySelectorAll("div")];
- divsOutOfGameContainer.forEach(element => {console.log(element.getBoundingClientRect().left, "bullet left");});
- const removeDivs = divsOutOfGameContainer.forEach(element => {
-     if(parseInt(element.getBoundingClientRect().left) > 1560
-     || parseInt(element.getBoundingClientRect().right) < 364) {element.style.display = 'none';
-     console.log(element, "check display")}
- });
+  const divsOutOfGameContainer = [...document.querySelectorAll("div")];
+  divsOutOfGameContainer.forEach(element => {
+    console.log(element.getBoundingClientRect().left, "bullet left");
+  });
+  const removeDivs = divsOutOfGameContainer.forEach(element => {
+    if (
+      parseInt(element.getBoundingClientRect().left) > 1560 ||
+      parseInt(element.getBoundingClientRect().right) < 364
+    ) {
+      element.style.display = "none";
+      console.log(element, "check display");
+    }
+  });
 }
- 
+
 document.addEventListener("keydown", function(e) {
   if (e.key == "l") {
     shot();
   }
 });
 
-
-// funkcja na pojawianie się monet w różnej pozycji 
-function coinSec(min, max){
-    
-    
-    return Math.floor( Math.random() * ( max - min + 1 ) + min );
+// funkcja na pojawianie się monet w różnej pozycji
+function coinSec(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 const coin1 = document.querySelector(".giftContainer");
 
-
-coin1.style.top = `${coinSec(50, 520)}px`; 
-
+coin1.style.top = `${coinSec(50, 520)}px`;
