@@ -1,0 +1,44 @@
+.giftContainer {
+  position: absolute;
+  top: 160px;
+  left: 230px;
+  width: 50px;
+  height: 50px;
+  /* background-color: hotpink; */
+  z-index: 4;
+}
+.gift {
+  position: absolute;
+  top: -105px;
+  left: -105px;
+  width: 256px;
+  height: 256px;
+  z-index: 9;
+  background-image: url("/img/game/sprite_sheet/shots/1.png");
+  animation: playXgift 0.4s steps(8) infinite, playYgift 0.8s steps(4) infinite;
+  transform: scale(0.3);
+}
+@keyframes playXcoin {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -679px;
+  }
+}
+@keyframes playXgift {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -2048px;
+  }
+}
+@keyframes playYgift {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: -1024px;
+  }
+}

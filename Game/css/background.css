@@ -1,0 +1,72 @@
+.sky {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/background_world/Layers/Sky.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 50s linear infinite;
+}
+.bgdecor {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/background_world/Layers/BG_Decor.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 30s linear infinite;
+}
+.middledecor {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/background_world/Layers/Middle_Decor.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 20s linear infinite;
+}
+.foreground {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/background_world/Layers/Foreground.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 15s linear infinite;
+}
+.ground {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/background_world/Layers/Ground.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 3s linear infinite;
+  z-index: 5;
+}
+.paused {
+  animation-play-state: paused;
+}
+@keyframes scrollLeft {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: -1200px;
+  }
+}
