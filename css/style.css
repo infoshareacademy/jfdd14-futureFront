@@ -493,6 +493,7 @@ form .submit {
 
 i.fab {
     transform: scale(1.5);
+    opacity: 1;
     margin: 10px;
     color: teal;
     background-color: transparent;
@@ -500,9 +501,10 @@ i.fab {
     /* transition: all 12s ease; */
 }
 
+
 i.fab:hover {
-    /* color: rgba(0, 128, 128, 0.822); */
-    /* opacity: 0.8; */
+    color: teal;
+    opacity: 0.8;
 }
 
 /* COOKIES */

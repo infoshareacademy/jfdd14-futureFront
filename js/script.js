@@ -74,16 +74,6 @@ function showSlides(n) {
 
 
 //fipp Team cell onscroll
-const teamSection = document.querySelector('.teamContainer');
-
-// function scrollRotate(){
-// const teamCells = [...document.querySelectorAll('.flipCardInner')];
-// teamCells.forEach(element => {
-//   if(element.getBoundingClientRect().bottom <= window.innerHeight){
-// console.log(element.getBoundingClientRect().top);
-//     element.style.transform = "rotateY(180deg)"};
-// });
-// }
 
 function scrollRotate() {
   const teamCells = [...document.querySelectorAll('.flipCardInner')];
@@ -99,7 +89,6 @@ function scrollRotate() {
   });
 }
 
-// scrollRotate();
 
 window.addEventListener('scroll', function () {
   scrollRotate()

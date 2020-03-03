@@ -5,7 +5,7 @@
     transition: transform .6s;
     transform-style: preserve-3d;
     perspective: 1000px;
-    transition-delay: .5s;
+    transition-delay: .7s;
   }
 
 
@@ -26,4 +26,3 @@
     transform: rotateY(180deg);
   }
 
-  
