@@ -6,6 +6,7 @@ const divZombie1 = document.querySelector("#zombie2");
 const divZombie2 = document.querySelector("#zombie3");
 const divHero = document.querySelector(".heroContainer");
 const world = document.querySelector(".gameContainer");
+const giftContainer = document.querySelector(".giftContainer");
 
 let zombieX = 500;
 const heroheight = divHero.style.left;
@@ -15,7 +16,7 @@ let count = 0;
 
 const engine = setInterval(function() {
   const bullets = [...document.querySelectorAll(".bulletContainerHero")];
-  const giftContainer = document.querySelector(".giftContainer");
+
   //gift collision
   checkCollision(divHero, giftContainer);
   //zombie collision
@@ -53,12 +54,16 @@ const checkCollision = (firstObject, secondObject) => {
       parseInt(bounding.top)
   ) {
     //secondObject.firstElementChild.classList.add("heroDie");
-    count += 2;
-    secondObject.style.display = "none";
-    if (count >= 6) {
-      firstObject.style.display = "none";
+    if (secondObject != giftContainer) {
+      count += 2;
+      secondObject.style.display = "none";
+      if (count >= 6) {
+        firstObject.style.display = "none";
+        count = 0;
+      }
+    } else {
+      secondObject.style.display = "none";
     }
-  } else {
   }
 };
 //zombie create
