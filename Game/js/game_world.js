@@ -1,42 +1,48 @@
 //consts + query selectors
 const zombie = document.querySelector(".zombieRun");
 const hero = document.querySelector(".heroRun");
-const divZombie = document.querySelector(".zombieContainer");
+const divZombie = document.querySelector("#zombie1");
+const divZombie1 = document.querySelector("#zombie2");
+const divZombie2 = document.querySelector("#zombie3");
 const divHero = document.querySelector(".heroContainer");
-divZombie.style.left = "500px";
-let zombieXPosition = 1200;
-let zombieContainerCoords = divZombie.getBoundingClientRect();
-let hero3 = divHero.getBoundingClientRect();
+const world = document.querySelector(".gameContainer");
+const giftContainer = document.querySelector(".giftContainer");
+
 let zombieX = 500;
 const heroheight = divHero.style.left;
 const fps = 60;
-let count = 0
+let count = 0;
 //engine
-
-
 
 const engine = setInterval(function() {
   const bullets = [...document.querySelectorAll(".bulletContainerHero")];
-  const gifts = document.querySelectorAll(".giftContainer"); // gift faza testu
-  zombieContainerCoords = divZombie.getBoundingClientRect();
-  hero3 = divHero.getBoundingClientRect();
-  //giftContainerColision = gifts.getBoundingClientRect(); //faza testu
-  //checkCollision(giftContainerColision, hero3); //faza testu
 
-
-
- checkCollision(divZombie, divHero);
+  //gift collision
+  checkCollision(divHero, giftContainer);
+  //zombie collision
+  checkCollision(divHero, divZombie);
+  checkCollision(divHero, divZombie1);
+  checkCollision(divHero, divZombie2);
+  //bullets collision
   if (bullets.length > 0) {
     bullets.forEach(el => {
-       
       checkCollision(divZombie, el);
     });
   }
-
+  if (bullets.length > 0) {
+    bullets.forEach(el => {
+      checkCollision(divZombie1, el);
+    });
+  }
+  if (bullets.length > 0) {
+    bullets.forEach(el => {
+      checkCollision(divZombie2, el);
+    });
+  }
 }, 1000 / fps);
- const checkCollision = (firstObject, secondObject) => {
-     const boundingFirst = firstObject.getBoundingClientRect()
-   const bounding = secondObject.getBoundingClientRect()
+const checkCollision = (firstObject, secondObject) => {
+  const boundingFirst = firstObject.getBoundingClientRect();
+  const bounding = secondObject.getBoundingClientRect();
 
   if (
     parseInt(boundingFirst.left) < parseInt(bounding.right) &&
@@ -47,37 +53,31 @@ const engine = setInterval(function() {
     parseInt(boundingFirst.top) + parseInt(boundingFirst.height) >
       parseInt(bounding.top)
   ) {
-    secondObject.firstElementChild.classList.add('heroDie')
-        count += 2
-        if(count >= 6) {
-         firstObject.style.display = 'none'
-        }
-          
-        
-        
-      
-      
-  } else {
-    console.log("nie kolacja");
+    //secondObject.firstElementChild.classList.add("heroDie");
+    if (secondObject != giftContainer) {
+      count += 2;
+      secondObject.style.display = "none";
+      if (count >= 6) {
+        firstObject.style.display = "none";
+        count = 0;
+      }
+    } else {
+      secondObject.style.display = "none";
+    }
   }
-}; 
-//zombie move
-function zombieMove() {
-  divZombie.style.left = `${zombieXPosition}px`;
-  zombieXPosition -= 8;
-  if (zombieXPosition < -150) {
-    zombieXPosition = 1200;
-    divZombie.style.left = `${zombieXPosition}px`;
-  }
+};
+//zombie create
+
+function addZombieMoveClass1() {
+  divZombie1.classList.remove("deadZombieContainer");
+  divZombie1.classList.add("zombieContainer");
 }
-function zombieCreate() {
-    const zombieDiv = document.createElement('div')
-    const zombie = document.createElement('div')
-    zombieDiv.classList.add('zombieContainer')
-    zombie.classList.add('zombieRun')
-    setTimeout(world.append(zombieDiv),5000)
-    setTimeout(zombieDiv.append(zombie),5000)
+function addZombieMoveClass2() {
+  divZombie2.classList.remove("deadZombieContainer");
+  divZombie2.classList.add("zombieContainer");
 }
+setTimeout(addZombieMoveClass1, 5000);
+setTimeout(addZombieMoveClass2, 10000);
 
 //hero methods
 const jump = function() {
@@ -115,7 +115,6 @@ const jump = function() {
 };
 const bulletsarr = [];
 function shot() {
-  const world = document.querySelector(".gameContainer");
   const hero = document.querySelector("#hero");
   const background = document.querySelectorAll(".back");
   const bulletDiv = document.createElement("div");
@@ -166,35 +165,30 @@ document.addEventListener("keydown", function(e) {
   }
 });
 
-
-
-
 function outOfMap() {
-    const divsOutOfGameContainer = [...document.querySelectorAll("div")];
- divsOutOfGameContainer.forEach(element => {console.log(element.getBoundingClientRect().left, "bullet left");});
- const removeDivs = divsOutOfGameContainer.forEach(element => {
-     if(parseInt(element.getBoundingClientRect().left) > 1560
-     || parseInt(element.getBoundingClientRect().right) < 364) {element.style.display = 'none';
-     console.log(element, "check display")}
- });
+  const divsOutOfGameContainer = [...document.querySelectorAll("div")];
+  divsOutOfGameContainer.forEach(element => {});
+  const removeDivs = divsOutOfGameContainer.forEach(element => {
+    if (
+      parseInt(element.getBoundingClientRect().left) > 1560 ||
+      parseInt(element.getBoundingClientRect().right) < 364
+    ) {
+      element.style.display = "none";
+    }
+  });
 }
- 
+
 document.addEventListener("keydown", function(e) {
   if (e.key == "l") {
     shot();
   }
 });
 
-
-// funkcja na pojawianie się monet w różnej pozycji 
-function coinSec(min, max){
-    
-    
-    return Math.floor( Math.random() * ( max - min + 1 ) + min );
+// funkcja na pojawianie się monet w różnej pozycji
+function coinSec(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 const coin1 = document.querySelector(".giftContainer");
 
-
-coin1.style.top = `${coinSec(50, 520)}px`; 
-
+coin1.style.top = `${coinSec(50, 520)}px`;

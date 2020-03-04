@@ -1,0 +1,52 @@
+.heroJump {
+  position: absolute;
+  z-index: 3;
+  width: 881px;
+  height: 639px;
+  background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_standing_jump.png");
+  animation: playX1jump 0.5s steps(5) infinite, playY1jump 1s steps(2) infinite;
+  transform: scale(0.3);
+}
+@keyframes playX1jump {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -4405px;
+  }
+}
+@keyframes playY1jump {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: -1278px;
+  }
+}
+.heroFlying {
+  position: absolute;
+  z-index: 3;
+  /* width: 692px;
+      height: 599px; */
+  width: 881;
+  height: 639;
+  background-image: url("/img/game/sprite_sheet/__jet_pack_man_with_weapon_red_helmet_flying.png");
+  animation: playXfly 0.4s steps(5) infinite, playYfly 1.2s steps(3) infinite;
+  transform: scale(0.3);
+}
+@keyframes playXfly {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -4405px;
+  }
+}
+@keyframes playYfly {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: -1917px;
+  }
+}
