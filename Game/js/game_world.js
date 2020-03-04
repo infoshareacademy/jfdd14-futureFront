@@ -273,16 +273,8 @@ const penguinJump = function() {
   //   hero.innerHTML += `<audio autoplay>
   //   <source src="/Game/audio/jetpack2.wav" type="audio/mpeg">
   // </audio>`;
-
   }
-  // if (penguinStartY > 597) {
-  //   console.log(penguinStartY, "pingwin Y class ADD");
-  //   penguin.classList.add("penguinJumpShooting");
-  // }
-  // if (parseInt(y_coord) < 509) {
-    // penguin.classList.add("penguinJumpShooting");
-    // console.log(parseInt(y_coord), 'y_coord penguin ADD')
-  // }
+
   setInterval(function() {
     // console.log(penguinStartY - 101,"ping - 101")
     // console.log(penguinStartY - 100, "pingwin Y przed if")

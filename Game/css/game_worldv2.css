@@ -6,25 +6,25 @@
 body {
   background-color: rgb(227, 188, 190);
   box-shadow: none !important;
+  overflow: hidden;
 }
 
 .frame{
   display: block;
   position: absolute;
-  top: -105px;
-  left: -185px;
-  width: 1550px;
+  top: -15px;
+  left: -105px;
+  width: 1920px;
   height: 900px;
-  background: url('/img/game/border_gray2.png');
-  background-position-x: -15px;
-  background-position-y: -15px;
+  background: url('/img/game/border_gray_1920.png');
+  /* background-position-x: -15px;
+  background-position-y: -15px; */
   /* background-attachment: inherit; */
   /* background-size: contain; */
   background-repeat: no-repeat;
-  /* background-position: inherit; */
+  /* background-size: cover ; */
   z-index: 9;
-  transform: scaleY(0.95);
-  box-shadow: none !important;
+  transform: scaleY(0.97);
 }
 
 .gameContainer {
@@ -32,7 +32,7 @@ body {
   height: 675px;
   position: absolute;
   top: 100px !important;
-  left: 18vw;
+  left: 15vw;
   border: 1px solid;
   transform: scale(1);
 }

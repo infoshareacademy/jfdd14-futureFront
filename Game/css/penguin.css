@@ -10,7 +10,7 @@
 }
 @keyframes scrollLeftPenguin {
   0% {
-    left: 1600px;
+    left: 1500px;
   }
   100% {
     left: -300px;
