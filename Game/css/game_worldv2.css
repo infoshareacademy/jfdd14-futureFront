@@ -5,20 +5,26 @@
 }
 body {
   background-color: rgb(227, 188, 190);
+  box-shadow: none !important;
 }
 
 .frame{
   display: block;
   position: absolute;
-  top: 0px;
-  left: 12vw;
-  width: 1450px;
-  height: 845px;
-  background: url('/img/game/border_red.png');
+  top: -105px;
+  left: -185px;
+  width: 1550px;
+  height: 900px;
+  background: url('/img/game/border_gray2.png');
+  background-position-x: -15px;
+  background-position-y: -15px;
   /* background-attachment: inherit; */
-  background-size: contain;
+  /* background-size: contain; */
   background-repeat: no-repeat;
+  /* background-position: inherit; */
   z-index: 9;
+  transform: scaleY(0.95);
+  box-shadow: none !important;
 }
 
 .gameContainer {

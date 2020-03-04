@@ -1,13 +1,13 @@
 const penguinJump = function () {
     console.log("penguinJump");
     const penguinContainer = document.querySelector(".penguinContainer");
-    const gravity = 15;
+    const gravity = 10;
     let metrNaPix = 19.2;
     let penguinStartX = parseInt(penguinContainer.getBoundingClientRect().left);
     let penguinStartY = parseInt(penguinContainer.getBoundingClientRect().top);
     let x_coord = penguinStartX; //pozycja penguin
     let y_coord = 495 //penguinStartY - 101;//penguinStartY;//445//dla top 562;
-    let speed = 110 * metrNaPix; // 30 meters per second or 108 km/hour -- quite fast ...
+    let speed = 90 * metrNaPix; // 30 meters per second or 108 km/hour -- quite fast ...
     let angle = 100 * Math.PI / 180;  // 30 degree angle, moved to radians.
     let speed_x = speed * Math.cos(angle);
     let speed_y = speed * Math.sin(angle);  // now you have initial direction vector
@@ -34,11 +34,11 @@ const penguinJump = function () {
 function shotPenguin() {
     console.log("shot penguin");
     const world = document.querySelector(".gameContainer");
-    const hero = document.querySelector("#penguin");
+    const hero = document.querySelector(".penguinContainer");
     const gameContainer = document.querySelector(".gameContainer")
     const containerLeft = gameContainer.getBoundingClientRect();
     const bulletDiv = document.createElement('div');
-    const heroPos = divPenguin.getBoundingClientRect();
+    const heroPos = hero.getBoundingClientRect();
     world.append(bulletDiv)
     bulletDiv.classList.add("bulletContainerPenguin");
     bulletDiv.innerHTML = '<div class="bulletPenguin"></div>';
@@ -55,3 +55,8 @@ document.addEventListener('keydown', function (e) {
         shotPenguin();
     }
 });
+
+setTimeout(function(){ penguinJump()}, 2000);
+setTimeout(function(){ shotPenguin()}, 2300);
+setTimeout(function(){ shotPenguin()}, 2600);
+setTimeout(function(){ shotPenguin()}, 3000);
