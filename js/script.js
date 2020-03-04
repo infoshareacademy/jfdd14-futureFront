@@ -93,14 +93,21 @@ window.addEventListener("scroll", function() {
   scrollRotate();
 });
 const premiereButton = document.querySelector("#premierButton");
-const gameBox = document.querySelector(".game");
+const game = document.querySelector(".game");
+const gameBoxPlay = document.querySelector("#gameBoxPlay");
+const gameBoxClose = document.querySelector("#gameBoxClose");
+
+gameBoxPlay.addEventListener("click", function() {
+  greyBackground.style.display = "none";
+  game.style.display = "none";
+});
 
 premiereButton.addEventListener("click", function() {
   greyBackground.style.display = "block";
-  gameBox.style.display = "flex";
+  game.style.display = "flex";
 });
 
-const gameClose = document.querySelector("#gameBoxClose");
-gameClose.addEventListener("click", function() {
-  gameBox.style.display = "none";
+gameBoxClose.addEventListener("click", function() {
+  greyBackground.style.display = "none";
+  game.style.display = "none";
 });
