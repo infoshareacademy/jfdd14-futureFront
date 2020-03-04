@@ -1,0 +1,13 @@
+.instruction {
+  position: absolute;
+  top: 60px;
+  left: 500px;
+  width: 530px;
+  height: 170px;
+  /* background-color: hotpink; */
+  z-index: 10;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}

@@ -7,6 +7,7 @@ const divZombie2 = document.querySelector("#zombie3");
 const divHero = document.querySelector(".heroContainer");
 const world = document.querySelector(".gameContainer");
 const giftContainer = document.querySelector(".giftContainer");
+const instructions = document.querySelector(".instruction");
 
 let zombieX = 500;
 const heroheight = divHero.style.left;
@@ -40,6 +41,13 @@ const engine = setInterval(function() {
     });
   }
 }, 1000 / fps);
+function addInstruction() {
+  instructions.innerHTML = `W trakcie gry atakowac Cie beda zombie - mozesz je
+  przeskoczyc lub zastrzelic klikajac 'L'. Uwazaj na pingwina...
+  Powodzenia!"`;
+}
+
+setTimeout(addInstruction, 5000);
 const checkCollision = (firstObject, secondObject) => {
   const boundingFirst = firstObject.getBoundingClientRect();
   const bounding = secondObject.getBoundingClientRect();
