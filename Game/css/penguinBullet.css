@@ -5,8 +5,9 @@
   /* left: 400px; */
   width: 20px;
   height: 20px;
-  /* background-color: red; */
-  animation: BulletPenguin 1s linear forwards;
+  background-color: red;
+  animation: BulletPenguin 2s linear forwards;
+  /* animation: shotAtAngle 2s linear forwards; */
   /* animation: ShotAtAngle 1s linear forwards; */
 }
 .bulletPenguin {
@@ -23,12 +24,12 @@
 }
 @keyframes shotAtAngle {
   0% {
-    left: 400px;
-    top: inherit;
+    left: inherit !important;
+    top: inherit !important;
   }
   100% {
-    left: 1900px;
-    top: -1200px;
+    left: 100px;
+    top: -200px;
   }
 }
 @keyframes BulletPenguin {

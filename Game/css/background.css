@@ -56,7 +56,7 @@
   background: url("/img/game/background_world/Layers/Ground.png");
   background-attachment: inherit;
   background-size: contain;
-  animation: scrollLeft 3s linear infinite;
+  animation: scrollLeft 5s linear infinite;
   z-index: 5;
 }
 .paused {
