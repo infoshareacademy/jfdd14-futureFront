@@ -310,16 +310,23 @@ i.fas:hover {
 }
 
 .functionLongHeaderContainer {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+   flex-basis: 50%;
     text-align: center;
     padding: 50px;
 }
+
+.smallContainers {
+width: 50vw;
+}
+
 
 .functionLongHeader {
     min-height: 100vh;
     min-width: 100vw;
     justify-content: center;
-    text-align: center;
+    text-align: right;
     font-weight: 500;
     background-image: url(/img/235.jpg);
     background-size: cover;
@@ -541,11 +548,16 @@ footer {
 
     .functionLongHeaderContainer {
         display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-
-    .functionLongHeaderContainer {
+    .smallContainers{
         display: flex;
-        justify-content: space-around;
+        padding-left: 5rem;
+        align-items: center;
+        flex-direction: column;
     }
 
     .functionsLongFirstColumn,
@@ -571,7 +583,7 @@ footer {
         background-position: bottom;
         margin-bottom: 80px;
     }
-
+   
 }
 
 @media only screen and (min-width: 992px) {
@@ -611,6 +623,18 @@ footer {
         padding-top: 80px;
     }
 
+.functionLongHeaderContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+.smallContainers{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    flex-direction: column;
+    align-self: flex-start;
 }
 
 @media (orientation: landscape) and (max-height: 600px) {
@@ -634,4 +658,8 @@ footer {
     .PremiereLogo {
         display: none;
     }
-}
+
+    .functionLongHeaderContainer{
+        display: flex;
+    }
+  }
