@@ -8,12 +8,14 @@ const divHero = document.querySelector(".heroContainer");
 const world = document.querySelector(".gameContainer");
 const giftContainer = document.querySelector(".giftContainer");
 const instructions = document.querySelector(".instruction");
-const penguin = document.querySelector(".penguinContainer");
+const penguinContainer = document.querySelector(".penguinContainer");
+const penguin = document.querySelector("#penguin");
 
 let zombieX = 500;
 const heroheight = divHero.style.left;
 const fps = 60;
 let count = 0;
+let penguinCount = 0;
 //engine
 
 const engine = setInterval(function() {
@@ -28,7 +30,7 @@ const engine = setInterval(function() {
   checkCollision(divHero, divZombie);
   checkCollision(divHero, divZombie1);
   checkCollision(divHero, divZombie2);
-  checkCollision(divHero, penguin);
+  checkCollision(divHero, penguinContainer);
   //bullets collision
   if (penguinBullets.length > 0) {
     penguinBullets.forEach(el => {
@@ -37,7 +39,7 @@ const engine = setInterval(function() {
   }
   if (bullets.length > 0) {
     bullets.forEach(el => {
-      checkCollision(penguin, el);
+      checkCollision(penguinContainer, el);
     });
   }
   if (bullets.length > 0) {
@@ -80,7 +82,32 @@ const checkCollision = (firstObject, secondObject) => {
       parseInt(bounding.top)
   ) {
     //secondObject.firstElementChild.classList.add("heroDie");
-    if (secondObject != giftContainer) {
+    /*  if (secondObject == penguinContainer) {
+      count += 2;
+      secondObject.classList.add("penguinDie");
+      if (count >= 6) {
+        firstObject.style.display = "none";
+        count = 0;
+      }
+    } */
+    if (secondObject == giftContainer) {
+      secondObject.style.display = "none";
+    } else if (firstObject == penguinContainer) {
+      penguinCount += 2;
+      secondObject.style.display = "none";
+      if (penguinCount >= 6) {
+        firstObject.classList.add("penguinDie");
+        penguinCount = 0;
+      }
+    } else {
+      count += 2;
+      secondObject.style.display = "none";
+      if (count >= 6) {
+        firstObject.style.display = "none";
+        count = 0;
+      }
+    }
+    /* if (secondObject != giftContainer) {
       count += 2;
       secondObject.style.display = "none";
       if (count >= 6) {
@@ -89,7 +116,7 @@ const checkCollision = (firstObject, secondObject) => {
       }
     } else {
       secondObject.style.display = "none";
-    }
+    } */
   }
 };
 //zombie create
@@ -225,7 +252,7 @@ const penguinJump = function() {
   let metrNaPix = 19.2;
   let penguinStartX = parseInt(penguinContainer.getBoundingClientRect().left);
   let penguinStartY = parseInt(penguinContainer.getBoundingClientRect().top);
-  let x_coord = penguinStartX; //pozycja penguin
+  let x_coord = penguinStartX; //pozycja penguinContainer
   let y_coord = 495; //penguinStartY - 101;//penguinStartY;//445//dla top 562;
   let speed = 90 * metrNaPix; // 30 meters per second or 108 km/hour -- quite fast ...
   let angle = (100 * Math.PI) / 180; // 30 degree angle, moved to radians.
