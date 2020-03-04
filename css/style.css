@@ -689,25 +689,3 @@ footer {
     }
   }
 }
-
-.game {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 50vw;
-  height: 20vh;
-  margin-left: -25vw;
-  margin-top: -10vh;
-  z-index: 100;
-  background-color: grey;
-  color: white;
-  font-size: 2vh;
-  padding: 5vh;
-  justify-content: center;
-  align-items: center;
-}
-
-.game a {
-  color: white;
-}

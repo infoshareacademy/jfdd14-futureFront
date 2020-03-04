@@ -88,18 +88,26 @@ function scrollRotate() {
     }
   });
 }
-
+const greyBackground = document.querySelector(".greyBackground");
 window.addEventListener("scroll", function() {
   scrollRotate();
 });
 const premiereButton = document.querySelector("#premierButton");
-const gameBox = document.querySelector(".game");
+const game = document.querySelector(".game");
+const gameBoxPlay = document.querySelector("#gameBoxPlay");
+const gameBoxClose = document.querySelector("#gameBoxClose");
 
-premiereButton.addEventListener("click", function() {
-  gameBox.style.display = "flex";
+gameBoxPlay.addEventListener("click", function() {
+  greyBackground.style.display = "none";
+  game.style.display = "none";
 });
 
-const gameClose = document.querySelector(".gameBoxClose");
-gameClose.addEventListener("click", function() {
-  gameBox.style.display = "none";
+premiereButton.addEventListener("click", function() {
+  greyBackground.style.display = "block";
+  game.style.display = "flex";
+});
+
+gameBoxClose.addEventListener("click", function() {
+  greyBackground.style.display = "none";
+  game.style.display = "none";
 });
