@@ -106,7 +106,7 @@ const jump = function() {
         hero.innerHTML -= `<audio autoplay>
         <source src="/Game/audio/jetpack2.wav" type="audio/mpeg">
       </audio>`;
-      hero.innerHTML += `<audio autoplay>
+        hero.innerHTML += `<audio autoplay>
       <source src="/Game/audio/run.wav" type="audio/mpeg">
     </audio>`;
       }
