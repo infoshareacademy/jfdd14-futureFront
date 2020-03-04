@@ -245,8 +245,13 @@ function coinSec(min, max) {
 const coin1 = document.querySelector(".giftContainer");
 
 coin1.style.top = `${coinSec(50, 520)}px`;
+
+
 const penguinJump = function() {
-  console.log("penguinJump");
+
+
+  // penguin.classList.add("penguinJumpShooting");
+  // console.log(penguin.classList, "klasy");
   const penguinContainer = document.querySelector(".penguinContainer");
   const gravity = 10;
   let metrNaPix = 19.2;
@@ -260,10 +265,30 @@ const penguinJump = function() {
   let speed_y = speed * Math.sin(angle); // now you have initial direction vector
   const fps = 60;
   let time_step = 1.0 / fps; // every frame...
+  const penguinPos = penguinContainer.getBoundingClientRect();
+  if (parseInt(penguinPos.top) > 560) {
+    console.log(parseInt(penguinPos.top), "penguin TOOP AFFFTEEER")
+    let penguin = document.querySelector("#penguin");
+    penguin.classList.add("penguinJump");
+  //   hero.innerHTML += `<audio autoplay>
+  //   <source src="/Game/audio/jetpack2.wav" type="audio/mpeg">
+  // </audio>`;
+
+  }
+  // if (penguinStartY > 597) {
+  //   console.log(penguinStartY, "pingwin Y class ADD");
+  //   penguin.classList.add("penguinJumpShooting");
+  // }
+  // if (parseInt(y_coord) < 509) {
+    // penguin.classList.add("penguinJumpShooting");
+    // console.log(parseInt(y_coord), 'y_coord penguin ADD')
+  // }
   setInterval(function() {
     // console.log(penguinStartY - 101,"ping - 101")
     // console.log(penguinStartY - 100, "pingwin Y przed if")
     // if (y_coord < penguinStartY-100 && x_coord > 350)
+
+    // console.log(penguin.classList, "klasy");
     if (y_coord < 496 && x_coord > 350) {
       console.log(penguinStartY, "pingwin Y");
       x_coord -= speed_x * time_step; //* metrNaPix;
@@ -275,6 +300,11 @@ const penguinJump = function() {
       penguinContainer.style.left = `${x_coord}px`;
       speed_x *= 0.99;
       speed_y *= 0.99;
+
+      if (parseInt(y_coord) > 490) {
+        penguin.classList.remove("penguinJump");
+        console.log(parseInt(y_coord), 'y_coord penguin REMOVE')
+      }
     }
   }, 1000 / fps);
 };
@@ -300,20 +330,32 @@ function shotPenguin() {
 }
 document.addEventListener("keydown", function(e) {
   if (e.key == "p") {
+    // console.log("STAAAAART");
+    // const penguinPos = penguinContainer.getBoundingClientRect();
+    // console.log(parseInt(penguinPos.top), "penguin TOOP")
+    // if (parseInt(penguinPos.top) > 560) {
+    //   console.log(parseInt(penguinPos.top), "penguin TOOP AFFFTEEER")
+    //   let penguin = document.querySelector("#penguin");
+    //   penguin.classList.add("penguinJumpShooting");
+    //   hero.innerHTML += `<audio autoplay>
+    //   <source src="/Game/audio/jetpack2.wav" type="audio/mpeg">
+    // </audio>`;
     penguinJump();
+    // }
+
     shotPenguin();
   }
 });
 
 setTimeout(function() {
   penguinJump();
+}, 3000);
+setTimeout(function() {
+  shotPenguin();
 }, 2000);
 setTimeout(function() {
   shotPenguin();
-}, 2300);
+}, 3500);
 setTimeout(function() {
   shotPenguin();
-}, 2600);
-setTimeout(function() {
-  shotPenguin();
-}, 3000);
+}, 4000);

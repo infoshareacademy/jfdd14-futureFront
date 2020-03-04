@@ -1,5 +1,11 @@
+
+
+
+
 const penguinJump = function () {
-    console.log("penguinJump");
+    const penguin = document.querySelector("#penguin");
+    penguin.classList.add("penguinJumpShooting");
+    console.log(penguin, "pingwin");
     const penguinContainer = document.querySelector(".penguinContainer");
     const gravity = 10;
     let metrNaPix = 19.2;
@@ -28,6 +34,15 @@ const penguinJump = function () {
             penguinContainer.style.left = `${x_coord}px`;
             speed_x *= 0.99;
             speed_y *= 0.99;
+            if (parseInt(y_coord) > 440) {
+                penguin.classList.remove("penguinJumpShooting");
+            //     hero.innerHTML -= `<audio autoplay>
+            //     <source src="/Game/audio/jetpack2.wav" type="audio/mpeg">
+            //   </audio>`;
+            //     hero.innerHTML += `<audio autoplay>
+            //   <source src="/Game/audio/run.wav" type="audio/mpeg">
+            // </audio>`;
+              }
         }
     }, 1000 / fps);
 }

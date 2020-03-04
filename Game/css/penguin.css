@@ -16,7 +16,7 @@
     left: -300px;
   }
 }
-.penguinRun1 {
+.penguinRun {
   /* background-color: lawngreen; */
   position: absolute;
   z-index: 3;
@@ -48,18 +48,20 @@
 
 
 
-.penguinJumpShooting {
+.penguinJump {
   /* background-color: lawngreen; */
   position: absolute;
   z-index: 3;
-  top: -163px;
+  top: -330px;
   left: -200px;
   width: 462px;
   height: 680px;
   background-image: url("/img/game/sprite_sheet/penguin/jump.png");
-  animation: playXPenguinJump .5s steps(6) infinite,
-            playYPenguinJump 2s steps(4) infinite;
+
+  animation: playXPenguinJump .3s steps(6) infinite,
+            playYPenguinJump 1.2s steps(4) infinite;
   transform: scale(-0.3, 0.3);
+
 }
 @keyframes playXPenguinJump {
   from {
@@ -75,6 +77,41 @@
   }
   to {
     background-position-y: -2720px;
+  }
+}
+
+
+
+
+.penguinJumpShooting {
+  /* background-color: lawngreen; */
+  position: absolute;
+  z-index: 5;
+  top: -330px;
+  left: -200px;
+  width: 462px;
+  height: 680px;
+  background-image: url("/img/game/sprite_sheet/penguin/jump_up.png");
+
+  animation: playXPenguinJumpShooting .3s steps(5) infinite,
+            playYPenguinJumpShooting .9s steps(3) infinite;
+  transform: scale(-0.3, 0.3);
+  /* animation-delay: 1.5s; */
+}
+@keyframes playXPenguinJumpShooting {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -2310px;
+  }
+}
+@keyframes playYPenguinJumpShooting {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: -2040px;
   }
 }
 
