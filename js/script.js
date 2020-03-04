@@ -88,7 +88,7 @@ function scrollRotate() {
     }
   });
 }
-
+const greyBackground = document.querySelector(".greyBackground");
 window.addEventListener("scroll", function() {
   scrollRotate();
 });
@@ -96,10 +96,11 @@ const premiereButton = document.querySelector("#premierButton");
 const gameBox = document.querySelector(".game");
 
 premiereButton.addEventListener("click", function() {
+  greyBackground.style.display = "block";
   gameBox.style.display = "flex";
 });
 
-const gameClose = document.querySelector(".gameBoxClose");
+const gameClose = document.querySelector("#gameBoxClose");
 gameClose.addEventListener("click", function() {
   gameBox.style.display = "none";
 });
