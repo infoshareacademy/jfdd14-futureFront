@@ -70,3 +70,266 @@
     background-position: -1200px;
   }
 }
+
+/* ***********************************MOUNTAINS************ */
+
+/* .sky {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/game_background_2/layers/sky.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 50s linear infinite;
+}
+.bgdecor {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/game_background_2/layers/clouds_3.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 50s linear infinite;
+  z-index:2;
+}
+.middledecor {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/game_background_2/layers/clouds_2.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 70s linear infinite;
+  z-index: 3;
+}
+.foreground {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/game_background_2/layers/clouds_1.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 65s linear infinite;
+  z-index: 5;
+}
+.ground {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/game_background_2/layers/rocks_3.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 55s linear infinite;
+  z-index: 3;
+}
+
+.ground1 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/game_background_2/layers/rocks_3.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 35s linear infinite;
+  z-index: 4;
+}
+
+.ground2 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/game_background_2/layers/rocks_2.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 25s linear infinite;
+  z-index: 4;
+}
+
+.ground3 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/game_background_2/layers/rocks_1.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 15s linear infinite;
+  z-index: 4;
+}
+
+.ground4 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/background_world/Layers/Ground.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 5s linear infinite;
+  z-index: 5;
+}
+
+.ground5 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/game_background_2/layers/birds.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 75s linear infinite;
+  z-index: 5;
+} */
+
+
+
+/* ************************MOUNTAINS 2************* */
+
+/*
+.sky {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/game_background_1/layers/sky.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 50s linear infinite;
+}
+.bgdecor {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/game_background_1/layers/clouds_1.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 30s linear infinite;
+  z-index:2;
+}
+.middledecor {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/game_background_1/layers/clouds_2.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 50s linear infinite;
+  z-index: 3;
+}
+.foreground {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/game_background_1/layers/clouds_3.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 45s linear infinite;
+  z-index: 5;
+}
+.ground {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/game_background_1/layers/clouds_4.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 55s linear infinite;
+  z-index: 5;
+}
+
+.ground1 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/game_background_1/layers/rocks_1.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 35s linear infinite;
+  z-index: 4;
+}
+
+.ground2 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/game_background_1/layers/rocks_2.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 25s linear infinite;
+  z-index: 4;
+}
+
+
+.ground4 {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 1200px;
+  height: 675px;
+  background: url("/img/game/background_world/Layers/Ground.png");
+  background-attachment: inherit;
+  background-size: contain;
+  animation: scrollLeft 5s linear infinite;
+  z-index: 6;
+} */
+
+
+.paused {
+  animation-play-state: paused;
+}
+@keyframes scrollLeft {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: -1200px;
+  }
+}

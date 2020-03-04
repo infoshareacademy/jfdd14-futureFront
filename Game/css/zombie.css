@@ -1,12 +1,12 @@
 .zombieContainer {
   /*display:none;*/
   position: absolute;
-  top: 440px;
+  top: 450px;
   left: 500px;
   width: 100.6px;
   height: 176.1px;
-
-  z-index: 8;
+/* background-color: lawngreen; */
+  z-index: 4;
   animation: scrollLeftZombie 6s linear infinite;
 }
 .deadZombieContainer {

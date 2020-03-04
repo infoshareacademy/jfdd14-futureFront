@@ -5,7 +5,7 @@
   width: 130px;
   height: 170px;
   /* background-color: hotpink; */
-  z-index: 4;
+  z-index: 5;
 }
 .heroRun {
   position: absolute;
