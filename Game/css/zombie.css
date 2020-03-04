@@ -1,0 +1,58 @@
+.zombieContainer {
+  /*display:none;*/
+  position: absolute;
+  top: 440px;
+  left: 500px;
+  width: 135.6px;
+  height: 176.1px;
+
+  z-index: 8;
+  animation: scrollLeftZombie 7s linear infinite;
+}
+.deadZombieContainer {
+  display: none;
+  position: absolute;
+  top: 440px;
+  left: 500px;
+  width: 135.6px;
+  height: 176.1px;
+
+  z-index: 8;
+  /*animation: scrollLeftZombie 7s linear infinite;*/
+}
+@keyframes scrollLeftZombie {
+  0% {
+    left: 1600px;
+  }
+  100% {
+    left: -300px;
+  }
+}
+.zombieRun {
+  position: absolute;
+  top: -200px;
+  left: -160px;
+  z-index: 3;
+  width: 452px;
+  height: 587px;
+  background-image: url("/img/game/sprite_sheet/Run.png");
+  animation: playXzombie 0.4s steps(4) infinite,
+    playYzombie 0.5s steps(5) infinite;
+  transform: scale(-0.3, 0.3);
+}
+@keyframes playXzombie {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -1808px;
+  }
+}
+@keyframes playYzombie {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: -2935px;
+  }
+}

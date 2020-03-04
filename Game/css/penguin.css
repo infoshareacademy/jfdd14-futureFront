@@ -1,0 +1,77 @@
+.penguinContainer {
+  position: absolute;
+  top: 495px;
+  left: 900px;
+  width: 120px;
+  height: 140px;
+  /* background-color: hotpink;*/
+  z-index: 4;
+  animation: scrollLeftPenguin 5s linear infinite;
+}
+@keyframes scrollLeftPenguin {
+  0% {
+    left: 1600px;
+  }
+  100% {
+    left: -300px;
+  }
+}
+.penguinRun {
+  position: absolute;
+  z-index: 3;
+  top: -180px;
+  left: -200px;
+  width: 485px;
+  height: 442px;
+  background-image: url("/img/game/sprite_sheet/pinguin/run_shooting_forward.png");
+  animation: playXPenguinRun 0.5s steps(5) infinite,
+    playYPenguinRun 1.5s steps(3) infinite;
+  transform: scale(-0.3, 0.3);
+}
+@keyframes playXPenguinRun {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -2425px;
+  }
+}
+@keyframes playYPenguinRun {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: -1326px;
+  }
+}
+.penguinContainerJump {
+  position: absolute;
+  top: 495px;
+  left: 900px;
+  width: 120px;
+  height: 140px;
+  /* background-color: hotpink; */
+  z-index: 4;
+  animation: scrollLeftPenguin 5s linear infinite;
+  /* jumpPenguin 1s ease-out infinite; */
+}
+@keyframes jumpPenguin {
+  0% {
+    top: 495px;
+  }
+  25% {
+    top: 70px;
+  }
+  50% {
+    top: 100px;
+  }
+  51% {
+    top: 80px;
+  }
+  75% {
+    top: 450px;
+  }
+  100% {
+    top: 495px;
+  }
+}

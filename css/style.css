@@ -43,7 +43,7 @@ header {
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: 
+    color:
     rgba(0,0,0,1);
 }
 
@@ -124,7 +124,7 @@ img {
     -webkit-animation-name: example;
     -webkit-animation-duration: 3s;
     animation-name: example;
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-delay: 1s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
@@ -240,6 +240,33 @@ img {
   }
 
 /* End of gallery*/
+/* kkkkkkkkk */
+/* .heroContainer {
+
+    -webkit-animation-name: hero;
+    -webkit-animation-duration: 3s;
+    animation-name: hero;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes hero {
+    from {
+        opacity: 1;
+        display: flex !important;
+    }
+
+    to {
+        opacity: 0;
+        display: none !important;
+    }
+} */
+
+
+/* ggghhhhhh */
 
 .inviteVertical {
     font-size: x-large;
@@ -269,7 +296,7 @@ img {
     -webkit-animation-duration: 2s;
     animation-name: motto;
     animation-duration: 2s;
-    /* animation-delay: 1s; */
+    animation-delay: 1s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
 }
@@ -304,10 +331,10 @@ i.fas {
     transition: all 1.5s ease;
 }
 
-i.fas:hover {
+/* i.fas:hover {
     color: rgba(0, 128, 128, 0.822);
     opacity: 0.8;
-}
+} */
 
 .functionLongHeaderContainer {
     display: flex;
@@ -427,7 +454,7 @@ form .submit {
     box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
     background-color: rgba(227, 188, 190, 0.432);
-    transition: all 0.6s ease;
+    /* transition: all .6s ease; */
 }
 
 .teamCell img {
@@ -447,6 +474,7 @@ form .submit {
 }
 
 .teamContainer {
+    /* position: absolute; */
     min-height: 80vh;
     padding: 5vh;
 }
@@ -472,16 +500,17 @@ form .submit {
 
 i.fab {
     transform: scale(1.5);
+    opacity: 1;
     margin: 10px;
-    opacity: 0.4;
     color: teal;
     background-color: transparent;
     text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: all 0.6s ease;
+    /* transition: all 12s ease; */
 }
 
+
 i.fab:hover {
-    color: rgba(0, 128, 128, 0.822);
+    color: teal;
     opacity: 0.8;
 }
 
