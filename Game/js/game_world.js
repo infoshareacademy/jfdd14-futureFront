@@ -7,15 +7,22 @@ const divZombie2 = document.querySelector("#zombie3");
 const divHero = document.querySelector(".heroContainer");
 const world = document.querySelector(".gameContainer");
 const giftContainer = document.querySelector(".giftContainer");
+const instructions = document.querySelector(".instruction");
+const penguinContainer = document.querySelector(".penguinContainer");
+const penguin = document.querySelector("#penguin");
 
 let zombieX = 500;
 const heroheight = divHero.style.left;
 const fps = 60;
 let count = 0;
+let penguinCount = 0;
 //engine
 
 const engine = setInterval(function() {
   const bullets = [...document.querySelectorAll(".bulletContainerHero")];
+  const penguinBullets = [
+    ...document.querySelectorAll(".bulletContainerPenguin")
+  ];
 
   //gift collision
   checkCollision(divHero, giftContainer);
@@ -23,7 +30,18 @@ const engine = setInterval(function() {
   checkCollision(divHero, divZombie);
   checkCollision(divHero, divZombie1);
   checkCollision(divHero, divZombie2);
+  checkCollision(divHero, penguinContainer);
   //bullets collision
+  if (penguinBullets.length > 0) {
+    penguinBullets.forEach(el => {
+      checkCollision(divHero, el);
+    });
+  }
+  if (bullets.length > 0) {
+    bullets.forEach(el => {
+      checkCollision(penguinContainer, el);
+    });
+  }
   if (bullets.length > 0) {
     bullets.forEach(el => {
       checkCollision(divZombie, el);
@@ -40,6 +58,16 @@ const engine = setInterval(function() {
     });
   }
 }, 1000 / fps);
+function addInstruction() {
+  instructions.innerHTML = `W trakcie gry atakowac Cie beda zombie - mozesz je
+  przeskoczyc lub zastrzelic klikajac 'L'. Uwazaj na pingwina...
+  Powodzenia!"`;
+}
+function removeInstruction() {
+  instructions.innerHTML = "";
+}
+setTimeout(addInstruction, 5000);
+setTimeout(removeInstruction, 10000);
 const checkCollision = (firstObject, secondObject) => {
   const boundingFirst = firstObject.getBoundingClientRect();
   const bounding = secondObject.getBoundingClientRect();
@@ -54,7 +82,32 @@ const checkCollision = (firstObject, secondObject) => {
       parseInt(bounding.top)
   ) {
     //secondObject.firstElementChild.classList.add("heroDie");
-    if (secondObject != giftContainer) {
+    /*  if (secondObject == penguinContainer) {
+      count += 2;
+      secondObject.classList.add("penguinDie");
+      if (count >= 6) {
+        firstObject.style.display = "none";
+        count = 0;
+      }
+    } */
+    if (secondObject == giftContainer) {
+      secondObject.style.display = "none";
+    } else if (firstObject == penguinContainer) {
+      penguinCount += 2;
+      secondObject.style.display = "none";
+      if (penguinCount >= 6) {
+        firstObject.classList.add("penguinDie");
+        penguinCount = 0;
+      }
+    } else {
+      count += 2;
+      secondObject.style.display = "none";
+      if (count >= 6) {
+        firstObject.style.display = "none";
+        count = 0;
+      }
+    }
+    /* if (secondObject != giftContainer) {
       count += 2;
       secondObject.style.display = "none";
       if (count >= 6) {
@@ -63,7 +116,7 @@ const checkCollision = (firstObject, secondObject) => {
       }
     } else {
       secondObject.style.display = "none";
-    }
+    } */
   }
 };
 //zombie create
@@ -106,7 +159,7 @@ const jump = function() {
         hero.innerHTML -= `<audio autoplay>
         <source src="/Game/audio/jetpack2.wav" type="audio/mpeg">
       </audio>`;
-      hero.innerHTML += `<audio autoplay>
+        hero.innerHTML += `<audio autoplay>
       <source src="/Game/audio/run.wav" type="audio/mpeg">
     </audio>`;
       }
@@ -192,3 +245,75 @@ function coinSec(min, max) {
 const coin1 = document.querySelector(".giftContainer");
 
 coin1.style.top = `${coinSec(50, 520)}px`;
+const penguinJump = function() {
+  console.log("penguinJump");
+  const penguinContainer = document.querySelector(".penguinContainer");
+  const gravity = 10;
+  let metrNaPix = 19.2;
+  let penguinStartX = parseInt(penguinContainer.getBoundingClientRect().left);
+  let penguinStartY = parseInt(penguinContainer.getBoundingClientRect().top);
+  let x_coord = penguinStartX; //pozycja penguinContainer
+  let y_coord = 495; //penguinStartY - 101;//penguinStartY;//445//dla top 562;
+  let speed = 90 * metrNaPix; // 30 meters per second or 108 km/hour -- quite fast ...
+  let angle = (100 * Math.PI) / 180; // 30 degree angle, moved to radians.
+  let speed_x = speed * Math.cos(angle);
+  let speed_y = speed * Math.sin(angle); // now you have initial direction vector
+  const fps = 60;
+  let time_step = 1.0 / fps; // every frame...
+  setInterval(function() {
+    // console.log(penguinStartY - 101,"ping - 101")
+    // console.log(penguinStartY - 100, "pingwin Y przed if")
+    // if (y_coord < penguinStartY-100 && x_coord > 350)
+    if (y_coord < 496 && x_coord > 350) {
+      console.log(penguinStartY, "pingwin Y");
+      x_coord -= speed_x * time_step; //* metrNaPix;
+      y_coord -= speed_y * time_step; //* metrNaPix;
+      //console.log(x_coord, y_coord, speed_x, speed_y);
+      speed_y -= gravity * time_step * metrNaPix * metrNaPix;
+      //   let hero = document.querySelector("#hero");
+      penguinContainer.style.top = `${y_coord}px`;
+      penguinContainer.style.left = `${x_coord}px`;
+      speed_x *= 0.99;
+      speed_y *= 0.99;
+    }
+  }, 1000 / fps);
+};
+function shotPenguin() {
+  console.log("shot penguin");
+  const world = document.querySelector(".gameContainer");
+  const hero = document.querySelector(".penguinContainer");
+  const gameContainer = document.querySelector(".gameContainer");
+  const containerLeft = gameContainer.getBoundingClientRect();
+  const bulletDiv = document.createElement("div");
+  const heroPos = hero.getBoundingClientRect();
+  world.append(bulletDiv);
+  bulletDiv.classList.add("bulletContainerPenguin");
+  bulletDiv.innerHTML = '<div class="bulletPenguin"></div>';
+  bulletDiv.style.top = `${parseInt(heroPos.top) - 50}px`;
+  bulletDiv.style.left = `${parseInt(heroPos.left) -
+    containerLeft.left -
+    130}px`;
+  console.log(bulletDiv.style.left, "bullet style left");
+  console.log(divHero.getBoundingClientRect());
+  console.log(parseInt(heroPos.top), "penguin TOP position while shooting");
+  console.log(parseInt(heroPos.left), "penguin LEFT position while shooting");
+}
+document.addEventListener("keydown", function(e) {
+  if (e.key == "p") {
+    penguinJump();
+    shotPenguin();
+  }
+});
+
+setTimeout(function() {
+  penguinJump();
+}, 2000);
+setTimeout(function() {
+  shotPenguin();
+}, 2300);
+setTimeout(function() {
+  shotPenguin();
+}, 2600);
+setTimeout(function() {
+  shotPenguin();
+}, 3000);

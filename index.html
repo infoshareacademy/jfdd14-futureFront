@@ -36,7 +36,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="#Home">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
@@ -125,54 +125,54 @@
       osoby i okoliczności z możliwością ustalenia zakresu cenowego.
     </div>
   </section>
+  
+  <section class="functionLongHeaderContainer">
+  
+    <div class="smallContainers">
+      <i class="fas fa-gift fa-4x"></i>
+      <p class="pb-5">Korzystaj z automatycznych powiadomień.
+        Nasza aplikacja poinformuje Cię jeżeli poszukiwany przez Ciebie produkt pojawi się w okolicznym sklepie,
+        bądź na aukcji</p>
+    </div>
 
-  <div class="functionLongHeaderContainer">
-    <div class="functionsLongFirstColumn">
-      <div>
-        <i class="fas fa-gift fa-4x"></i>
-        <p class="pb-5">Korzystaj z automatycznych powiadomień.<br>
-          Nasza aplikacja poinformuje Cię jeżeli poszukiwany przez Ciebie produkt pojawi się w okolicznym sklepie,
-          bądź na aukcji</p>
-      </div>
-      <div>
-        <i class="fas fa-save fa-4x"></i>
-        <p class="pb-5">Twórz własne listy z prezentami oraz zapisuj je do późniejszego wykorzystania.<br>
-          Dziel się listą prezentów ze znajomymi i rodziną.<br>
-          Dodawaj własne propozycję prezentów do list udostępnionych przez innych
-        </p>
-      </div>
-      <div>
-        <i class="fas fa-microphone-alt fa-4x"></i>
-        <p class="pb-5">Synchronizuj aplikacje z Siri i Amazon. <br>
-          Korzystaj z Siri aby wyszukiwać i dodawać prezenty nawet gdy masz zajęte ręce.<br>
-          Użyj wyłącznie polecenia głosowego a nasza aplikacja zrobi wszystko za Ciebie
-        </p>
-      </div>
+    <div class="smallContainers">
+      <i class="fas fa-save fa-4x"></i>
+      <p class="pb-5">Twórz własne listy z prezentami oraz zapisuj je do późniejszego wykorzystania.
+        Dziel się listą prezentów ze znajomymi i rodziną.
+        Dodawaj własne propozycję prezentów do list udostępnionych przez innych
+      </p>
     </div>
-    <div class="functionsLongSecondColumn">
-      <div>
-        <i class="fas fa-mobile-alt fa-4x"></i>
-        <p class="pb-5">Korzystaj z mobilnej aplikacji. <br>
-          Dzięki temu masz dostęp do listy swoich prezentów niezależnie od lokalizacji w której się znajdujesz.</p>
-      </div>
-      <div>
-        <i class="fas fa-gavel fa-4x"></i>
-        <p class="pb-5">Synchronizacja z najbardziej popularnymi serwisami aukcyjnymi takimi jak ebay.com czy
-          allegro.pl. <br>
-          Dzięku temu możesz wyszukać produkty po okazyjnych cenach.</p>
-      </div>
-      <div>
-        <i class="fas fa-store fa-4x"></i>
-        <p class="pb-5">Wyszukuj lokalnie punktów w których możesz nabyć poszukiwany produkt.<br>
-          Jeżeli wspierasz lokalny handel lub preferujesz zakup osobiście.</p>
-      </div>
-      <div>
-        <i class="fas fa-camera fa-4x"></i>
-        <p class="pb-5">Wykorzystuj swój aparat w celu łatwiejszego wyszukiwania produktów. <br>
-          Jeżeli nie potrafisz zidentyfikować produktu nasza aplikacja zrobi to za Ciebie.</p>
-      </div>
+    <div class="smallContainers">
+      <i class="fas fa-microphone-alt fa-4x"></i>
+      <p class="pb-5">Synchronizuj aplikacje z Siri i Amazon.
+        Korzystaj z Siri aby wyszukiwać i dodawać prezenty nawet gdy masz zajęte ręce.
+        Użyj wyłącznie polecenia głosowego a nasza aplikacja zrobi wszystko za Ciebie
+      </p>
+  
     </div>
-  </div>
+  
+    <div class="smallContainers">
+      <i class="fas fa-mobile-alt fa-4x"></i>
+      <p class="pb-5">Korzystaj z mobilnej aplikacji. 
+        Dzięki temu masz dostęp do listy swoich prezentów niezależnie od lokalizacji w której się znajdujesz.</p>
+    </div>
+    <div class="smallContainers">
+      <i class="fas fa-gavel fa-4x"></i>
+      <p class="pb-5">Synchronizacja z najbardziej popularnymi serwisami aukcyjnymi takimi jak ebay.com czy
+        allegro.pl.
+        Dzięku temu możesz wyszukać produkty po okazyjnych cenach.</p>
+    </div>
+    <div class="smallContainers">
+      <i class="fas fa-store fa-4x"></i>
+      <p class="pb-5">Wyszukuj lokalnie punktów w których możesz nabyć poszukiwany produkt.
+        Jeżeli wspierasz lokalny handel lub preferujesz zakup osobiście.</p>
+    </div>
+    <div class="smallContainers">
+      <i class="fas fa-camera fa-4x"></i>
+      <p class="pb-5">Wykorzystuj swój aparat w celu łatwiejszego wyszukiwania produktów. 
+        Jeżeli nie potrafisz zidentyfikować produktu nasza aplikacja zrobi to za Ciebie.</p>
+    </div>
+  </section>
 
   <div class="navIdPositioner" id="Premiere"></div>
 
@@ -183,7 +183,7 @@
       <form class="premiere" action="" method="post">
         <label for="email" class="PremiereEmailLabel m-0 p-0">Twoj email:</label>
         <input type="email" class="PremiereEmailLabel">
-        <button type="button" class="btn btn-secondary shadow m-4">Zapisz mnie!</button>
+        <button type="button" class="btn btn-secondary shadow m-4" id="premierButton">Zapisz mnie!</button>
         <p>
           Twoje dane sa bezpieczne - podany adres email bedzie uzyty tylko w celu przypomnienia Ci
           o premierze naszej aplikacji. Wyslemy tylko jeden email!
@@ -303,6 +303,13 @@
     crossorigin="anonymous"></script>
 
     <script src="js/script.js" defer></script>
+    <section class="game">
+      <div class="gameInfo">
+        Dzieki za maila! Mozesz teraz zagrac w gre. By to zrobic kliknij <a href="Game/game_worldv2.html" target="_blank">Tutaj.</a><br>
+
+        Jesli nie mozesz teraz zagrac, kliknij <a href="#Premiere"class="gameBoxClose">Tu</a> by wrocic do strony.
+      </div>
+    </section>
 </body>
 
 </html>
