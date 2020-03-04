@@ -1,10 +1,10 @@
-$(".navbar-nav>li>a").on("click", function () {
+$(".navbar-nav>li>a").on("click", function() {
   $(".navbar-collapse").collapse("hide");
   // $('.navbar').addClass("transparent");
   $(".navbar").toggleClass("white");
 });
 
-$("body").on("click", function () {
+$("body").on("click", function() {
   let navbarQuery = document.querySelector(".navbar-collapse");
 
   $(".navbar-collapse").collapse("hide");
@@ -14,30 +14,28 @@ $("body").on("click", function () {
   }
 });
 
-$(".navbar-toggler").on("click", function () {
+$(".navbar-toggler").on("click", function() {
   $(".navbar").toggleClass("white");
 });
 
 //cookies
-const cookiesBtn = document.querySelector('#cookiesBtn');
+const cookiesBtn = document.querySelector("#cookiesBtn");
 
-const cookiesSection = document.querySelector('#cookies');
+const cookiesSection = document.querySelector("#cookies");
 
-cookiesBtn.addEventListener('click', function () {
-  cookiesSection.style.display = 'none';
+cookiesBtn.addEventListener("click", function() {
+  cookiesSection.style.display = "none";
   cookiesToStorage();
-
-})
+});
 
 function cookiesToStorage() {
-  localStorage.setItem('cookie', 'agreed');
+  localStorage.setItem("cookie", "agreed");
 }
 
 function cookiesCheck() {
-  if (localStorage.getItem('cookie') == 'agreed') {
-    cookiesSection.style.display = 'none';
+  if (localStorage.getItem("cookie") == "agreed") {
+    cookiesSection.style.display = "none";
   }
-
 }
 
 cookiesCheck();
@@ -46,24 +44,30 @@ let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showSlides((slideIndex += n));
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showSlides((slideIndex = n));
 }
 
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1 }
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
@@ -72,23 +76,30 @@ function showSlides(n) {
   setTimeout(showSlides, 2000);
 }
 
-
 //fipp Team cell onscroll
 
 function scrollRotate() {
-  const teamCells = [...document.querySelectorAll('.flipCardInner')];
+  const teamCells = [...document.querySelectorAll(".flipCardInner")];
   teamCells.forEach(element => {
-    if (element.getBoundingClientRect().bottom <= window.innerHeight){
+    if (element.getBoundingClientRect().bottom <= window.innerHeight) {
       element.style.transform = "rotateY(180deg)";
-    }
-    else {
+    } else {
       element.style.transform = "";
-    };
+    }
   });
 }
 
-window.addEventListener('scroll', function () {
-  scrollRotate()
-})
+window.addEventListener("scroll", function() {
+  scrollRotate();
+});
+const premiereButton = document.querySelector("#premierButton");
+const gameBox = document.querySelector(".game");
 
+premiereButton.addEventListener("click", function() {
+  gameBox.style.display = "flex";
+});
 
+const gameClose = document.querySelector(".gameBoxClose");
+gameClose.addEventListener("click", function() {
+  gameBox.style.display = "none";
+});
