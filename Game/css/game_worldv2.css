@@ -6,6 +6,21 @@
 body {
   background-color: rgb(227, 188, 190);
 }
+
+.frame{
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 12vw;
+  width: 1450px;
+  height: 845px;
+  background: url('/img/game/border_red.png');
+  /* background-attachment: inherit; */
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 9;
+}
+
 .gameContainer {
   width: 1200px;
   height: 675px;
@@ -15,3 +30,10 @@ body {
   border: 1px solid;
   transform: scale(1);
 }
+
+/* .audio{
+  position: absolute;
+  top: 750px;
+  left: 23vw;
+  z-index: 20;
+} */
