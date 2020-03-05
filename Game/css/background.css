@@ -62,6 +62,7 @@
 .paused {
   animation-play-state: paused;
 }
+
 @keyframes scrollLeft {
   0% {
     background-position: 0px;

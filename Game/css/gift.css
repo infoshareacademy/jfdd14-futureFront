@@ -49,3 +49,7 @@
     background-position-y: -1024px;
   }
 }
+
+.paused {
+  animation-play-state: paused;
+}
