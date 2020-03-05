@@ -5,7 +5,7 @@
   /* left: 400px; */
   width: 20px;
   height: 20px;
-  background-color: red;
+  /* background-color: red; */
   animation: BulletPenguin 2s linear forwards;
   /* animation: shotAtAngle 2s linear forwards; */
   /* animation: ShotAtAngle 1s linear forwards; */
@@ -17,7 +17,7 @@
   width: 256px;
   height: 256px;
   z-index: 9;
-  background-image: url("/img/game/sprite_sheet/shots/3.png");
+  background-image: url("/img/game/sprite_sheet/shots/5.png");
   animation: playXbullet 0.4s steps(8) infinite,
     playYbullet 0.8s steps(4) infinite;
   transform: scale(0.1);
@@ -37,7 +37,7 @@
     left: inherit !important;
   }
   100% {
-    left: -100px;
+    left: -600px;
   }
 }
 @keyframes playXbullet {

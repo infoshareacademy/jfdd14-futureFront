@@ -20,7 +20,7 @@
   }
 
 
-.gift {
+/* .gift {
   position: absolute;
   top: -105px;
   left: -105px;
@@ -48,7 +48,31 @@
   to {
     background-position-y: -1024px;
   }
+} */
+
+.gift {
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  width: 84px;
+  height: 84px;
+  z-index: 9;
+  background-image: url("/img/game/sprite_sheet/coin/coin.png");
+  animation: playXgift 1s steps(6) infinite;
+  transform: scale(0.6);
 }
+
+
+@keyframes playXgift {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -504px;
+  }
+}
+
+
 
 .paused {
   animation-play-state: paused;

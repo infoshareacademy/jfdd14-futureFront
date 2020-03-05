@@ -1,7 +1,7 @@
 const startGame = document.querySelector("#startGame");
 const start = document.querySelector(".start");
 const game = document.querySelector(".game");
-startGame.addEventListener("click", function() {
+startGame.addEventListener("click", function () {
   start.style.display = "none";
   game.style.display = "block";
   setTimeout(addInstruction, 5000);
@@ -9,16 +9,16 @@ startGame.addEventListener("click", function() {
   setTimeout(addZombieMoveClass1, 5000);
   setTimeout(addZombieMoveClass2, 10000);
 
-  setTimeout(function() {
+  setTimeout(function () {
     penguinJump();
   }, 3000);
-  setTimeout(function() {
+  setTimeout(function () {
     shotPenguin();
   }, 2000);
-  setTimeout(function() {
+  setTimeout(function () {
     shotPenguin();
   }, 3500);
-  setTimeout(function() {
+  setTimeout(function () {
     shotPenguin();
   }, 4000);
 });
@@ -43,11 +43,9 @@ let count = 0;
 let penguinCount = 0;
 //engine
 
-const engine = setInterval(function() {
+const engine = setInterval(function () {
   const bullets = [...document.querySelectorAll(".bulletContainerHero")];
-  const penguinBullets = [
-    ...document.querySelectorAll(".bulletContainerPenguin")
-  ];
+  const penguinBullets = [...document.querySelectorAll(".bulletContainerPenguin")];
 
   //gift collision
   checkCollision(divHero, giftContainer);
@@ -99,11 +97,11 @@ const checkCollision = (firstObject, secondObject) => {
   if (
     parseInt(boundingFirst.left) < parseInt(bounding.right) &&
     parseInt(boundingFirst.left) + parseInt(boundingFirst.width) >
-      parseInt(bounding.left) &&
+    parseInt(bounding.left) &&
     parseInt(boundingFirst.top) <
-      parseInt(bounding.top) + parseInt(bounding.height) &&
+    parseInt(bounding.top) + parseInt(bounding.height) &&
     parseInt(boundingFirst.top) + parseInt(boundingFirst.height) >
-      parseInt(bounding.top)
+    parseInt(bounding.top)
   ) {
     //secondObject.firstElementChild.classList.add("heroDie");
     /*  if (secondObject == penguinContainer) {
@@ -115,6 +113,9 @@ const checkCollision = (firstObject, secondObject) => {
       }
     } */
     if (secondObject == giftContainer) {
+      secondObject.innerHTML += `<audio autoplay>
+      <source src="/Game/audio/cash-register-purchase.wav" type="audio/mpeg">
+      </audio>`;
       secondObject.style.display = "none";
     } else if (firstObject == penguinContainer) {
       penguinCount += 2;
@@ -124,6 +125,13 @@ const checkCollision = (firstObject, secondObject) => {
         penguinCount = 0;
       }
     } else {
+
+
+      // oglos umierajacego zombie ????
+      secondObject.innerHTML += `<audio autoplay>
+      <source src="/Game/audio/death-pain.wav" type="audio/wav">
+    </audio>`;
+
       count += 2;
       secondObject.style.display = "none";
       if (count >= 6) {
@@ -157,7 +165,7 @@ function addZombieMoveClass2() {
 setTimeout(addZombieMoveClass2, 10000); */
 
 //hero methods
-const jump = function() {
+const jump = function () {
   const gravity = 10;
   let metrNaPix = 19.2;
   let speed = 100 * metrNaPix;
@@ -169,7 +177,7 @@ const jump = function() {
   const fps = 60;
   let time_step = 1.0 / fps;
 
-  const jumpInterval = setInterval(function() {
+  const jumpInterval = setInterval(function () {
     if (y_coord < 446 && x_coord < 1920) {
       x_coord += speed_x * time_step;
       y_coord -= speed_y * time_step;
@@ -183,9 +191,9 @@ const jump = function() {
         hero.innerHTML -= `<audio autoplay>
         <source src="/Game/audio/jetpack2.wav" type="audio/mpeg">
       </audio>`;
-    //     hero.innerHTML += `<audio autoplay>
-    //   <source src="/Game/audio/run.wav" type="audio/mpeg">
-    // </audio>`;
+        //     hero.innerHTML += `<audio autoplay>
+        //   <source src="/Game/audio/run.wav" type="audio/mpeg">
+        // </audio>`;
       }
     }
   }, 1000 / fps);
@@ -208,12 +216,12 @@ function shot() {
 
   if (parseInt(heroPos.top) > 558) {
     hero.classList.add("heroStandingShooting");
-    setTimeout(function() {
+    setTimeout(function () {
       background.forEach(element => {
         element.classList.add("paused");
       });
     }, 200);
-    setTimeout(function() {
+    setTimeout(function () {
       hero.classList.remove("heroStandingShooting");
       background.forEach(element => {
         element.classList.remove("paused");
@@ -222,13 +230,13 @@ function shot() {
   }
   if (parseInt(heroPos.top) < 560) {
     hero.classList.add("heroFlyingShooting");
-    setTimeout(function() {
+    setTimeout(function () {
       hero.classList.remove("heroFlyingShooting");
     }, 1000);
   }
 }
 //event listeners
-document.addEventListener("keydown", function(e) {
+document.addEventListener("keydown", function (e) {
   if (e.key == "b") {
     const heroPos = divHero.getBoundingClientRect();
     if (parseInt(heroPos.top) > 560) {
@@ -244,7 +252,7 @@ document.addEventListener("keydown", function(e) {
 
 function outOfMap() {
   const divsOutOfGameContainer = [...document.querySelectorAll("div")];
-  divsOutOfGameContainer.forEach(element => {});
+  divsOutOfGameContainer.forEach(element => { });
   const removeDivs = divsOutOfGameContainer.forEach(element => {
     if (
       parseInt(element.getBoundingClientRect().left) > 1560 ||
@@ -255,7 +263,7 @@ function outOfMap() {
   });
 }
 
-document.addEventListener("keydown", function(e) {
+document.addEventListener("keydown", function (e) {
   if (e.key == "l") {
     shot();
   }
@@ -270,7 +278,7 @@ const coin1 = document.querySelector(".giftContainer");
 
 coin1.style.top = `${coinSec(50, 520)}px`;
 
-const penguinJump = function() {
+const penguinJump = function () {
   // penguin.classList.add("penguinJumpShooting");
   // console.log(penguin.classList, "klasy");
   const penguinContainer = document.querySelector(".penguinContainer");
@@ -296,7 +304,7 @@ const penguinJump = function() {
     // </audio>`;
   }
 
-  setInterval(function() {
+  setInterval(function () {
     // console.log(penguinStartY - 101,"ping - 101")
     // console.log(penguinStartY - 100, "pingwin Y przed if")
     // if (y_coord < penguinStartY-100 && x_coord > 350)
@@ -331,17 +339,22 @@ function shotPenguin() {
   const heroPos = hero.getBoundingClientRect();
   world.append(bulletDiv);
   bulletDiv.classList.add("bulletContainerPenguin");
-  bulletDiv.innerHTML = '<div class="bulletPenguin"></div>';
+  bulletDiv.innerHTML = `<div class="bulletPenguin">
+  <audio autoplay>
+  <source src="/Game/audio/shot_reload.wav" type="audio/mpeg">
+  </audio>
+  </div>`;
   bulletDiv.style.top = `${parseInt(heroPos.top) - 50}px`;
   bulletDiv.style.left = `${parseInt(heroPos.left) -
     containerLeft.left -
     130}px`;
+
   console.log(bulletDiv.style.left, "bullet style left");
   console.log(divHero.getBoundingClientRect());
   console.log(parseInt(heroPos.top), "penguin TOP position while shooting");
   console.log(parseInt(heroPos.left), "penguin LEFT position while shooting");
 }
-document.addEventListener("keydown", function(e) {
+document.addEventListener("keydown", function (e) {
   if (e.key == "p") {
     // console.log("STAAAAART");
     // const penguinPos = penguinContainer.getBoundingClientRect();
@@ -359,7 +372,7 @@ document.addEventListener("keydown", function(e) {
     shotPenguin();
   }
 });
-/* 
+/*
 setTimeout(function() {
   penguinJump();
 }, 3000);
