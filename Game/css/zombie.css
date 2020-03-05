@@ -100,14 +100,17 @@
 }
 @keyframes playXzombieDie {
   from {
-    background-position-x: -2920px;
+    background-position-x: 0px;
   }
   to {
-    background-position-x: 0px;
+    background-position-x: -2920px;
   }
 }
 @keyframes playYzombieDie {
   from {
+    background-position-y:  0px;
+  }
+  to {
     background-position-y: -3145px;
   }
 }

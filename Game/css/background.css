@@ -59,6 +59,11 @@
   animation: scrollLeft 5s linear infinite;
   z-index: 5;
 }
+
+
+
+
+
 .paused {
   animation-play-state: paused;
 }
