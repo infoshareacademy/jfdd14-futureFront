@@ -1,0 +1,148 @@
+.penguinContainer {
+  position: absolute;
+  top: 495px;
+  left: 900px;
+  width: 120px;
+  height: 140px;
+  /* background-color: hotpink; */
+  z-index: 4;
+  animation: scrollLeftPenguin 7s linear infinite;
+}
+@keyframes scrollLeftPenguin {
+  0% {
+    left: 1500px;
+  }
+  100% {
+    left: -300px;
+  }
+}
+.penguinRun {
+  /* background-color: lawngreen; */
+  position: absolute;
+  z-index: 3;
+  top: -163px;
+  left: -200px;
+  width: 485px;
+  height: 442px;
+  background-image: url("/img/game/sprite_sheet/penguin/run_shooting_forward.png");
+  animation: playXPenguinRun 0.5s steps(5) infinite,
+    playYPenguinRun 1.5s steps(3) infinite;
+  transform: scale(-0.3, 0.3);
+}
+@keyframes playXPenguinRun {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -2425px;
+  }
+}
+@keyframes playYPenguinRun {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: -1326px;
+  }
+}
+
+
+
+.penguinJump {
+  /* background-color: lawngreen; */
+  position: absolute;
+  z-index: 3;
+  top: -330px;
+  left: -200px;
+  width: 462px;
+  height: 680px;
+  background-image: url("/img/game/sprite_sheet/penguin/jump.png");
+
+  animation: playXPenguinJump .3s steps(6) infinite,
+            playYPenguinJump 1.2s steps(4) infinite;
+  transform: scale(-0.3, 0.3);
+
+}
+@keyframes playXPenguinJump {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -2772px;
+  }
+}
+@keyframes playYPenguinJump {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: -2720px;
+  }
+}
+
+
+
+
+.penguinJumpShooting {
+  /* background-color: lawngreen; */
+  position: absolute;
+  z-index: 5;
+  top: -330px;
+  left: -200px;
+  width: 462px;
+  height: 680px;
+  background-image: url("/img/game/sprite_sheet/penguin/jump_up.png");
+
+  animation: playXPenguinJumpShooting .3s steps(5) infinite,
+            playYPenguinJumpShooting .9s steps(3) infinite;
+  transform: scale(-0.3, 0.3);
+  /* animation-delay: 1.5s; */
+}
+@keyframes playXPenguinJumpShooting {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -2310px;
+  }
+}
+@keyframes playYPenguinJumpShooting {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: -2040px;
+  }
+}
+
+.penguinDie {
+  /* background-color: lawngreen; */
+  position: absolute;
+  z-index: 3;
+  top: -163px;
+  left: -200px;
+  width: 765px;
+  height: 483px;
+  background-image: url("/img/game/sprite_sheet/penguin/death.png");
+  animation: playXPenguinDie .1s steps(7) forwards,
+            playYPenguinDie .5s steps(5) forwards;
+  transform: scale(-0.3, 0.3);
+}
+@keyframes playXPenguinDie {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -5355px;
+  }
+}
+@keyframes playYPenguinDie {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: -2415px;
+  }
+}
+
+
