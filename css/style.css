@@ -419,7 +419,6 @@ i.fas {
   transition: all 1.5s ease;
 }
 
-<<<<<<< HEAD
 i.fas:hover {
   color: rgba(0, 128, 128, 0.822);
   opacity: 0.8;
@@ -429,12 +428,11 @@ i.fas:hover {
   display: block;
   text-align: center;
   padding: 50px;
-=======
-/* i.fas:hover {
+  /* i.fas:hover {
     color: rgba(0, 128, 128, 0.822);
     opacity: 0.8;
 } */
-
+}
 .functionLongHeaderContainer {
   display: flex;
   flex-wrap: wrap;
@@ -445,18 +443,14 @@ i.fas:hover {
 
 .smallContainers {
   width: 50vw;
->>>>>>> 82d4dfd30e5bfbef55c28a514edec1b9d6b190b8
 }
 
 .functionLongHeader {
   min-height: 100vh;
   min-width: 100vw;
   justify-content: center;
-<<<<<<< HEAD
   text-align: center;
-=======
   text-align: right;
->>>>>>> 82d4dfd30e5bfbef55c28a514edec1b9d6b190b8
   font-weight: 500;
   background-image: url(/img/235.jpg);
   background-size: cover;
@@ -502,11 +496,8 @@ i.fas:hover {
 
 form {
   /* background: rgba(0, 128, 128, 0.233); */
-<<<<<<< HEAD
   background: rgba(255, 255, 255, 0.233);
-=======
   /* background: rgba(255, 255, 255, 0.233); */
->>>>>>> 82d4dfd30e5bfbef55c28a514edec1b9d6b190b8
   border-radius: 25px;
 }
 
@@ -517,11 +508,7 @@ form input {
 
 form input {
   display: flex-box;
-<<<<<<< HEAD
-  width: 30vw;
-=======
   width: 50vw;
->>>>>>> 82d4dfd30e5bfbef55c28a514edec1b9d6b190b8
 }
 
 form .submit {
@@ -555,17 +542,12 @@ form .submit {
 
 .teamCell {
   flex-direction: column;
-<<<<<<< HEAD
-  justify-content: flex-start;
-=======
   justify-content: center;
->>>>>>> 82d4dfd30e5bfbef55c28a514edec1b9d6b190b8
   align-items: center;
   text-align: center;
   display: flex;
   flex-basis: 100%;
   margin: 40px;
-<<<<<<< HEAD
   padding: 40px 15px;
   padding-top: 40px;
   box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1);
@@ -577,12 +559,10 @@ form .submit {
 .teamCell:hover {
   transform: scale(1.25);
   transition: all 0.6s ease;
-=======
   box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
   background-color: rgba(227, 188, 190, 0.432);
   /* transition: all .6s ease; */
->>>>>>> 82d4dfd30e5bfbef55c28a514edec1b9d6b190b8
 }
 
 .teamCell img {
@@ -602,10 +582,7 @@ form .submit {
 }
 
 .teamContainer {
-<<<<<<< HEAD
-=======
   /* position: absolute; */
->>>>>>> 82d4dfd30e5bfbef55c28a514edec1b9d6b190b8
   min-height: 80vh;
   padding: 5vh;
 }
@@ -617,18 +594,12 @@ form .submit {
 
 .teamSocial {
   text-align: center;
-<<<<<<< HEAD
-=======
   z-index: 3;
->>>>>>> 82d4dfd30e5bfbef55c28a514edec1b9d6b190b8
 }
 
 .team h6 {
   text-align: center;
-<<<<<<< HEAD
-=======
   font-size: 1rem !important;
->>>>>>> 82d4dfd30e5bfbef55c28a514edec1b9d6b190b8
 }
 
 .team a {
@@ -637,18 +608,6 @@ form .submit {
 
 i.fab {
   transform: scale(1.5);
-<<<<<<< HEAD
-  margin: 10px;
-  opacity: 0.4;
-  color: teal;
-  background-color: transparent;
-  text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  transition: all 0.6s ease;
-}
-
-i.fab:hover {
-  color: rgba(0, 128, 128, 0.822);
-=======
   opacity: 1;
   margin: 10px;
   color: teal;
@@ -659,7 +618,6 @@ i.fab:hover {
 
 i.fab:hover {
   color: teal;
->>>>>>> 82d4dfd30e5bfbef55c28a514edec1b9d6b190b8
   opacity: 0.8;
 }
 
@@ -713,101 +671,6 @@ footer {
     width: 30vw;
     max-width: 370px;
   }
-<<<<<<< HEAD
-
-  .premiere-main {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding-bottom: 30vh;
-  }
-
-  .functionLongHeaderContainer {
-    display: flex;
-  }
-
-  .functionLongHeaderContainer {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .functionsLongFirstColumn,
-  .functionsLongSecondColumn {
-    width: 30%;
-  }
-
-  .functionLongHeaderText {
-    padding: 5vw 25vw;
-    text-align: center;
-  }
-
-  .functionLongHeader {
-    min-height: 100vh;
-    min-width: 100vw;
-    justify-content: center;
-    text-align: center;
-    font-weight: 500;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    margin-bottom: 80px;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  header {
-    font-size: 1.5rem;
-  }
-
-  .heroContainer {
-    justify-content: space-around;
-    padding-top: 53;
-  }
-
-  #carInviteContainer {
-    justify-content: space-around;
-  }
-
-  #carImgContainer {
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-
-  img {
-    margin-left: 0px;
-    margin-right: 10%;
-  }
-
-  .navbar-brand {
-    display: flex;
-  }
-
-  .navbar {
-    background: rgba(255, 255, 255, 0.863) !important;
-  }
-}
-
-@media (orientation: landscape) and (max-height: 600px) {
-  .inviteVertical {
-    display: none !important;
-  }
-
-  .subHeaderLine1 {
-    font-size: 1rem;
-  }
-
-  .subHeaderLine2 {
-    font-size: 0.8rem;
-  }
-
-  .functionLongHeaderText {
-    font-size: 0.7rem;
-    padding-top: 8px;
-  }
-
-  .PremiereLogo {
-    display: none;
-=======
 
   .premiere-main {
     display: flex;
@@ -929,6 +792,5 @@ footer {
     .functionLongHeaderContainer {
       display: flex;
     }
->>>>>>> 82d4dfd30e5bfbef55c28a514edec1b9d6b190b8
   }
 }
