@@ -73,68 +73,74 @@
 
 
       <div class="gameEnd">
-        <div class="gameOver">GAME OVER
-          <p class="gameOver">
-            Nie udało Ci się dotrzec do prezentu...<br>
-            Twój wynik to:
-          </p>
-          <!-- <div class="gameWon">GRATULACJE
-                <p class="gameWon">
-                 Nie udało Ci się dotrzec do prezentu...<br>
-                 Twój wynik to:
-                </p> -->
-          <div class="currentScore">current score</div>
-          <p>
-            Twój najlepszy wynik do tej pory:
-          </p>
-          <div class="highScore">highscore</div>
+        <div class="leftContainerEnd">
+          <div class="gameOver">GAME OVER
+            <p class="gameOver">
+              Nie udało Ci się dotrzec do prezentu...<br>
+              Twój wynik to:
+            </p>
+            <div class="gameWon">GRATULACJE
+              <p class="gameWon">
+                Udało Ci się dotrzec do prezentu...<br>
+                Twój wynik to:
+              </p>
+            </div>
+            <div class="currentScore">12345678</div>
+            <p>
+              Twój najlepszy wynik do tej pory:
+            </p>
+            <div class="highScore">99999999999</div>
+          </div>
         </div>
-        <div class="buttonStart">
-          <button id="startGame">Start</button>
+
+          <div class="buttonsEndGame">
+            <button id="backToGame" onclick="location.href='/Game/game_worldv2.html'">Start</button>
+            <button id="backToSite">Wyjście</button>
+          </div>
+
         </div>
-      </div>
 
 
-      <!-- <div class="back ground1"></div>
+        <!-- <div class="back ground1"></div>
       <div class="back ground2"></div>
       <div class="back ground3"></div>
       <div class="back ground4"></div>
       <div class="back1 ground5"></div> -->
 
-      <div class="heroContainer">
-        <div class="heroRun" id="hero"></div>
-      </div>
-      <div class="zombieContainer" id="zombie1">
-        <div class="zombieRun" id="zombie"></div>
-      </div>
-      <div class="deadZombieContainer" id="zombie2">
-        <div class="zombieRun" id="zombie"></div>
-      </div>
-      <div class="deadZombieContainer" id="zombie3">
-        <div class="zombieRun" id="zombie"></div>
-      </div>
+        <div class="heroContainer">
+          <div class="heroRun" id="hero"></div>
+        </div>
+        <div class="zombieContainer" id="zombie1">
+          <div class="zombieRun" id="zombie"></div>
+        </div>
+        <div class="deadZombieContainer" id="zombie2">
+          <div class="zombieRun" id="zombie"></div>
+        </div>
+        <div class="deadZombieContainer" id="zombie3">
+          <div class="zombieRun" id="zombie"></div>
+        </div>
 
-      <div class="giftContainer back">
-        <div class="gift"></div>
+        <div class="giftContainer back">
+          <div class="gift"></div>
+        </div>
+        <div class="penguinContainer">
+          <div class="penguinRun" id="penguin"></div>
+        </div>
+
+
+
       </div>
-      <div class="penguinContainer">
-        <div class="penguinRun" id="penguin"></div>
-      </div>
-
-
-
     </div>
-  </div>
 
-  <!-- <audio controls autoplay class="audio">
+    <!-- <audio controls autoplay class="audio">
       <source src="/Game/audio/09. Hero.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
     </audio> -->
 
-  <script src="js/game_world.js" defer></script>
+    <script src="js/game_world.js" defer></script>
 
-  <!-- <script src="js/penguin.js" defer></script> -->
-  <script src="" async defer></script>
+    <!-- <script src="js/penguin.js" defer></script> -->
+    <script src="" async defer></script>
 </body>
 
 </html>
