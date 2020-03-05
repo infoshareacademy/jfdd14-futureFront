@@ -5,7 +5,9 @@
   height: auto;
   background-color: rgb(227, 188, 190);
   margin: 0;
-  padding: 0;
+  padding: 5vh;
+  flex-direction: column;
+  text-align: center;
 }
 
 .calculatorDiscount {

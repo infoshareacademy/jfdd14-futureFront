@@ -286,16 +286,19 @@
   </section>
   <section id="calculator" class="calculator">
     <div class="calculatorDiv">
-      <p>Wybierz liczbe sugestii</p>
+      <p>Wybierz liczbę sugestii</p>
       <div class="slideContainer">
 
-      <input oninput="testing()" type="range" min="1" max="10" step ="1" class="slider" id="myRange">
+      <input oninput="priceFunction()" type="range" min="1" max="10" step ="1" class="slider" id="myRange">
       
       <p>Cena:</p>  <p class ="calculatorPrice" id="calculatorPrice"></p>
       <div class="calculatorDiscount">
-        <input  oninput="discount()" type="checkbox" id='disc1'><span>Znizka dla studentow 10%</span>
-        <input type="checkbox" id='disc2'><span>Znizka dla  20%</span>
-        <input type="checkbox" id='disc3'><span>znizka dla emerytow i rencistow 30%</span>
+        <div class="calculatorCheckbox"><input type="checkbox" id='disc1'><span>Zniżka dla studentów 10%</span></div>
+        <div class="calculatorCheckbox"> <input type="checkbox" id='disc2'><span>Zniżka z Kartą Mieszkańca Gdańska 20%</span></div>
+        <div class="calculatorCheckbox"> <input type="checkbox" id='disc3'><span>zniżka dla emerytów i rencistów 30%</span></div>
+        
+       
+       
       </div>
      
       </div>
@@ -341,7 +344,8 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
 
-    <script src="js/script.js" defer></script>
+
+    <script src="js/calculator2.js" defer></script>
     
 </body>
 
