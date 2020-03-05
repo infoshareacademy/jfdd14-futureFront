@@ -5,7 +5,7 @@
   left: 500px;
   width: 100.6px;
   height: 176.1px;
-/* background-color: lawngreen; */
+  /* background-color: lawngreen; */
   z-index: 4;
   animation: scrollLeftZombie 6s linear infinite;
 }
@@ -19,6 +19,17 @@
   }
 }
 
+.deadZombieContainer {
+  display: none;
+  position: absolute;
+  top: 440px;
+  left: 500px;
+  width: 135.6px;
+  height: 176.1px;
+
+  z-index: 8;
+  /*animation: scrollLeftZombie 7s linear infinite;*/
+}
 .zombieRun {
   position: absolute;
   top: -200px;
@@ -55,8 +66,7 @@
   width: 730px;
   height: 629px;
   background-image: url("/img/game/sprite_sheet/Christmas_zombie/Die.png");
-  animation: playXzombieDie 0.2s steps(4) 1,
-    playYzombieDie 1s steps(5) 1;
+  animation: playXzombieDie 0.2s steps(4) 1, playYzombieDie 1s steps(5) 1;
   transform: scale(-0.3, 0.3);
 }
 @keyframes playXzombieDie {
