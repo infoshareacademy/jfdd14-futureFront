@@ -107,6 +107,8 @@ body {
   box-shadow: 0 0.2em gray;
   cursor: pointer;
   z-index: 19;
+
+  display: none;
 }
 
 .gameEnd p {
