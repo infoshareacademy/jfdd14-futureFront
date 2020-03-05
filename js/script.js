@@ -88,11 +88,14 @@ function scrollRotate() {
     }
   });
 }
-const greyBackground = document.querySelector(".greyBackground");
+
 window.addEventListener("scroll", function() {
   scrollRotate();
 });
+//game for mail
+const greyBackground = document.querySelector(".greyBackground");
 const premiereButton = document.querySelector("#premierButton");
+const premiereButtonSmall = document.querySelector("#premierButtonSmall");
 const game = document.querySelector(".game");
 const gameBoxPlay = document.querySelector("#gameBoxPlay");
 const gameBoxClose = document.querySelector("#gameBoxClose");
@@ -104,7 +107,20 @@ gameBoxPlay.addEventListener("click", function() {
 });
 
 premiereButton.addEventListener("click", function() {
+  console.log("bb");
   let premiereInput = document.querySelector(".premiereEmailInput");
+  if (premiereInput.value == "") {
+    alert("Pole email nie moze byc puste");
+  } else if (!emailRegex.test(premiereInput.value)) {
+    alert("Prosze wpisac prawidlowy adres email");
+  } else {
+    greyBackground.style.display = "block";
+    game.style.display = "flex";
+  }
+});
+premiereButtonSmall.addEventListener("click", function() {
+  console.log("bb");
+  let premiereInput = document.querySelector(".premiereEmailInputSmall");
   if (premiereInput.value == "") {
     alert("Pole email nie moze byc puste");
   } else if (!emailRegex.test(premiereInput.value)) {
