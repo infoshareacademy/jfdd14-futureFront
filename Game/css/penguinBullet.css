@@ -1,0 +1,58 @@
+.bulletContainerPenguin {
+  position: absolute;
+  z-index: 9;
+  /* top: 320px;  nadawane z pozycji hero.top przy tworzeniu bullet*/
+  /* left: 400px; */
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  animation: BulletPenguin 2s linear forwards;
+  /* animation: shotAtAngle 2s linear forwards; */
+  /* animation: ShotAtAngle 1s linear forwards; */
+}
+.bulletPenguin {
+  position: absolute;
+  top: -120px;
+  left: -117px;
+  width: 256px;
+  height: 256px;
+  z-index: 9;
+  background-image: url("/img/game/sprite_sheet/shots/3.png");
+  animation: playXbullet 0.4s steps(8) infinite,
+    playYbullet 0.8s steps(4) infinite;
+  transform: scale(0.1);
+}
+@keyframes shotAtAngle {
+  0% {
+    left: inherit !important;
+    top: inherit !important;
+  }
+  100% {
+    left: 100px;
+    top: -200px;
+  }
+}
+@keyframes BulletPenguin {
+  0% {
+    left: inherit !important;
+  }
+  100% {
+    left: -100px;
+  }
+}
+@keyframes playXbullet {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -2048px;
+  }
+}
+@keyframes playYbullet {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: -1024px;
+  }
+}
