@@ -67,45 +67,54 @@
   </head>
 
   <body class="">
-    <div class="frame"></div>
-    <div class="gameContainer">
+    <div class="start">
+      <p>
+        Cel gry jest prosty - zbierac monety by moc kupic wymarzony prezent. W
+        trakcie gry przeszkadzac beda Ci w tym zombie - kazde zetkniecie z nimi
+        spowoduje utrate zycia (zaczynasz z trzema!). Mozesz je przeskoczyc klikajac "B" lub zestrzelic klikajac "L". Gdy uporasz sie ze wszystkimi zombie, czeka na Ciebie jeszcze jedno wyzwanie...<div class=""></div>
+      </p>
+      <div class="buttonStart">  <button id="startGame">Start</button></div>
+    
+    </div>
+    <div class="game">
+      <div class="frame"></div>
+      <div class="gameContainer">
+        <div class="instruction">
+          Zbieraj monety by uzbierac na prezent! Gdy sa w gorze kliknij "B" by
+          do nich doskoczyc.
+        </div>
 
-      <div class="instruction">
-        Zbieraj monety by uzbierac na prezent! Gdy sa w gorze kliknij "B" by do
-        nich doskoczyc.
-      </div>
+        <div class="back sky"></div>
+        <div class="back bgdecor"></div>
+        <div class="back middledecor"></div>
+        <div class="back foreground"></div>
+        <div class="back ground"></div>
 
-      <div class="back sky"></div>
-      <div class="back bgdecor"></div>
-      <div class="back middledecor"></div>
-      <div class="back foreground"></div>
-      <div class="back ground"></div>
-
-      <!-- <div class="back ground1"></div>
+        <!-- <div class="back ground1"></div>
       <div class="back ground2"></div>
       <div class="back ground3"></div>
       <div class="back ground4"></div>
       <div class="back1 ground5"></div> -->
 
+        <div class="heroContainer">
+          <div class="heroRun" id="hero"></div>
+        </div>
+        <div class="zombieContainer" id="zombie1">
+          <div class="zombieRun" id="zombie"></div>
+        </div>
+        <div class="deadZombieContainer" id="zombie2">
+          <div class="zombieRun" id="zombie"></div>
+        </div>
+        <div class="deadZombieContainer" id="zombie3">
+          <div class="zombieRun" id="zombie"></div>
+        </div>
 
-      <div class="heroContainer">
-        <div class="heroRun" id="hero"></div>
-      </div>
-      <div class="zombieContainer" id="zombie1">
-        <div class="zombieRun" id="zombie"></div>
-      </div>
-      <div class="deadZombieContainer" id="zombie2">
-        <div class="zombieRun" id="zombie"></div>
-      </div>
-      <div class="deadZombieContainer" id="zombie3">
-        <div class="zombieRun" id="zombie"></div>
-      </div>
-
-      <div class="giftContainer">
-        <div class="gift"></div>
-      </div>
-      <div class="penguinContainer">
-        <div class="penguinRun" id="penguin"></div>
+        <div class="giftContainer">
+          <div class="gift"></div>
+        </div>
+        <div class="penguinContainer">
+          <div class="penguinRun" id="penguin"></div>
+        </div>
       </div>
     </div>
 
@@ -115,6 +124,7 @@
     </audio> -->
 
     <script src="js/game_world.js" defer></script>
+
     <!-- <script src="js/penguin.js" defer></script> -->
     <script src="" async defer></script>
   </body>
