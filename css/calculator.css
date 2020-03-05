@@ -1,0 +1,14 @@
+.calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-color: rgb(227, 188, 190);
+  margin: 0;
+  padding: 0;
+}
+
+.calculatorDiscount {
+  display: flex;
+  flex-direction: column;
+}
