@@ -1,17 +1,18 @@
 const startGame = document.querySelector("#startGame");
 const start = document.querySelector(".start");
 const game = document.querySelector(".game");
+let lifeCheck = 0;
 
 startGame.addEventListener("click", function() {
   start.style.display = "none";
   game.style.display = "block";
 
-  setTimeout(addZombieMoveClass1, 5000);
-  setTimeout(addZombieMoveClass2, 10000);
+  setTimeout(addZombieMoveClass1, 4000);
+  setTimeout(addZombieMoveClass2, 7000);
 
   setTimeout(function() {
     penguinJump();
-  }, 3000);
+  }, 13000);
   setTimeout(function() {
     shotPenguin();
   }, 12000);
@@ -21,6 +22,13 @@ startGame.addEventListener("click", function() {
   setTimeout(function() {
     shotPenguin();
   }, 14000);
+  setTimeout(function() {
+    shotPenguin();
+  }, 15000);
+  setTimeout(function() {
+    shotPenguin();
+  }, 18000);
+
   setTimeout(function() {
     penguinContainer.style.display = "block";
   }, 10000);
@@ -38,6 +46,9 @@ const giftContainer = document.querySelector(".giftContainer");
 const instructions = document.querySelector(".instruction");
 const penguinContainer = document.querySelector(".penguinContainer");
 const penguin = document.querySelector("#penguin");
+const gameEnd = document.querySelector(".gameEnd");
+const gameLose = document.querySelector(".gameOver");
+const gameWon = document.querySelector(".gameWon");
 
 let zombieX = 500;
 const heroheight = divHero.style.left;
@@ -52,7 +63,14 @@ const engine = setInterval(function() {
   const penguinBullets = [
     ...document.querySelectorAll(".bulletContainerPenguin")
   ];
-
+  if (lifeCheck == 3) {
+    gameEnd.style.display = "flex";
+    gameWon.style.display = "none";
+  }
+  if (score >= 50) {
+    gameEnd.style.display = "flex";
+    gameLose.style.display = "none";
+  }
   //gift collision
   checkCollision(divHero, giftContainer);
   //zombie collision
@@ -159,6 +177,7 @@ const checkCollision = (firstObject, secondObject) => {
       if (count >= 6) {
         firstObject.style.display = "none";
         count = 0;
+        score += 10;
       }
     }
   }
@@ -386,4 +405,5 @@ function lifeRemover() {
   let firstLife = document.querySelector(".lifeSingle");
   firstLife.classList.remove("lifeSingle");
   firstLife.classList.add("lifeSingleHidden");
+  lifeCheck += 1;
 }

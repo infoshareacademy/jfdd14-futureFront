@@ -26,7 +26,8 @@
   display: none;
 }
 
-.gameEnd p {
+.gameEnd p,
+.gameWon p {
   font-size: 20px;
 }
 
@@ -51,10 +52,6 @@
 
 #backToSite {
   margin-top: 40px;
-}
-
-.gameWon {
-  display: none;
 }
 
 /* .audio{
