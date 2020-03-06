@@ -1,6 +1,7 @@
 const startGame = document.querySelector("#startGame");
 const start = document.querySelector(".start");
 const game = document.querySelector(".game");
+
 startGame.addEventListener("click", function() {
   start.style.display = "none";
   game.style.display = "block";
@@ -13,13 +14,16 @@ startGame.addEventListener("click", function() {
   }, 3000);
   setTimeout(function() {
     shotPenguin();
-  }, 2000);
+  }, 12000);
   setTimeout(function() {
     shotPenguin();
-  }, 3500);
+  }, 13500);
   setTimeout(function() {
     shotPenguin();
-  }, 4000);
+  }, 14000);
+  setTimeout(function() {
+    penguinContainer.style.display = "block";
+  }, 10000);
 });
 
 //consts + query selectors
@@ -43,6 +47,7 @@ let penguinCount = 0;
 //engine
 
 const engine = setInterval(function() {
+  scoreQuery.innerHTML = `SCORE: ${score}`;
   const bullets = [...document.querySelectorAll(".bulletContainerHero")];
   const penguinBullets = [
     ...document.querySelectorAll(".bulletContainerPenguin")
@@ -105,21 +110,47 @@ const checkCollision = (firstObject, secondObject) => {
         count = 0;
       }
     } */
-    if (secondObject == giftContainer) {
+    //hero collision with gift
+    if (firstObject == divHero && secondObject == giftContainer) {
       secondObject.innerHTML += `<audio autoplay>
       <source src="/Game/audio/cash-register-purchase.wav" type="audio/mpeg">
       </audio>`;
       secondObject.style.display = "none";
+      score += 10;
+      //hero collision with zombie
+    } else if (
+      (firstObject == divHero && secondObject == divZombie) ||
+      secondObject == divZombie1 ||
+      secondObject == divZombie2
+    ) {
+      secondObject.style.display = "none";
+      lifeRemover();
+      //penguin collision with bullet
     } else if (firstObject == penguinContainer) {
       penguinCount += 2;
       secondObject.style.display = "none";
       if (penguinCount >= 6) {
-        firstObject.classList.add("penguinDie");
-        penguinCount = 0;
+        firstObject.firstElementChild.classList.remove("penguinRun");
+        firstObject.firstElementChild.classList.add("penguinDie");
+        setTimeout(function() {
+          firstObject.style.display = "none";
+        }, 700);
+        score += 10;
       }
+      //hero collision with penguin
+    } else if (firstObject == divHero && secondObject == penguinContainer) {
+      secondObject.firstElementChild.classList.remove("penguinRun");
+      secondObject.firstElementChild.classList.add("penguinDie");
+
+      secondObject.style.display = "none";
+      lifeRemover();
+      //hero collission with bullet
+    } else if (firstObject == divHero && secondObject != giftContainer) {
+      secondObject.style.display = "none";
+      lifeRemover();
+      //zombie collision with bullet
     } else {
-      // oglos umierajacego zombie ????
-      secondObject.innerHTML += `<audio autoplay>
+      firstObject.firstElementChild.innerHTML += `<audio autoplay>
       <source src="/Game/audio/death-pain.wav" type="audio/wav">
     </audio>`;
 
@@ -130,16 +161,6 @@ const checkCollision = (firstObject, secondObject) => {
         count = 0;
       }
     }
-    /* if (secondObject != giftContainer) {
-      count += 2;
-      secondObject.style.display = "none";
-      if (count >= 6) {
-        firstObject.style.display = "none";
-        count = 0;
-      }
-    } else {
-      secondObject.style.display = "none";
-    } */
   }
 };
 //zombie create
@@ -254,7 +275,7 @@ function outOfMap() {
   });
 }
 
-document.addEventListener("keydown", function(e) {
+document.addEventListener("keyup", function(e) {
   if (e.key == "l") {
     shot();
   }
@@ -287,7 +308,6 @@ const penguinJump = function() {
   let time_step = 1.0 / fps; // every frame...
   const penguinPos = penguinContainer.getBoundingClientRect();
   if (parseInt(penguinPos.top) > 560) {
-    console.log(parseInt(penguinPos.top), "penguin TOOP AFFFTEEER");
     let penguin = document.querySelector("#penguin");
     penguin.classList.add("penguinJump");
     //   hero.innerHTML += `<audio autoplay>
@@ -302,7 +322,6 @@ const penguinJump = function() {
 
     // console.log(penguin.classList, "klasy");
     if (y_coord < 496 && x_coord > 350) {
-      console.log(penguinStartY, "pingwin Y");
       x_coord -= speed_x * time_step; //* metrNaPix;
       y_coord -= speed_y * time_step; //* metrNaPix;
       //console.log(x_coord, y_coord, speed_x, speed_y);
@@ -315,13 +334,11 @@ const penguinJump = function() {
 
       if (parseInt(y_coord) > 490) {
         penguin.classList.remove("penguinJump");
-        console.log(parseInt(y_coord), "y_coord penguin REMOVE");
       }
     }
   }, 1000 / fps);
 };
 function shotPenguin() {
-  console.log("shot penguin");
   const world = document.querySelector(".gameContainer");
   const hero = document.querySelector(".penguinContainer");
   const gameContainer = document.querySelector(".gameContainer");
@@ -339,11 +356,6 @@ function shotPenguin() {
   bulletDiv.style.left = `${parseInt(heroPos.left) -
     containerLeft.left -
     130}px`;
-
-  console.log(bulletDiv.style.left, "bullet style left");
-  console.log(divHero.getBoundingClientRect());
-  console.log(parseInt(heroPos.top), "penguin TOP position while shooting");
-  console.log(parseInt(heroPos.left), "penguin LEFT position while shooting");
 }
 document.addEventListener("keydown", function(e) {
   if (e.key == "p") {
@@ -363,16 +375,15 @@ document.addEventListener("keydown", function(e) {
     shotPenguin();
   }
 });
-/*
-setTimeout(function() {
-  penguinJump();
-}, 3000);
-setTimeout(function() {
-  shotPenguin();
-}, 2000);
-setTimeout(function() {
-  shotPenguin();
-}, 3500);
-setTimeout(function() {
-  shotPenguin();
-}, 4000); */
+//score and jump
+let score = 0;
+let scoreQuery = document.querySelector(".score");
+scoreQuery.innerHTML = `SCORE: ${score}`;
+
+let negativeHit = true;
+
+function lifeRemover() {
+  let firstLife = document.querySelector(".lifeSingle");
+  firstLife.classList.remove("lifeSingle");
+  firstLife.classList.add("lifeSingleHidden");
+}
