@@ -407,3 +407,27 @@ function lifeRemover() {
   firstLife.classList.add("lifeSingleHidden");
   lifeCheck += 1;
 }
+const coinCreate = () => {
+  const giftDiv = document.createElement("div");
+  giftDiv.classList.add("giftContainer", "back");
+  giftDiv.innerHTML = `<div class="gift"></div>`;
+
+  coinSec = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  };
+  giftDiv.style.top = `${coinSec(50, 520)}px`;
+  world.append(giftDiv);
+};
+
+setTimeout(function() {
+  coinCreate();
+}, 8000);
+setTimeout(function() {
+  coinCreate();
+}, 10000);
+setTimeout(function() {
+  coinCreate();
+}, 15000);
+setTimeout(function() {
+  coinCreate();
+}, 20000);
