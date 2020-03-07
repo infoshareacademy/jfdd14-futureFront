@@ -6,7 +6,6 @@ const startGame = document.querySelector("#startGame");
 const start = document.querySelector(".start");
 const game = document.querySelector(".game");
 let lifeCheck = 0;
-const zombie = document.querySelector(".zombieRun");
 const hero = document.querySelector(".heroRun");
 const divZombie = document.querySelector("#zombie1");
 const divZombie1 = document.querySelector("#zombie2");
@@ -145,7 +144,7 @@ const engine = setInterval(function() {
         checkCollision(el, divHero);
       });
     }
-    //zombie collision
+    //zombie/penguin collision
 
     checkCollision(divHero, divZombie);
     checkCollision(divHero, divZombie1);
@@ -209,10 +208,16 @@ const checkCollision = (firstObject, secondObject) => {
       secondObject == divZombie1 ||
       secondObject == divZombie2
     ) {
+      firstObject.firstElementChild.innerHTML += `<audio autoplay>
+      <source src="/Game/audio/death-pain.wav" type="audio/wav">
+    </audio>`;
       secondObject.style.display = "none";
       lifeRemover();
       //penguin collision with bullet
     } else if (firstObject == penguinContainer) {
+      firstObject.firstElementChild.innerHTML += `<audio autoplay>
+    <source src="/Game/audio/death-pain.wav" type="audio/wav">
+  </audio>`;
       penguinCount += 2;
       secondObject.style.display = "none";
       if (penguinCount >= 6) {
@@ -225,14 +230,17 @@ const checkCollision = (firstObject, secondObject) => {
       }
       //hero collision with penguin
     } else if (firstObject == divHero && secondObject == penguinContainer) {
-      secondObject.firstElementChild.classList.remove("penguinRun");
-      secondObject.firstElementChild.classList.add("penguinDie");
-
+      firstObject.firstElementChild.innerHTML += `<audio autoplay>
+      <source src="/Game/audio/death-pain.wav" type="audio/wav">
+    </audio>`;
       secondObject.style.display = "none";
       lifeRemover();
       //hero collission with bullet
     } else if (firstObject == divHero && secondObject != giftContainer) {
       secondObject.style.display = "none";
+      firstObject.firstElementChild.innerHTML += `<audio autoplay>
+      <source src="/Game/audio/death-pain.wav" type="audio/wav">
+    </audio>`;
       lifeRemover();
       //zombie collision with bullet
     } else {
