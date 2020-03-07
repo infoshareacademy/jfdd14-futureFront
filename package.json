@@ -1,0 +1,24 @@
+{
+  "name": "jfdd14-futureFront",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infoshareacademy/jfdd14-futureFront.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/infoshareacademy/jfdd14-futureFront/issues"
+  },
+  "homepage": "https://github.com/infoshareacademy/jfdd14-futureFront#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
+  }
+}
