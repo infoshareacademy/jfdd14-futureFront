@@ -11,22 +11,34 @@ startGame.addEventListener("click", function() {
   setTimeout(addZombieMoveClass2, 7000);
 
   setTimeout(function() {
-    penguinJump();
+    if (penguinContainer.style.display == "block") {
+      penguinJump();
+    }
   }, 13000);
   setTimeout(function() {
-    shotPenguin();
+    if (penguinContainer.style.display == "block") {
+      shotPenguin();
+    }
   }, 12000);
   setTimeout(function() {
-    shotPenguin();
+    if (penguinContainer.style.display == "block") {
+      shotPenguin();
+    }
   }, 13500);
   setTimeout(function() {
-    shotPenguin();
+    if (penguinContainer.style.display == "block") {
+      shotPenguin();
+    }
   }, 14000);
   setTimeout(function() {
-    shotPenguin();
+    if (penguinContainer.style.display == "block") {
+      shotPenguin();
+    }
   }, 15000);
   setTimeout(function() {
-    shotPenguin();
+    if (penguinContainer.style.display == "block") {
+      shotPenguin();
+    }
   }, 18000);
 
   setTimeout(function() {
