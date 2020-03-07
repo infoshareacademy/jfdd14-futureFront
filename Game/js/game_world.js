@@ -1,7 +1,32 @@
+//consts + query selectors
 const startGame = document.querySelector("#startGame");
 const start = document.querySelector(".start");
 const game = document.querySelector(".game");
 let lifeCheck = 0;
+const zombie = document.querySelector(".zombieRun");
+const hero = document.querySelector(".heroRun");
+const divZombie = document.querySelector("#zombie1");
+const divZombie1 = document.querySelector("#zombie2");
+const divZombie2 = document.querySelector("#zombie3");
+const divHero = document.querySelector(".heroContainer");
+const world = document.querySelector(".gameContainer");
+const giftContainer = document.querySelector(".giftContainer");
+const instructions = document.querySelector(".instruction");
+const penguinContainer = document.querySelector(".penguinContainer");
+const penguin = document.querySelector("#penguin");
+const gameEnd = document.querySelector(".gameEnd");
+const gameLose = document.querySelector(".gameOver");
+const gameWon = document.querySelector(".gameWon");
+const currentScore = document.querySelector(".currentScore");
+const highScore = document.querySelector(".highScore");
+
+let zombieX = 500;
+const heroheight = divHero.style.left;
+const fps = 60;
+let count = 0;
+let penguinCount = 0;
+
+//startgame
 
 startGame.addEventListener("click", function() {
   start.style.display = "none";
@@ -11,32 +36,50 @@ startGame.addEventListener("click", function() {
   setTimeout(addZombieMoveClass2, 7000);
 
   setTimeout(function() {
-    if (penguinContainer.style.display == "block") {
+    if (
+      penguinContainer.style.display == "block" &&
+      gameEnd.style.display == ""
+    ) {
       penguinJump();
     }
   }, 13000);
   setTimeout(function() {
-    if (penguinContainer.style.display == "block") {
+    if (
+      penguinContainer.style.display == "block" &&
+      gameEnd.style.display == ""
+    ) {
       shotPenguin();
     }
   }, 12000);
   setTimeout(function() {
-    if (penguinContainer.style.display == "block") {
+    if (
+      penguinContainer.style.display == "block" &&
+      gameEnd.style.display == ""
+    ) {
       shotPenguin();
     }
   }, 13500);
   setTimeout(function() {
-    if (penguinContainer.style.display == "block") {
+    if (
+      penguinContainer.style.display == "block" &&
+      gameEnd.style.display == ""
+    ) {
       shotPenguin();
     }
   }, 14000);
   setTimeout(function() {
-    if (penguinContainer.style.display == "block") {
+    if (
+      penguinContainer.style.display == "block" &&
+      gameEnd.style.display == ""
+    ) {
       shotPenguin();
     }
   }, 15000);
   setTimeout(function() {
-    if (penguinContainer.style.display == "block") {
+    if (
+      penguinContainer.style.display == "block" &&
+      gameEnd.style.display == ""
+    ) {
       shotPenguin();
     }
   }, 18000);
@@ -57,80 +100,79 @@ startGame.addEventListener("click", function() {
   }, 10000);
 });
 
-//consts + query selectors
-const zombie = document.querySelector(".zombieRun");
-const hero = document.querySelector(".heroRun");
-const divZombie = document.querySelector("#zombie1");
-const divZombie1 = document.querySelector("#zombie2");
-const divZombie2 = document.querySelector("#zombie3");
-const divHero = document.querySelector(".heroContainer");
-const world = document.querySelector(".gameContainer");
-const giftContainer = document.querySelector(".giftContainer");
-const instructions = document.querySelector(".instruction");
-const penguinContainer = document.querySelector(".penguinContainer");
-const penguin = document.querySelector("#penguin");
-const gameEnd = document.querySelector(".gameEnd");
-const gameLose = document.querySelector(".gameOver");
-const gameWon = document.querySelector(".gameWon");
-
-let zombieX = 500;
-const heroheight = divHero.style.left;
-const fps = 60;
-let count = 0;
-let penguinCount = 0;
 //engine
 
 const engine = setInterval(function() {
   scoreQuery.innerHTML = `SCORE: ${score}`;
+
   const bullets = [...document.querySelectorAll(".bulletContainerHero")];
   const penguinBullets = [
     ...document.querySelectorAll(".bulletContainerPenguin")
   ];
   const gifts = [...document.querySelectorAll(".giftContainer")];
   if (lifeCheck == 3) {
+    if (JSON.parse(localStorage.getItem("score")) < score) {
+      localStorage.setItem("score", JSON.stringify(score));
+    }
+    if (JSON.parse(localStorage.getItem("score")) > 0) {
+      highScore.innerHTML = JSON.parse(localStorage.getItem("score"));
+    }
+
     gameEnd.style.display = "flex";
     gameWon.style.display = "none";
+    currentScore.innerHTML = score;
   }
-  if (score >= 80) {
+  if (score >= 100) {
+    if (JSON.parse(localStorage.getItem("score")) < score) {
+      localStorage.setItem("score", JSON.stringify(score));
+    }
+    if (JSON.parse(localStorage.getItem("score")) > 0) {
+      highScore.innerHTML = JSON.parse(localStorage.getItem("score"));
+    }
     gameEnd.style.display = "flex";
     gameLose.style.display = "none";
+    currentScore.innerHTML = score;
   }
   //gift collision
-  if (gifts.length > 0) {
-    gifts.forEach(el => {
-      checkCollision(el, divHero);
-    });
-  }
-  //zombie collision
-  checkCollision(divHero, divZombie);
-  checkCollision(divHero, divZombie1);
-  checkCollision(divHero, divZombie2);
-  checkCollision(divHero, penguinContainer);
-  //bullets collision
-  if (penguinBullets.length > 0) {
-    penguinBullets.forEach(el => {
-      checkCollision(divHero, el);
-    });
-  }
-  if (bullets.length > 0) {
-    bullets.forEach(el => {
-      checkCollision(penguinContainer, el);
-    });
-  }
-  if (bullets.length > 0) {
-    bullets.forEach(el => {
-      checkCollision(divZombie, el);
-    });
-  }
-  if (bullets.length > 0) {
-    bullets.forEach(el => {
-      checkCollision(divZombie1, el);
-    });
-  }
-  if (bullets.length > 0) {
-    bullets.forEach(el => {
-      checkCollision(divZombie2, el);
-    });
+  if (gameEnd.style.display == "") {
+    if (gifts.length > 0) {
+      gifts.forEach(el => {
+        checkCollision(el, divHero);
+      });
+    }
+    //zombie collision
+
+    checkCollision(divHero, divZombie);
+    checkCollision(divHero, divZombie1);
+    checkCollision(divHero, divZombie2);
+    checkCollision(divHero, penguinContainer);
+    //bullets collision
+
+    if (penguinBullets.length > 0) {
+      penguinBullets.forEach(el => {
+        checkCollision(divHero, el);
+      });
+    }
+    if (bullets.length > 0) {
+      bullets.forEach(el => {
+        checkCollision(penguinContainer, el);
+      });
+    }
+    if (bullets.length > 0) {
+      bullets.forEach(el => {
+        checkCollision(divZombie, el);
+      });
+    }
+    if (bullets.length > 0) {
+      bullets.forEach(el => {
+        checkCollision(divZombie1, el);
+      });
+    }
+    if (bullets.length > 0) {
+      bullets.forEach(el => {
+        checkCollision(divZombie2, el);
+      });
+    }
   }
 }, 1000 / fps);
 
@@ -162,7 +204,7 @@ const checkCollision = (firstObject, secondObject) => {
       <source src="/Game/audio/cash-register-purchase.wav" type="audio/mpeg">
       </audio>`;
       firstObject.style.display = "none";
-      score += 10;
+      score += 20;
       //hero collision with zombie
     } else if (
       (firstObject == divHero && secondObject == divZombie) ||
