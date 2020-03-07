@@ -20,6 +20,7 @@ const gameLose = document.querySelector(".gameOver");
 const gameWon = document.querySelector(".gameWon");
 const currentScore = document.querySelector(".currentScore");
 const highScore = document.querySelector(".highScore");
+const characters = document.querySelector(".characters");
 const fps = 60;
 let count = 0;
 let penguinCount = 0;
@@ -114,6 +115,7 @@ const engine = setInterval(function() {
     ...document.querySelectorAll(".bulletContainerPenguin")
   ];
   const gifts = [...document.querySelectorAll(".giftContainer")];
+  outOfMap();
   if (lifeCheck == 3) {
     if (JSON.parse(localStorage.getItem("score")) < score) {
       localStorage.setItem("score", JSON.stringify(score));
@@ -221,8 +223,8 @@ const checkCollision = (firstObject, secondObject) => {
       penguinCount += 2;
       secondObject.style.display = "none";
       if (penguinCount >= 6) {
-        firstObject.firstElementChild.classList.remove("penguinRun");
-        firstObject.firstElementChild.classList.add("penguinDie");
+        /* firstObject.firstElementChild.classList.remove("penguinRun");
+        firstObject.firstElementChild.classList.add("penguinDie"); */
         setTimeout(function() {
           firstObject.style.display = "none";
         }, 700);
@@ -362,14 +364,16 @@ document.addEventListener("keyup", function(e) {
 });
 
 function outOfMap() {
-  const divsOutOfGameContainer = [...document.querySelectorAll("div")];
+  const divsOutOfGameContainer = [...characters.querySelectorAll("div")];
   divsOutOfGameContainer.forEach(element => {});
   const removeDivs = divsOutOfGameContainer.forEach(element => {
+    console.log(element.getBoundingClientRect().left);
     if (
-      parseInt(element.getBoundingClientRect().left) > 1560 ||
-      parseInt(element.getBoundingClientRect().right) < 364
+      parseInt(element.getBoundingClientRect.left) > 1560 ||
+      parseInt(element.getBoundingClientRect.right) < 364
     ) {
       element.style.display = "none";
+      console.log(element);
     }
   });
 }
