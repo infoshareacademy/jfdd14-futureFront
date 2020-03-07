@@ -21,8 +21,11 @@ const highScore = document.querySelector(".highScore");
 const fps = 60;
 let count = 0;
 let penguinCount = 0;
+let score = 0;
+let scoreQuery = document.querySelector(".score");
+scoreQuery.innerHTML = `SCORE: ${score}`;
 
-//startgame
+//startgame - all functions trigger after "start" button is clicked
 
 startGame.addEventListener("click", function() {
   start.style.display = "none";
@@ -81,6 +84,9 @@ startGame.addEventListener("click", function() {
   }, 18000);
   setTimeout(function() {
     coinCreate();
+  }, 2000);
+  setTimeout(function() {
+    coinCreate();
   }, 8000);
   setTimeout(function() {
     coinCreate();
@@ -96,7 +102,7 @@ startGame.addEventListener("click", function() {
   }, 10000);
 });
 
-//engine
+//engine - every variables/functions are running in interval 1000/fps
 
 const engine = setInterval(function() {
   scoreQuery.innerHTML = `SCORE: ${score}`;
@@ -186,14 +192,7 @@ const checkCollision = (firstObject, secondObject) => {
       parseInt(bounding.top)
   ) {
     //secondObject.firstElementChild.classList.add("heroDie");
-    /*  if (secondObject == penguinContainer) {
-      count += 2;
-      secondObject.classList.add("penguinDie");
-      if (count >= 6) {
-        firstObject.style.display = "none";
-        count = 0;
-      }
-    } */
+
     //hero collision with gift
     if (secondObject == divHero) {
       firstObject.innerHTML += `<audio autoplay>
@@ -248,7 +247,7 @@ const checkCollision = (firstObject, secondObject) => {
     }
   }
 };
-//zombie create
+//functions to create second and third zombies
 
 function addZombieMoveClass1() {
   divZombie1.classList.remove("deadZombieContainer");
@@ -259,7 +258,7 @@ function addZombieMoveClass2() {
   divZombie2.classList.add("zombieContainer");
 }
 
-//hero methods
+//hero metho jump, triggered on 'b' button
 const jump = function() {
   const gravity = 10;
   let metrNaPix = 19.2;
@@ -293,7 +292,7 @@ const jump = function() {
     }
   }, 1000 / fps);
 };
-
+//hero metho shot, triggered on 'l' button
 function shot() {
   const hero = document.querySelector("#hero");
   const background = document.querySelectorAll(".back");
@@ -330,7 +329,7 @@ function shot() {
     }, 1000);
   }
 }
-//event listeners
+//hero jump event listener
 document.addEventListener("keydown", function(e) {
   if (e.key == "b") {
     const heroPos = divHero.getBoundingClientRect();
@@ -342,6 +341,12 @@ document.addEventListener("keydown", function(e) {
     </audio>`;
       jump();
     }
+  }
+});
+//hero shot even listener
+document.addEventListener("keyup", function(e) {
+  if (e.key == "l") {
+    shot();
   }
 });
 
@@ -357,21 +362,6 @@ function outOfMap() {
     }
   });
 }
-
-document.addEventListener("keyup", function(e) {
-  if (e.key == "l") {
-    shot();
-  }
-});
-
-// funkcja na pojawianie się monet w różnej pozycji
-function coinSec(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-const coin1 = document.querySelector(".giftContainer");
-
-coin1.style.top = `${coinSec(50, 520)}px`;
 
 const penguinJump = function() {
   const penguinContainer = document.querySelector(".penguinContainer");
@@ -431,27 +421,16 @@ function shotPenguin() {
     containerLeft.left -
     130}px`;
 }
-document.addEventListener("keydown", function(e) {
-  if (e.key == "p") {
-    penguinJump();
 
-    shotPenguin();
-  }
-});
-
-//score and coin
-let score = 0;
-let scoreQuery = document.querySelector(".score");
-scoreQuery.innerHTML = `SCORE: ${score}`;
-
-let negativeHit = true;
-
+//removing life after collision
 function lifeRemover() {
   let firstLife = document.querySelector(".lifeSingle");
   firstLife.classList.remove("lifeSingle");
   firstLife.classList.add("lifeSingleHidden");
   lifeCheck += 1;
 }
+//adding new coins to the game
+
 const coinCreate = () => {
   const giftDiv = document.createElement("div");
   giftDiv.classList.add("giftContainer", "back");
