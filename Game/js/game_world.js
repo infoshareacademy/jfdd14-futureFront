@@ -40,7 +40,18 @@ startGame.addEventListener("click", function() {
       shotPenguin();
     }
   }, 18000);
-
+  setTimeout(function() {
+    coinCreate();
+  }, 8000);
+  setTimeout(function() {
+    coinCreate();
+  }, 10000);
+  setTimeout(function() {
+    coinCreate();
+  }, 15000);
+  setTimeout(function() {
+    coinCreate();
+  }, 20000);
   setTimeout(function() {
     penguinContainer.style.display = "block";
   }, 10000);
@@ -75,16 +86,21 @@ const engine = setInterval(function() {
   const penguinBullets = [
     ...document.querySelectorAll(".bulletContainerPenguin")
   ];
+  const gifts = [...document.querySelectorAll(".giftContainer")];
   if (lifeCheck == 3) {
     gameEnd.style.display = "flex";
     gameWon.style.display = "none";
   }
-  if (score >= 50) {
+  if (score >= 80) {
     gameEnd.style.display = "flex";
     gameLose.style.display = "none";
   }
   //gift collision
-  checkCollision(divHero, giftContainer);
+  if (gifts.length > 0) {
+    gifts.forEach(el => {
+      checkCollision(el, divHero);
+    });
+  }
   //zombie collision
   checkCollision(divHero, divZombie);
   checkCollision(divHero, divZombie1);
@@ -141,11 +157,11 @@ const checkCollision = (firstObject, secondObject) => {
       }
     } */
     //hero collision with gift
-    if (firstObject == divHero && secondObject == giftContainer) {
-      secondObject.innerHTML += `<audio autoplay>
+    if (secondObject == divHero) {
+      firstObject.innerHTML += `<audio autoplay>
       <source src="/Game/audio/cash-register-purchase.wav" type="audio/mpeg">
       </audio>`;
-      secondObject.style.display = "none";
+      firstObject.style.display = "none";
       score += 10;
       //hero collision with zombie
     } else if (
@@ -430,16 +446,3 @@ const coinCreate = () => {
   giftDiv.style.top = `${coinSec(50, 520)}px`;
   world.append(giftDiv);
 };
-
-setTimeout(function() {
-  coinCreate();
-}, 8000);
-setTimeout(function() {
-  coinCreate();
-}, 10000);
-setTimeout(function() {
-  coinCreate();
-}, 15000);
-setTimeout(function() {
-  coinCreate();
-}, 20000);
