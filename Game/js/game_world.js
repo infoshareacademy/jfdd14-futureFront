@@ -11,7 +11,6 @@ const divZombie2 = document.querySelector("#zombie3");
 const divHero = document.querySelector(".heroContainer");
 const world = document.querySelector(".gameContainer");
 const giftContainer = document.querySelector(".giftContainer");
-const instructions = document.querySelector(".instruction");
 const penguinContainer = document.querySelector(".penguinContainer");
 const penguin = document.querySelector("#penguin");
 const gameEnd = document.querySelector(".gameEnd");
@@ -19,9 +18,6 @@ const gameLose = document.querySelector(".gameOver");
 const gameWon = document.querySelector(".gameWon");
 const currentScore = document.querySelector(".currentScore");
 const highScore = document.querySelector(".highScore");
-
-let zombieX = 500;
-const heroheight = divHero.style.left;
 const fps = 60;
 let count = 0;
 let penguinCount = 0;
@@ -262,8 +258,6 @@ function addZombieMoveClass2() {
   divZombie2.classList.remove("deadZombieContainer");
   divZombie2.classList.add("zombieContainer");
 }
-/* setTimeout(addZombieMoveClass1, 5000);
-setTimeout(addZombieMoveClass2, 10000); */
 
 //hero methods
 const jump = function() {
@@ -299,7 +293,7 @@ const jump = function() {
     }
   }, 1000 / fps);
 };
-const bulletsarr = [];
+
 function shot() {
   const hero = document.querySelector("#hero");
   const background = document.querySelectorAll(".back");
@@ -380,8 +374,6 @@ const coin1 = document.querySelector(".giftContainer");
 coin1.style.top = `${coinSec(50, 520)}px`;
 
 const penguinJump = function() {
-  // penguin.classList.add("penguinJumpShooting");
-  // console.log(penguin.classList, "klasy");
   const penguinContainer = document.querySelector(".penguinContainer");
   const gravity = 10;
   let metrNaPix = 19.2;
@@ -405,17 +397,10 @@ const penguinJump = function() {
   }
 
   setInterval(function() {
-    // console.log(penguinStartY - 101,"ping - 101")
-    // console.log(penguinStartY - 100, "pingwin Y przed if")
-    // if (y_coord < penguinStartY-100 && x_coord > 350)
-
-    // console.log(penguin.classList, "klasy");
     if (y_coord < 496 && x_coord > 350) {
       x_coord -= speed_x * time_step; //* metrNaPix;
       y_coord -= speed_y * time_step; //* metrNaPix;
-      //console.log(x_coord, y_coord, speed_x, speed_y);
       speed_y -= gravity * time_step * metrNaPix * metrNaPix;
-      //   let hero = document.querySelector("#hero");
       penguinContainer.style.top = `${y_coord}px`;
       penguinContainer.style.left = `${x_coord}px`;
       speed_x *= 0.99;
@@ -448,23 +433,13 @@ function shotPenguin() {
 }
 document.addEventListener("keydown", function(e) {
   if (e.key == "p") {
-    // console.log("STAAAAART");
-    // const penguinPos = penguinContainer.getBoundingClientRect();
-    // console.log(parseInt(penguinPos.top), "penguin TOOP")
-    // if (parseInt(penguinPos.top) > 560) {
-    //   console.log(parseInt(penguinPos.top), "penguin TOOP AFFFTEEER")
-    //   let penguin = document.querySelector("#penguin");
-    //   penguin.classList.add("penguinJumpShooting");
-    //   hero.innerHTML += `<audio autoplay>
-    //   <source src="/Game/audio/jetpack2.wav" type="audio/mpeg">
-    // </audio>`;
     penguinJump();
-    // }
 
     shotPenguin();
   }
 });
-//score and jump
+
+//score and coin
 let score = 0;
 let scoreQuery = document.querySelector(".score");
 scoreQuery.innerHTML = `SCORE: ${score}`;
