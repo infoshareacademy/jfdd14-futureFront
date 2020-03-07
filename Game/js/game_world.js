@@ -363,7 +363,7 @@ document.addEventListener("keyup", function(e) {
   }
 });
 
-function outOfMap() {
+/* function outOfMap() {
   const divsOutOfGameContainer = [...characters.querySelectorAll("div")];
   divsOutOfGameContainer.forEach(element => {});
   const removeDivs = divsOutOfGameContainer.forEach(element => {
@@ -376,7 +376,7 @@ function outOfMap() {
       console.log(element);
     }
   });
-}
+} */
 
 //removing life after collision
 function lifeRemover() {

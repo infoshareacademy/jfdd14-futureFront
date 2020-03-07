@@ -42,10 +42,14 @@
 }
 
 .buttonsEndGame {
+  position: relative;
   display: flex;
   flex-direction: column;
+  z-index: 20;
 }
-
+.buttonsEndGame a {
+  text-decoration: none;
+}
 #backToGame {
   margin-top: 20px;
 }

@@ -65,12 +65,13 @@ body {
   /* background-attachment: inherit; */
   /* background-size: contain; */
   background-repeat: no-repeat;
-  /* background-size: cover ; */
+  background-size: cover;
   z-index: 9;
   transform: scaleY(0.97);
 }
 
 .gameContainer {
+  overflow: hidden;
   width: 1200px;
   height: 675px;
   position: absolute;
@@ -78,4 +79,5 @@ body {
   left: 14vw;
   border: 1px solid;
   transform: scale(1);
+  z-index: 9;
 }

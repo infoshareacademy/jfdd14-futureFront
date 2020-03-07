@@ -80,7 +80,6 @@
       <div class="buttonStart"><button id="startGame">Start</button></div>
     </div>
     <div class="game">
-      <div class="frame"></div>
       <div class="gameContainer">
         <div class="back sky"></div>
         <div class="back bgdecor"></div>
@@ -112,13 +111,9 @@
           </div>
 
           <div class="buttonsEndGame">
-            <button
-              id="backToGame"
-              onclick="location.href='/Game/game_worldv2.html'"
-            >
-              Start
-            </button>
-            <button id="backToSite">Wyjście</button>
+            <a id="backToGame" href="game_worldv2.html">Zagraj ponownie</a>
+
+            <a id="backToSite" href="/index.html">Wyjście</a>
           </div>
         </div>
 
@@ -167,6 +162,7 @@
           </div>
         </div>
       </div>
+      <div class="frame"></div>
     </div>
 
     <!-- <audio controls autoplay class="audio">
