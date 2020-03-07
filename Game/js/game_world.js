@@ -104,14 +104,7 @@ startGame.addEventListener("click", function() {
     penguinContainer.style.display = "block";
   }, 10000);
 });
-function remove(el) {
-  if (
-    el.getBoundingClientRect().left > 1400 ||
-    el.getBoundingClientRect().right < 364
-  ) {
-    el.style.display = "none";
-  }
-}
+
 //engine - every variables/functions are running in interval 1000/fps
 
 const engine = setInterval(function() {
@@ -229,7 +222,7 @@ const checkCollision = (firstObject, secondObject) => {
   </audio>`;
       penguinCount += 2;
       secondObject.style.display = "none";
-      if (penguinCount >= 6) {
+      if (penguinCount >= 8) {
         /* firstObject.firstElementChild.classList.remove("penguinRun");
         firstObject.firstElementChild.classList.add("penguinDie"); */
         setTimeout(function() {
@@ -259,7 +252,7 @@ const checkCollision = (firstObject, secondObject) => {
 
       count += 2;
       secondObject.style.display = "none";
-      if (count >= 6) {
+      if (count >= 8) {
         firstObject.style.display = "none";
         count = 0;
         score += 10;
@@ -405,3 +398,12 @@ const coinCreate = () => {
   giftDiv.style.top = `${coinSec(50, 520)}px`;
   world.append(giftDiv);
 };
+//function that removes bullets if its outside of the game container
+function remove(el) {
+  if (
+    el.getBoundingClientRect().left > 1400 ||
+    el.getBoundingClientRect().right < 364
+  ) {
+    el.style.display = "none";
+  }
+}

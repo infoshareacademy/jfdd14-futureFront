@@ -7,7 +7,7 @@
   height: 176.1px;
   /* background-color: lawngreen; */
   z-index: 4;
-  animation: scrollLeftZombie 6s linear infinite;
+  animation: scrollLeftZombie 5s linear infinite;
 }
 
 @keyframes scrollLeftZombie {
@@ -108,7 +108,7 @@
 }
 @keyframes playYzombieDie {
   from {
-    background-position-y:  0px;
+    background-position-y: 0px;
   }
   to {
     background-position-y: -3145px;
