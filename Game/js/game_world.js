@@ -104,7 +104,14 @@ startGame.addEventListener("click", function() {
     penguinContainer.style.display = "block";
   }, 10000);
 });
-
+function remove(el) {
+  if (
+    el.getBoundingClientRect().left > 1400 ||
+    el.getBoundingClientRect().right < 364
+  ) {
+    el.style.display = "none";
+  }
+}
 //engine - every variables/functions are running in interval 1000/fps
 
 const engine = setInterval(function() {
@@ -115,7 +122,6 @@ const engine = setInterval(function() {
     ...document.querySelectorAll(".bulletContainerPenguin")
   ];
   const gifts = [...document.querySelectorAll(".giftContainer")];
-  outOfMap();
   if (lifeCheck == 3) {
     if (JSON.parse(localStorage.getItem("score")) < score) {
       localStorage.setItem("score", JSON.stringify(score));
@@ -162,6 +168,7 @@ const engine = setInterval(function() {
     if (bullets.length > 0) {
       bullets.forEach(el => {
         checkCollision(penguinContainer, el);
+        remove(el);
       });
     }
     if (bullets.length > 0) {
