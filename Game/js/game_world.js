@@ -1,9 +1,3 @@
-require("babel-register")({
-  presets: ["env"]
-});
-
-module.exports = require("./penguin.js");
-
 import { penguinJump } from "./penguin.js";
 import { shotPenguin } from "./penguin.js";
 
@@ -386,7 +380,7 @@ const coinCreate = () => {
   giftDiv.classList.add("giftContainer", "back");
   giftDiv.innerHTML = `<div class="gift"></div>`;
 
-  coinSec = (min, max) => {
+  const coinSec = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
   giftDiv.style.top = `${coinSec(50, 520)}px`;
