@@ -27,6 +27,29 @@ let score = 0;
 let scoreQuery = document.querySelector(".score");
 scoreQuery.innerHTML = `SCORE: ${score}`;
 
+const getFromLocalStorege = function () {
+  return JSON.parse(localStorage.getItem("highScores")) || [];
+}
+const saveToLocalStorage = function () {
+  localStorage.setItem("highScores", JSON.stringify(highScoresArr));
+}
+const highScoresArr = [...getFromLocalStorege()];
+let currentPlayerHighScore = 1;
+
+highScoresArr.forEach(el => {
+  if(el.email == highScoresArr[0]) {currentPlayerHighScore = el.score};
+  console.log(el.email, "score");
+});
+
+highScore.innerHTML = currentPlayerHighScore ;
+
+
+console.log(highScoresArr, "high score Arr");
+console.log(highScoresArr[0], "high score Arr 0");
+console.log(currentPlayerHighScore, "high score");
+
+
+
 //startgame - all functions trigger after "start" button is clicked
 
 startGame.addEventListener("click", function() {
@@ -113,30 +136,39 @@ const engine = setInterval(function() {
   const penguinBullets = [
     ...document.querySelectorAll(".bulletContainerPenguin")
   ];
-  const gifts = [...document.querySelectorAll(".giftContainer")];
-  if (lifeCheck == 3) {
-    if (JSON.parse(localStorage.getItem("score")) < score) {
-      localStorage.setItem("score", JSON.stringify(score));
-    }
-    if (JSON.parse(localStorage.getItem("score")) > 0) {
-      highScore.innerHTML = JSON.parse(localStorage.getItem("score"));
-    }
 
-    gameEnd.style.display = "flex";
-    gameWon.style.display = "none";
-    currentScore.innerHTML = score;
+
+
+
+  const gifts = [...document.querySelectorAll(".giftContainer")];
+  if (lifeCheck == 3 || score >= 100) {
+      highScoresArr.forEach(el => {
+        if(el.email == highScoresArr[0]) {
+          el.score <= score ? el.score = score : el.score;
+          currentScore.innerHTML = score;
+          saveToLocalStorage()};
+          gameEnd.style.display = "flex";
+          score >= 100 ?  gameWon.style.display = "flex" : gameLose.style.display = "flex";
+      });
+      // highScore.innerHTML = currentPlayerHighScore ;
+
+
+  //   gameEnd.style.display = "flex";
+  //   gameWon.style.display = "none";
+  //   currentScore.innerHTML = score;
   }
-  if (score >= 100) {
-    if (JSON.parse(localStorage.getItem("score")) < score) {
-      localStorage.setItem("score", JSON.stringify(score));
-    }
-    if (JSON.parse(localStorage.getItem("score")) > 0) {
-      highScore.innerHTML = JSON.parse(localStorage.getItem("score"));
-    }
-    gameEnd.style.display = "flex";
-    gameLose.style.display = "none";
-    currentScore.innerHTML = score;
-  }
+
+  // if (score >= 100) {
+  //   highScoresArr.forEach(el => {
+  //     if(el.email == highScoresArr[0]) {
+  //       el.score <= score ? el.score = score : el.score;
+  //       saveToLocalStorage()};
+  //   });
+
+  //   gameEnd.style.display = "flex";
+  //   gameLose.style.display = "none";
+  //   currentScore.innerHTML = score;
+  // }
   //gift collision
   if (gameEnd.style.display == "") {
     if (gifts.length > 0) {
@@ -294,12 +326,10 @@ const jump = function() {
       speed_y *= 0.99;
       if (parseInt(y_coord) > 440) {
         hero.classList.remove("heroFlying");
-        hero.innerHTML -= `<audio autoplay>
-        <source src="/Game/audio/jetpack2.wav" type="audio/mpeg">
-      </audio>`;
-        //     hero.innerHTML += `<audio autoplay>
-        //   <source src="/Game/audio/run.wav" type="audio/mpeg">
-        // </audio>`;
+        hero.innerHTML = ``;
+      //   `<audio autoplay>
+      //   <source src="/Game/audio/jetpack2.wav" type="audio/mpeg">
+      // </audio>`;
       }
     }
   }, 1000 / fps);

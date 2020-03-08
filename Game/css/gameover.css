@@ -31,6 +31,12 @@
   font-size: 20px;
 }
 
+.gameOver,
+.gameWon {
+  display: none;
+}
+
+
 .currentScore {
   color: teal;
   font-size: 30px;
