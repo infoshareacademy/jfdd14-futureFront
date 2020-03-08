@@ -2,36 +2,19 @@ const navbar = document.querySelector(".navbar");
 const navbarCollapse = document.querySelector(".navbar-collapse");
 const navbarToggler = document.querySelector("#btnToggler");
 const body = document.querySelector("body");
-$(".navbar-nav>li>a").on("click", function() {
-  $(".navbar-collapse").collapse("hide");
-});
-//$('.navbar').addClass("transparent");
-/* $(".navbar").toggleClass("white"); 
-});
-/* 
-$("body").on("click", function() {
-  let navbarQuery = document.querySelector(".navbar-collapse");
+const navlinks = document.querySelectorAll(".nav-link");
 
-  $(".navbar-collapse").collapse("hide");
-
-  if (navbarQuery.className == "navbar-collapse collapsing") {
+navlinks.forEach(el =>
+  el.addEventListener("click", function() {
+    navbarCollapse.classList = "navbar-collapse collapse";
     navbar.classList.remove("white");
-  }
-}); */
-/* body.addEventListener("click", function() {
-  navbarCollapse.collapse("hide");
-  if (navbarCollapse.className == "navbar-collapse collapsing") {
-    navbar.classList.remove("white");
-  }
-}); */
-
-/* $(".navbar-toggler").on("click", function() {
-  $(".navbar").toggleClass("white");
-}); */
-
+  })
+);
 navbarToggler.addEventListener("click", function() {
-  console.log("bbb");
   navbar.classList.add("white");
+  if (navbarCollapse.className == "navbar-collapse collapse show") {
+    navbar.classList.remove("white");
+  }
 });
 
 //cookies
@@ -55,6 +38,8 @@ function cookiesCheck() {
 }
 
 cookiesCheck();
+
+//gallery slides
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -123,7 +108,6 @@ gameBoxPlay.addEventListener("click", function() {
 });
 
 premiereButton.addEventListener("click", function() {
-  console.log("bb");
   let premiereInput = document.querySelector(".premiereEmailInput");
   if (premiereInput.value == "") {
     alert("Pole email nie moze byc puste");
@@ -135,7 +119,6 @@ premiereButton.addEventListener("click", function() {
   }
 });
 premiereButtonSmall.addEventListener("click", function() {
-  console.log("bb");
   let premiereInput = document.querySelector(".premiereEmailInputSmall");
   if (premiereInput.value == "") {
     alert("Pole email nie moze byc puste");
