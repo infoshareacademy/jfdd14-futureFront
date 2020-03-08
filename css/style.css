@@ -467,7 +467,7 @@ i.fas:hover {
 
 .premiere-main {
   height: 100vh;
-  margin: 2vh;
+  margin: 0vh;
   background-image: url(/img/233.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -646,7 +646,7 @@ i.fab:hover {
 footer {
   justify-content: center;
   align-items: center;
-  padding-bottom: 15vh;
+  padding: 10vh 0;
   font-size: 1.5vh;
   letter-spacing: 1px;
   text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -656,7 +656,19 @@ footer {
   opacity: 0.5;
   transform: scale(0.8);
 }
+.functionLongHeaderContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.smallContainers {
+  display: flex;
 
+  align-items: center;
+  flex-direction: column;
+}
 @media (min-aspect-ratio: 16/9) {
   .functionLongHeaderText {
     padding: 2vw;
@@ -689,7 +701,7 @@ footer {
   }
   .smallContainers {
     display: flex;
-    padding-left: 5rem;
+    padding-left: 0rem;
     align-items: center;
     flex-direction: column;
   }
@@ -706,7 +718,7 @@ footer {
 
   .functionLongHeader {
     min-height: 100vh;
-    min-width: 100vw;
+    min-width: 100%;
     justify-content: center;
     text-align: center;
     font-weight: 500;
