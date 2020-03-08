@@ -149,6 +149,89 @@ img {
 }
 /* Gallery */
 
+.inviteVertical {
+  font-size: x-large;
+  overflow: hidden;
+  align-self: center;
+  padding-top: 50px;
+}
+
+.inviteHorizontal {
+  align-self: flex-start;
+  font-size: 2vw;
+}
+
+.inviteHorizontal div {
+  padding: 30px;
+  padding-top: 80px;
+}
+
+.inviteHorizontal,
+.inviteVertical {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  -webkit-animation-name: motto;
+  -webkit-animation-duration: 2s;
+  animation-name: motto;
+  animation-duration: 2s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes motto {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes motto {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.shortInfo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  box-shadow: none;
+  min-height: 80vh;
+  margin: 10vh auto;
+}
+
+.shortInfoHeader {
+  font-weight: 500;
+}
+
+.infoCell {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-basis: 100%;
+  margin: 40px;
+  padding: 40px 15px;
+  padding-top: 40px;
+  box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  background-color: rgba(227, 188, 190, 0.432);
+
+  transition: all 0.6s ease;
+}
 .slideshow-container {
   max-width: 1000px;
   position: relative;
@@ -336,11 +419,20 @@ i.fas {
   transition: all 1.5s ease;
 }
 
-/* i.fas:hover {
+i.fas:hover {
+  color: rgba(0, 128, 128, 0.822);
+  opacity: 0.8;
+}
+
+.functionLongHeaderContainer {
+  display: block;
+  text-align: center;
+  padding: 50px;
+  /* i.fas:hover {
     color: rgba(0, 128, 128, 0.822);
     opacity: 0.8;
 } */
-
+}
 .functionLongHeaderContainer {
   display: flex;
   flex-wrap: wrap;
@@ -357,6 +449,7 @@ i.fas {
   min-height: 100vh;
   min-width: 100vw;
   justify-content: center;
+  text-align: center;
   text-align: right;
   font-weight: 500;
   background-image: url(/img/235.jpg);
@@ -374,7 +467,7 @@ i.fas {
 
 .premiere-main {
   height: 100vh;
-  margin: 2vh;
+  margin: 0vh;
   background-image: url(/img/233.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -403,6 +496,7 @@ i.fas {
 
 form {
   /* background: rgba(0, 128, 128, 0.233); */
+  background: rgba(255, 255, 255, 0.233);
   /* background: rgba(255, 255, 255, 0.233); */
   border-radius: 25px;
 }
@@ -454,6 +548,17 @@ form .submit {
   display: flex;
   flex-basis: 100%;
   margin: 40px;
+  padding: 40px 15px;
+  padding-top: 40px;
+  box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  background-color: rgba(227, 188, 190, 0.432);
+  transition: all 0.6s ease;
+}
+
+.teamCell:hover {
+  transform: scale(1.25);
+  transition: all 0.6s ease;
   box-shadow: 0px 6px 19px 0px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
   background-color: rgba(227, 188, 190, 0.432);
@@ -541,7 +646,7 @@ i.fab:hover {
 footer {
   justify-content: center;
   align-items: center;
-  padding-bottom: 15vh;
+  padding: 10vh 0;
   font-size: 1.5vh;
   letter-spacing: 1px;
   text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -551,7 +656,19 @@ footer {
   opacity: 0.5;
   transform: scale(0.8);
 }
+.functionLongHeaderContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.smallContainers {
+  display: flex;
 
+  align-items: center;
+  flex-direction: column;
+}
 @media (min-aspect-ratio: 16/9) {
   .functionLongHeaderText {
     padding: 2vw;
@@ -584,7 +701,7 @@ footer {
   }
   .smallContainers {
     display: flex;
-    padding-left: 5rem;
+    padding-left: 0rem;
     align-items: center;
     flex-direction: column;
   }
@@ -601,7 +718,7 @@ footer {
 
   .functionLongHeader {
     min-height: 100vh;
-    min-width: 100vw;
+    min-width: 100%;
     justify-content: center;
     text-align: center;
     font-weight: 500;

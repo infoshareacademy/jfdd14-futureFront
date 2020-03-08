@@ -1,0 +1,16 @@
+.calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-color: rgb(227, 188, 190);
+  margin: 0;
+  padding: 5vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+.calculatorDiscount {
+  display: flex;
+  flex-direction: column;
+}

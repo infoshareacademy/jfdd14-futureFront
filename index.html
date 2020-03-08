@@ -13,8 +13,11 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,400i,700&display=swap" rel="stylesheet" />
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="css/style.css" />
+  
+  <script src="js/script.js" defer></script>
   <link rel="stylesheet" type="text/css" href="css/animation.css" />
   <link rel="stylesheet" type="text/css" href="css/gamePopUp.css" />
+  <link rel="stylesheet" type="text/css" href="css/calculator.css" />
   <!-- <script src="js/script.js" defer></script> -->
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon_io/apple-touch-icon.png">
@@ -32,7 +35,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#Home">GIFTmatcher</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="btnToggler">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -84,7 +87,7 @@
 
   </section>
 
-<div class="slideshow-container" style="margin-top: 40px;">
+<div class="slideshow-container" style="margin-top: 40px;" id="Product">
 
   <div class="mySlides fade">
     <div class="numbertext">1 / 3</div>
@@ -281,6 +284,29 @@
         </div>
       </div>
   </section>
+  <section id="calculator" class="calculator">
+    <div class="calculatorDiv">
+      <p>Wybierz liczbę sugestii</p>
+      <p class="suggestions"></p>
+      <div class="slideContainer">
+
+      <input oninput="priceFunction()" type="range" min="1" max="10" step ="1" class="slider" id="myRange" value="1">
+      
+      <p>Cena:</p>  <p class ="calculatorPrice" id="calculatorPrice"></p>
+      <div class="calculatorDiscount">
+        <div class="calculatorCheckbox"><input type="checkbox" id='disc1'><span>Zniżka dla studentów 10%</span></div>
+        <div class="calculatorCheckbox"> <input type="checkbox" id='disc2'><span>Zniżka z Kartą Mieszkańca Gdańska 20%</span></div>
+        <div class="calculatorCheckbox"> <input type="checkbox" id='disc3'><span>zniżka dla emerytów i rencistów 30%</span></div>
+        
+       
+       
+      </div>
+     
+      </div>
+    </div>
+    
+    
+  </section>
   <section class="cookies" id="cookies">
     <p>Nasza strona wykorzystuje pliki cookies. Korzystajac ze strony wyrazasz zgode na wykorzystywanie plikow cookies.</p>
     <button id="cookiesBtn"type ="button" class="btn btn-secondary shadow">Ok rozumiem</button>
@@ -307,6 +333,7 @@
     </a>
     <span id="footerQuote" class=""> Giftmatcher 2020</span>
   </footer>
+  
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -318,7 +345,8 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
 
-    <script src="js/script.js" defer></script>
+
+    <script src="js/calculator.js" defer></script>
     
 </body>
 
