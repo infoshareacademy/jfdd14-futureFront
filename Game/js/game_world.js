@@ -1,3 +1,5 @@
+import { penguinJump } from "./penguin.js";
+import { shotPenguin } from "./penguin.js";
 //consts + query selectors
 const startGame = document.querySelector("#startGame");
 const start = document.querySelector(".start");
