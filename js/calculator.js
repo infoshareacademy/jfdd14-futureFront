@@ -15,11 +15,20 @@ const suggestions = document.querySelector(".suggestions");
 suggestions.innerHTML = slider.value;
 calculatorPrice.innerHTML = `${finalPrice}$`;
 function priceFunction() {
+  if (slider.value > 5 && slider.value < 10) {
+    console.log("check");
+    discountv2 = Number(slider.value) * 0.5;
+  } else if (slider.value == 10) {
+    discountv2 = Number(slider.value) * 1;
+  } else {
+    discountv2 = 0;
+  }
   if (discount1.checked && discount2.checked && discount3.checked) {
     discount =
       Number(slider.value) +
       Number(slider.value) * 2 +
       Number(slider.value) * 3;
+    console.log(discount);
   } else if (discount1.checked && discount2.checked) {
     discount = Number(slider.value) + Number(slider.value) * 2;
   } else if (discount1.checked && discount3.checked) {
@@ -35,7 +44,8 @@ function priceFunction() {
   } else {
     discount = 0;
   }
-  let finalPrice = Number(slider.value * 10) - discount;
+
+  let finalPrice = Number(slider.value * 10) - discount - discountv2;
   calculatorPrice.innerHTML = `${finalPrice}$`;
   suggestions.innerHTML = `${slider.value}`;
 }
