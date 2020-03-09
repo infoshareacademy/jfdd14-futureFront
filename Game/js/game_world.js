@@ -147,6 +147,8 @@ const engine = setInterval(function() {
           el.score <= score ? el.score = score : el.score;
           currentScore.innerHTML = score;
           saveToLocalStorage()};
+          const frame = document.querySelector(".frame");
+          frame.style.display = "none";
           gameEnd.style.display = "flex";
           score >= 100 ?  gameWon.style.display = "flex" : gameLose.style.display = "flex";
       });
