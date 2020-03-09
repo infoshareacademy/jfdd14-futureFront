@@ -1,5 +1,5 @@
 .gameEnd {
-  border: solid 2px;
+  /* border: solid 2px; */
   display: flex;
   justify-content: space-around;
   /* flex-direction: column; */
