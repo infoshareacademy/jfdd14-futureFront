@@ -131,6 +131,7 @@ premiereButton.addEventListener("click", function() {
       console.log(highScoresArr);}
 
       saveToLocalStorage();
+      console.log(highScoresArr, "after");
 
     greyBackground.style.display = "block";
     game.style.display = "flex";

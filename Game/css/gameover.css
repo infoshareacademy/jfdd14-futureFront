@@ -26,6 +26,7 @@
   display: none;
 }
 
+
 .gameEnd p,
 .gameWon p {
   font-size: 20px;
@@ -34,6 +35,7 @@
 .gameOver,
 .gameWon {
   display: none;
+  flex-direction: column;
 }
 
 
@@ -53,15 +55,24 @@
   flex-direction: column;
   z-index: 20;
 }
+
 .buttonsEndGame a {
   text-decoration: none;
 }
+
 #backToGame {
   margin-top: 20px;
+  font-size: 20px;
+  padding: 0px;
+
+  /* width: 200px; */
 }
 
 #backToSite {
-  margin-top: 40px;
+  margin-top: 30px;
+  font-size: 20px;
+  padding: 0px;
+
 }
 
 /* .audio{
