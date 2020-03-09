@@ -40,7 +40,7 @@ function cookiesCheck() {
 cookiesCheck();
 
 //gallery slides
-
+/* 
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -51,8 +51,8 @@ function plusSlides(n) {
 function currentSlide(n) {
   showSlides((slideIndex = n));
 }
-
-function showSlides(n) {
+ */
+/* function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
@@ -75,7 +75,7 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
   setTimeout(showSlides, 2000);
-}
+} */
 
 //fipp Team cell onscroll
 

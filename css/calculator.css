@@ -13,5 +13,12 @@
 .calculatorDiscount {
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  align-items: flex-start;
+
+}
+.calculatorDiscount span {
+  padding: 2vh;
+}
+.calculatorCheckbox{
+  padding: 1vh;
 }

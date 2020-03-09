@@ -284,17 +284,18 @@
   </section>
   <section id="calculator" class="calculator">
     <div class="calculatorDiv">
-      <p>Wybierz liczbę sugestii</p>
-      <p class="suggestions"></p>
+      <p><strong>WYBIERZ LICZB SUGESTII</strong></p><br/>
+      (Powyzej 5 sugestii otrzymujesz znizke 5%, a przy 10 sugestiach 10%!)
+      <p class="suggestions" style="font-weight: bold;"></p>
       <div class="slideContainer">
 
       <input oninput="priceFunction()" type="range" min="1" max="10" step ="1" class="slider" id="myRange" value="1">
       
-      <p>Cena:</p>  <p class ="calculatorPrice" id="calculatorPrice"></p>
-      <div class="calculatorDiscount">
-        <div class="calculatorCheckbox"><input type="checkbox" id='disc1'><span>Zniżka dla studentów 10%</span></div>
-        <div class="calculatorCheckbox"> <input type="checkbox" id='disc2'><span>Zniżka z Kartą Mieszkańca Gdańska 20%</span></div>
-        <div class="calculatorCheckbox"> <input type="checkbox" id='disc3'><span>zniżka dla emerytów i rencistów 30%</span></div>
+      <p>Cena:</p>  <p style ="font-weight: bold; font-size: 2vh;" class="calculatorPrice" id="calculatorPrice"></p>
+      <div class="calculatorDiscount ">
+        <div class="calculatorCheckbox"><input type="checkbox" id='disc1'class="checboxStyle"><span>Zniżka dla studentów <strong>10%</strong></span></div>
+        <div class="calculatorCheckbox"> <input type="checkbox" id='disc2' class="checboxStyle"><span>Zniżka z Kartą Mieszkańca <strong>20%</strong> </span></div>
+        <div class="calculatorCheckbox"> <input type="checkbox" id='disc3' class="checboxStyle"><span>Zniżka dla emerytów i rencistów <strong>30%</strong></span></div>
         
        
        
