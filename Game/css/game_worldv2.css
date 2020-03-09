@@ -72,7 +72,14 @@ body {
   z-index: 9;
   transform: scaleY(0.97);
 }
-
+.start span{
+  font-size: 45px;
+  font-weight: bold;
+  color: teal;
+}
+.start {
+  text-align: center;
+}
 .gameContainer {
   overflow: hidden;
   width: 1200px;
