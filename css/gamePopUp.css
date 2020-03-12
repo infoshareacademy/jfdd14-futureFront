@@ -1,0 +1,73 @@
+.game {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80vw;
+  height: 50vh;
+  margin-left: -40vw;
+  margin-top: -25vw;
+  z-index: 100;
+  background-color: rgb(207, 155, 158);
+  color: white;
+  font-size: 3vh;
+  padding: 2vh;
+  justify-content: center;
+  align-items: center;
+}
+.game a {
+  color: white;
+}
+
+.greyBackground {
+  display: none;
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.37);
+}
+.gameBoxButtons {
+  display: flex;
+  justify-content: space-around;
+}
+@media (min-width: 720px) {
+  .game {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 70vw;
+    height: 60vh;
+    margin-left: -35vw;
+    margin-top: -30vh;
+    z-index: 100;
+    background-color: rgb(207, 155, 158);
+    color: white;
+    font-size: 3vh;
+    padding: 5vh;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 1024px) {
+  .game {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50vw;
+    height: 30vh;
+    margin-left: -25vw;
+    margin-top: -15vh;
+    z-index: 100;
+    background-color: rgb(207, 155, 158);
+    color: white;
+    font-size: 2vh;
+    padding: 5vh;
+    justify-content: center;
+    align-items: center;
+  }
+}

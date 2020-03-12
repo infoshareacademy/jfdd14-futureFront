@@ -1,20 +1,352 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <!-- font awsome -->
+  <script src="https://kit.fontawesome.com/c0b38c2141.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,400i,700&display=swap" rel="stylesheet" />
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script src="js/calculator.js" defer></script>
+  <script src="js/script.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="css/animation.css" />
+  <link rel="stylesheet" type="text/css" href="css/gamePopUp.css" />
+  <link rel="stylesheet" type="text/css" href="css/calculator.css" />
+  <!-- <script src="js/script.js" defer></script> -->
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon_io/site.webmanifest">
+
+  <title>GIFTmatcher</title>
+
 </head>
-<body>
-    <div class="navigation">
-        <a href="#">Home</a>
-        <a href="#">News</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+
+<body data-spy="scroll" data-target="#navbarNav">
+
+  <div class="mainMenu">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#Home">GIFTmatcher</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="btnToggler">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#Home">Home <span class="sr-only">(current)</span></a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="#About">Funkcje</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Premiere">Premiera</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Team">Team</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="navIdPositioner" id="Home"></div>
+
+  <section class="container-fluid heroContainer">
+    <header class="d-flex">
+      <div class="subHeaderLine1">KONIEC ROZCZAROWAŃ</div>
+      <div class="subHeaderLine2">GIFTmatcher - obdarowywanie nigdy nie było takie proste.</div>
+    </header>
+    <div class=" col-10 d-flex d-lg-none no-gutters m-0 p-0 inviteVertical">
+      <div class="d-flex p-4"><strong>GIFTmatcher</strong></div>
+      <button type="button" class="btn btn-secondary" id="buttonFront"><a class="premiereButton"
+          href="#Premiere">Zapraszamy na
+          premierę</a></button>
+    </div>
+    <div class="d-flex row px-1" id="carInviteContainer">
+      <div class="p-0 d-none d-lg-flex col-lg-3 offset-lg-2 inviteHorizontal">
+        <div class="d-flex">GIFTmatcher</div>
+        <button type="button" class="btn btn-secondary shadow">
+          <a class="premiereButton" href="#Premiere">Zapraszamy na premierę</a>
+        </button>
+      </div>
+      <div class="d-flex col-12 col-lg-6 p-0 m-0" id="carImgContainer">
+        <img class="d-flex" src="img/samochod.png" alt="PinkCar" id="carImg">
+      </div>
+    </div>
+
+  </section>
+
+<!-- <div class="slideshow-container" style="margin-top: 40px;" id="Product">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img class="m-0 p-0" src="Hero img ( trial version )/photo1.jpg" style="width:100%">
+    <div class="text">xxx</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img class="m-0 p-0" src="Hero img ( trial version )/photo2.jpg" style="width:100%">
+    <div class="text">xxx</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img class="m-0 p-0" src="Hero img ( trial version )/photo3.jpg" style="width:100%" >
+    <div class="text">xxx</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br> -->
+
+<!-- <div class ="slideshow-container" style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div> -->
+
+  <div class="navIdPositioner" id="About"></div>
+
+  <section class="functionLongHeader">
+    <div class="functionLongHeaderText">
+      Nie wiesz co kupić na prezent? Nasza aplikacja ci to ułatwi. System analizy bazujący na danych z
+      portalu
+      społecznościowego Facebook, pozwoli zawęzić obszar poszukiwań. Otrzymasz propozycję dopasowaną
+      do konkretnej
+      osoby i okoliczności z możliwością ustalenia zakresu cenowego.
+    </div>
+  </section>
+  
+  <section class="functionLongHeaderContainer">
+  
+    <div class="smallContainers">
+      <i class="fas fa-gift fa-4x"></i>
+      <p class="pb-5">Korzystaj z automatycznych powiadomień.
+        Nasza aplikacja poinformuje Cię jeżeli poszukiwany przez Ciebie produkt pojawi się w okolicznym sklepie,
+        bądź na aukcji</p>
+    </div>
+
+    <div class="smallContainers">
+      <i class="fas fa-save fa-4x"></i>
+      <p class="pb-5">Twórz własne listy z prezentami oraz zapisuj je do późniejszego wykorzystania.
+        Dziel się listą prezentów ze znajomymi i rodziną.
+        Dodawaj własne propozycję prezentów do list udostępnionych przez innych
+      </p>
+    </div>
+    <div class="smallContainers">
+      <i class="fas fa-microphone-alt fa-4x"></i>
+      <p class="pb-5">Synchronizuj aplikacje z Siri i Amazon.
+        Korzystaj z Siri aby wyszukiwać i dodawać prezenty nawet gdy masz zajęte ręce.
+        Użyj wyłącznie polecenia głosowego a nasza aplikacja zrobi wszystko za Ciebie
+      </p>
+  
+    </div>
+  
+    <div class="smallContainers">
+      <i class="fas fa-mobile-alt fa-4x"></i>
+      <p class="pb-5">Korzystaj z mobilnej aplikacji. 
+        Dzięki temu masz dostęp do listy swoich prezentów niezależnie od lokalizacji w której się znajdujesz.</p>
+    </div>
+    <div class="smallContainers">
+      <i class="fas fa-gavel fa-4x"></i>
+      <p class="pb-5">Synchronizacja z najbardziej popularnymi serwisami aukcyjnymi takimi jak ebay.com czy
+        allegro.pl.
+        Dzięku temu możesz wyszukać produkty po okazyjnych cenach.</p>
+    </div>
+    <div class="smallContainers">
+      <i class="fas fa-store fa-4x"></i>
+      <p class="pb-5">Wyszukuj lokalnie punktów w których możesz nabyć poszukiwany produkt.
+        Jeżeli wspierasz lokalny handel lub preferujesz zakup osobiście.</p>
+    </div>
+    <div class="smallContainers">
+      <i class="fas fa-camera fa-4x"></i>
+      <p class="pb-5">Wykorzystuj swój aparat w celu łatwiejszego wyszukiwania produktów. 
+        Jeżeli nie potrafisz zidentyfikować produktu nasza aplikacja zrobi to za Ciebie.</p>
+    </div>
+  </section>
+
+  <div class="navIdPositioner" id="Premiere"></div>
+
+  <section class="premiere-main m-0 d-flex">
+    <div class="premiere p-3 col-5 offset-6 d-none d-md-flex">
+      <img src="img/logo.png" alt="" class="PremiereLogo pb-3">
+      <h3 class="pb-3 mb-2">Zapisz się na premiere!</h3>
+      <form class="premiere" action="" method="post">
+        <label for="email" class="PremiereEmailLabel m-0 p-0">Twoj email:</label>
+        <input type="email" class="premiereEmailInput" required>
+        <button type="button" class="btn btn-secondary shadow m-4" id="premierButton">Zapisz mnie!</button>
+        <p>
+          Twoje dane sa bezpieczne - podany adres email bedzie uzyty tylko w celu przypomnienia Ci
+          o premierze naszej aplikacji. Wyslemy tylko jeden email!
+        </p>
+      </form>
+    </div>
+
+    <div class="premiere mt-5 p-1 d-flex d-md-none justify-content-start">
+      <img src="img/logo.png" alt="" class="PremiereLogo pb-3">
+      <h3 class="pb-3">Zapisz się na premiere!</h3>
+      <form class="premiere" action="" method="post">
+        <label for="email" class="PremiereEmailLabel m-0 p-0">Twoj email:</label>
+        <input type="email" class="premiereEmailInputSmall" required>
+        <button type="button" class="btn btn-secondary shadow m-4" id="premierButtonSmall">Zapisz mnie!</button>
+        <p>
+          Twoje dane sa bezpieczne - podany adres email bedzie uzyty tylko w celu przypomnienia Ci
+          o premierze naszej aplikacji. Wyslemy tylko jeden email!
+        </p>
+      </form>
+    </div>
+
+  </section>
+
+  <div class="navIdPositioner" id="Team"></div>
+
+  <section class="teamContainer">
+    <h3>Poznaj nasz zespół</h3>
+    <div class="team">
+
+      <div class="teamCell col-md-4 col-xl-2 flipCardInner p-3" id="spinner">
+
+        <div class="flipCardFront p-0 m-0 d-flex justify-content-center">
+          <img class="rounded-circle" src="img/Bartek_BW.jpg" alt="Bartek zdjecie" />
+          <h6>Bartek Ciesielski</h6>
+        </div>
+
+        <div class="teamSocial flipCardBack">
+
+          <a href="https://github.com/bartek-ciesielski" target="_blank">
+            <i class="fab fa-github fa-3x p-2"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/bartek-ciesielski-b40782175/" target="_blank">
+            <i class="fab fa-linkedin fa-3x p-2"></i>
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="teamCell col-md-4 col-xl-2 flipCardInner p-3" id="spinner">
+
+        <div class="flipCardFront p-0 m-0 d-flex justify-content-center">
+          <img class="rounded-circle" src="img/Mateusz_BW.jpg" alt="Mateusz zdjecie" />
+          <h6>Mateusz Kujawiński</h6>
+        </div>
+
+        <div class="teamSocial flipCardBack">
+
+          <a href="https://github.com/Kujawdett" target="_blank">
+            <i class="fab fa-github fa-3x p-2"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/mateusz-kujawi%C5%84ski-022a141a1/" target="_blank">
+            <i class="fab fa-linkedin fa-3x p-2"></i>
+          </a>
+        </div>
+
+      </div>
+      <div class="teamCell col-md-4 col-xl-2 flipCardInner p-3" id="spinner">
+        <div class="flipCardFront p-0 m-0 d-flex justify-content-center">
+          <img class="rounded-circle" src="img/Dominik_BW.jpg" alt="Dominik zdjecie" />
+          <h6>Dominik Pilawski</h6>
+        </div>
+        <div class="teamSocial flipCardBack">
+          <a href="https://github.com/DominikPilawski" target="_blank">
+            <i class="fab fa-github fa-3x p-2"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/dominik-pilawski" target="_blank">
+            <i class="fab fa-linkedin fa-3x p-2"></i>
+          </a>
+        </div>
+      </div>
+      <div class="teamCell col-md-4 col-xl-2 flipCardInner p-3" id="spinner">
+        <div class="flipCardFront p-0 m-0 d-flex justify-content-center">
+          <img class="rounded-circle" src="img/Borys_BW.jpg" alt="Borys zdjecie" />
+          <h6>Borys Maciuch</h6>
+        </div>
+        <div class="teamSocial flipCardBack">
+          <a href="https://github.com/BorysMaciuch" target="_blank">
+            <i class="fab fa-github fa-3x p-2"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/borys-maciuch-943b78117/" target="_blank">
+            <i class="fab fa-linkedin fa-3x p-2"></i>
+          </a>
+        </div>
+      </div>
+  </section>
+  <section id="calculator" class="calculator">
+    <div class="calculatorDiv">
+      <p><strong>WYBIERZ LICZB SUGESTII</strong></p><br/>
+      (Powyzej 5 sugestii otrzymujesz znizke 5%, a przy 10 sugestiach 10%!)
+      <p class="suggestions" style="font-weight: bold;"></p>
+      <div class="slideContainer">
+
+      <input oninput="priceFunction()" type="range" min="1" max="10" step ="1" class="slider" id="myRange" value="1">
+      
+      <p>Cena:</p>  <p style ="font-weight: bold; font-size: 2vh;" class="calculatorPrice" id="calculatorPrice"></p>
+      <div class="calculatorDiscount ">
+        <div class="calculatorCheckbox"><input type="checkbox" id='disc1'class="checboxStyle"><span>Zniżka dla studentów <strong>10%</strong></span></div>
+        <div class="calculatorCheckbox"> <input type="checkbox" id='disc2' class="checboxStyle"><span>Zniżka z Kartą Mieszkańca <strong>20%</strong> </span></div>
+        <div class="calculatorCheckbox"> <input type="checkbox" id='disc3' class="checboxStyle"><span>Zniżka dla emerytów i rencistów <strong>30%</strong></span></div>
+        
+       
+       
+      </div>
+     
+      </div>
+    </div>
+    
+    
+  </section>
+  <section class="cookies" id="cookies">
+    <p>Nasza strona wykorzystuje pliki cookies. Korzystajac ze strony wyrazasz zgode na wykorzystywanie plikow cookies.</p>
+    <button id="cookiesBtn"type ="button" class="btn btn-secondary shadow">Ok rozumiem</button>
+  </section>
+  <div class="greyBackground"></div>
+  <section class="game">
+    <div class="gameInfo">
+      <p>
+        Dzieki za maila! Mozesz teraz zagrac w gre. By to zrobic kliknij "Zagraj" <br>
+
+      Jesli nie mozesz teraz zagrac i chcesz wrocic do strony, kliknij "Zamknij".<br/>
+      </p>
+      
+      <div class="gameBoxButtons">
+        <a id="gameBoxPlay"href="Game/game_worldv2.html" target="_blank" class="btn btn-secondary shadow m-4">Zagraj</a>
+      <a id="gameBoxClose" class="btn btn-secondary shadow m-4">Zamknij</a>
       </div>
       
+    </div>
+  </section>
+  <footer class="d-flex w-100">
+    <a href="https://github.com/infoshareacademy/jfdd14-futureFront">
+      <i class="fab fa-github fa-2x"></i>
+    </a>
+    <span id="footerQuote" class=""> Giftmatcher 2020</span>
+  </footer>
+  
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+
+   
     
 </body>
+
 </html>

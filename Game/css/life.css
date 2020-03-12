@@ -1,0 +1,25 @@
+.score {
+  position: absolute;
+  top: 80px;
+  left: 120px;
+  z-index: 10;
+  font-size: 40px;
+  font-family: "Orbitron", sans-serif;
+  color: rgb(227, 188, 190);
+  font-weight: bold;
+}
+.life {
+  position: absolute;
+  display: flex;
+  width: 30px;
+  height: 20px;
+  top: 85px;
+  right: 220px;
+  z-index: 10;
+}
+.lifeSingle {
+  display: block;
+}
+.lifeSingleHidden {
+  display: none;
+}
